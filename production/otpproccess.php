@@ -35,7 +35,7 @@ include 'session.php';
                               <form method="POST" class="my-login-validation" action="resetpassword.php" novalidate="">
 <div class="form-group">
     <label for="otp">OTP</label>
-    <input id="otp" type="text" class="form-control" name="otp" value="" required autofocus>
+    <input id="otp" type="text" class="form-control" name="eotp" value="" required autofocus>
     <div class="invalid-feedback">
         OTP is Invalid
     </div>

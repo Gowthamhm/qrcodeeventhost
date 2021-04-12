@@ -10,7 +10,7 @@ $email = mysqli_real_escape_string($conn,$_POST['email']);
 $password =mysqli_real_escape_string($conn,$_POST['newpassword']);
 $number =mysqli_real_escape_string($conn,$_POST['number']);
 
-$otp = mysqli_real_escape_string($conn,$_POST['otp']);
+$otp = mysqli_real_escape_string($conn,$_POST['eotp']);
 $sotp = mysqli_real_escape_string($conn,$_POST['sotp']);
 echo $username,$email,$password,$number,$otp,$sotp;
 if ($sotp == $otp) {
@@ -31,7 +31,7 @@ if ($sotp == $otp) {
 }else {
   ?><script type="text/javascript" charset="utf-8">
    alert("Enter a valid OTP");
-   // window.location.replace('otpproccess.php');
+   window.location.replace('otpproccess.php');
    </script>
    <?php
 }
