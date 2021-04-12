@@ -101,7 +101,7 @@ include 'error.php';
                              <!--Panel-->
                              <div class="card card-body ml-1" style="background: none;width:fit-content;">
                                  <h4 class="card-title">Create Folder</h4>
-                                 <form action="CreateFolder.php" method="post">
+                                 <form action="folderCreation.php" method="post">
                                      <div class="form-group row">
                                          <label for="inputPassword" class="col-sm-10 col-form-label">Folder Name</label>
                                          <div class="col-sm-10">
