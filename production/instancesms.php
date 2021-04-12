@@ -155,12 +155,15 @@ document.multiselect('#testSelect1')
 //     });
 //     console.log(total);
 // });
-$(document).ready(function(){
-    $("select.form-control").change(function(){
-        var selectedCountry = $(this).children("option:selected").val();
-        alert("You have selected the number - " + selectedCountry);
-    });
-});
+// $(document).ready(function(){
+//     $("select.form-control").change(function(){
+//         var selectedCountry = $(this).children("option:selected").val();
+//         alert("You have selected the number - " + selectedCountry);
+//     });
+// });
+var e = document.getElementById("testSelect1");
+var strUser = e.options[e.selectedIndex].text;
+alert('strUser');
 </script>
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
