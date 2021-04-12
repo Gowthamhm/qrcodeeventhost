@@ -1,7 +1,7 @@
 <?php
 include 'connection.php';
 include 'error.php';
-
+session_start();
 if (isset($_POST['reset'])) {
 $username =mysqli_real_escape_string($conn,$_POST['username']);
 $email = mysqli_real_escape_string($conn,$_POST['email']);

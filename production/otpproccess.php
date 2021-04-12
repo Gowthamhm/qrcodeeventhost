@@ -49,7 +49,7 @@ include 'session.php';
 </div>
 <div class="form-group">
     <label for="email">Email</label>
-    <input id="email" type="text" class="form-control" name="email" value='<?php echo $_SESSION['forgot_email'];?>' required autofocus>
+    <input id="email" type="text" class="form-control" name="email" value=<?php echo $_SESSION['forgot_email'];?> required autofocus>
     <div class="invalid-feedback">
       Email is invalid
     </div>
@@ -64,7 +64,7 @@ include 'session.php';
 </div>
 <div class="form-group">
     <label for="number">Phone Number</label>
-    <input id="phone" type="text" class="form-control" name="number" value='<?php echo $_SESSION['number'];?>' required autofocus>
+    <input id="phone" type="text" class="form-control" name="number" value='<?php echo $_SESSION[number];?>' required autofocus>
     <div class="invalid-feedback">
       Number is invalid
     </div>
