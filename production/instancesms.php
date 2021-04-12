@@ -111,9 +111,9 @@ include 'error.php';
                     <label class="control-label col-md-3 col-sm-3 ">Select Custom</label>
                     <div class="col-md-9 col-sm-9 " onclick="show">
                     </div>
-                    <div>
+                    <div class="multiselect">
                     <?php
-                    $sql ="SELECT * FROM `folders`";
+                    $sql ="SELECT * FROM `qrcode`";
                     $result = $conn->query($sql);
                     if ($result->num_rows > 0) {
                       // output data of each row
