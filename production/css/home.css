@@ -23,3 +23,13 @@
 	color: #400040;
 	border-radius: 17px;
 } */
+.cre {
+	border: 3px solid whitesmoke;
+	background-color: midnightblue;
+	color: white;
+	border-radius: 17px;
+}
+
+.cre:hover {
+	border-radius: 17px;
+}

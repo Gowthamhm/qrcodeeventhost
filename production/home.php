@@ -99,7 +99,7 @@ include 'error.php';
               <i class="fa fa-folder-o pr-2" aria-hidden="true"></i>Create Folder</button>
               <div class="collapse" id="collapseOne" style="display:none;">
                              <!--Panel-->
-                             <div class="card card-body ml-1" style="background: none;width: 85%;">
+                             <div class="card card-body ml-1" style="background: none; width:auto;">
                                  <h4 class="card-title">Create Folder</h4>
                                  <form action="CreateFolder.php" method="post">
                                      <div class="form-group row">
