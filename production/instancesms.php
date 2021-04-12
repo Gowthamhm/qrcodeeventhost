@@ -14,6 +14,8 @@ include 'error.php';
 	<link rel="icon" href="images/logo.ico" type="image/ico" />
 
     <title>Home</title>
+    <link href="styles/multiselect.css" rel="stylesheet"/>
+<script src="multiselect.min.js"></script>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <!-- Bootstrap -->
     <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -107,16 +109,15 @@ include 'error.php';
                       <div class="col-md-6 col-sm-6  form-group has-feedback">
 		                    <input type="text" id="first-name" required="required" class="form-control " name="phone">
                         <span class="fa fa-phone form-control-feedback right" aria-hidden="true"></span>
+                        <select id='testSelect1' multiple>
+	<option value='1'>Item 1</option>
+	<option value='2' selected>Item 2</option>
+	<option value='3' selected>Item 3</option>
+	<option value='4'>Item 4</option>
+	<option value='5'>Item 5</option>
+</select>
                         </div>
 										</div>
-                    <select name="ingredients[]" id="ingredients" multiple="multiple">
-    <option value="cheese">Cheese</option>
-    <option value="tomatoes">Tomatoes</option>
-    <option value="mozarella">Mozzarella</option>
-    <option value="mushrooms">Mushrooms</option>
-    <option value="pepperoni">Pepperoni</option>
-    <option value="onions">Onions</option>
-</select>
   									</form>
   								</div>
   							</div>
@@ -127,12 +128,18 @@ include 'error.php';
       </div>
     </div>
 
+<script type="text/javascript" charset="utf-8">
+document.multiselect('#testSelect1')
+  .setCheckBoxClick("checkboxAll", function(target, args) {
+    console.log("Checkbox 'Select All' was clicked and got value ", args.checked);
+  })
+  .setCheckBoxClick("1", function(target, args) {
+    console.log("Checkbox for item with value '1' was clicked and got value ", args.checked);
+  });
+
+
+</script>
     <!-- jQuery -->
-    <script  type="text/javascript" charset="utf-8">
-    $(document).ready(function() {
-            $('#ingredients').multiselect();
-        });
-    </script>
     <script src="../vendors/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap -->
     <script src="../vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
