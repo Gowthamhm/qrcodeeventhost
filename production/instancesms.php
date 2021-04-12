@@ -115,7 +115,7 @@ include 'error.php';
 $query = mysqli_query($conn, 'select * from qrcode');
 while($row = $query->fetch_assoc()){
   ?>
-<option value=<?php echo $row['number'];><?php echo $row['number']; ?></option>
+<option value=<?php echo $row['number'];><?php echo $row['number'];</option>
 <?php
 }
   ?>
