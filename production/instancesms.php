@@ -146,9 +146,13 @@ document.multiselect('#testSelect1')
     console.log("Checkbox for item with value '1' was clicked and got value ", args.checked);
   });
 var count = <?php echo $count;?>;
-alert(count);
+for (var i = 1; i <= count; i++) {
+  if(document.querySelector("#testSelect1_itemList > ul > li:nth-child(i)").className = "active"){
+console.log(document.querySelector("#testSelect1_itemList > ul > li:nth-child(i)").innerText);
+document.getElementById("phone").innerHTML = document.querySelector("#testSelect1_itemList > ul > li:nth-child(i)").innerText;
+}
+}
 </script>
-// document.querySelector("#testSelect1_itemList > ul > li.active > label > span").textContent
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
     <!-- jQuery -->
