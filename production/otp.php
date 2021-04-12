@@ -1,5 +1,5 @@
 <?php
-include 'config.php';
+include 'connection.php';
 include 'error.php';
 
 if (isset($_POST['reset'])) {
