@@ -110,11 +110,12 @@ include 'error.php';
 		                    <input type="text" id="phone" required="required" class="form-control " name="phone">
                         <span class="fa fa-phone form-control-feedback right" aria-hidden="true"></span>
                         <select id='testSelect1' class="form-control "  name="phone_number" multiple>
+                        <option value="selectAll">Select All </option>
                         <?php
                 $sql ="SELECT * FROM `qrcode`";
                 $result = $conn->query($sql);
                 $count = $result->num_rows;
-                echo $count;
+                // echo $count;
                 if ($result->num_rows > 0) {
                   // output data of each row
                   while($row = $result->fetch_assoc()) {
