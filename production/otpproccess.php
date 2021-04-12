@@ -33,10 +33,6 @@ include 'session.php';
                           <div class="card-body">
                               <h4 class="card-title">OTP</h4>
                               <form method="POST" class="my-login-validation" action="otpprocess.php" novalidate="">
-//  <div class="form-group">
-//     <label for="otp">OTP</label>
-//     <input type="text" class="form-control" name="otp" value="">
-// </div>
 <div class="form-group">
     <label for="otp">OTP</label>
     <input id="otp" type="text" class="form-control" name="otp" value="" required autofocus>
@@ -46,14 +42,14 @@ include 'session.php';
 </div>
 <div class="form-group">
     <label for="name">User Name</label>
-    <input id="name" type="text" class="form-control" name="username" value=<?php echo $_SESSION['forgot_username'];?> required autofocus>
+    <input id="name" type="text" class="form-control" name="username" value='<?php echo $_SESSION['forgot_username'];?>' autofocus>
     <div class="invalid-feedback">
         Username is invalid
     </div>
 </div>
 <div class="form-group">
     <label for="email">User Name</label>
-    <input id="email" type="text" class="form-control" name="email" value=<?php echo $_SESSION['forgot_email'];?> required autofocus>
+    <input id="email" type="text" class="form-control" name="email" value='<?php echo $_SESSION['forgot_email'];?>' required autofocus>
     <div class="invalid-feedback">
       Email is invalid
     </div>
@@ -61,14 +57,14 @@ include 'session.php';
 
 <div class="form-group">
     <label for="password">Password</label>
-    <input id="password" type="text" class="form-control" name="number" value=<?php echo $_SESSION['new_password'];?> required autofocus>
+    <input id="password" type="text" class="form-control" name="number" value='<?php echo $_SESSION['new_password'];?>' required autofocus>
     <div class="invalid-feedback">
       Password is invalid
     </div>
 </div>
 <div class="form-group">
     <label for="number">Phone Number</label>
-    <input id="phone" type="text" class="form-control" name="number" value=<?php echo $_SESSION['number'];?> required autofocus>
+    <input id="phone" type="text" class="form-control" name="number" value='<?php echo $_SESSION['number'];?>' required autofocus>
     <div class="invalid-feedback">
       Number is invalid
     </div>
