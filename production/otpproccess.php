@@ -32,7 +32,7 @@ include 'session.php';
                       <div class="card fat">
                           <div class="card-body">
                               <h4 class="card-title">OTP</h4>
-                              <form method="POST" class="my-login-validation" action="otpprocess.php" novalidate="">
+                              <form method="POST" class="my-login-validation" action="resetpassword.php" novalidate="">
 <div class="form-group">
     <label for="otp">OTP</label>
     <input id="otp" type="text" class="form-control" name="otp" value="" required autofocus>
@@ -57,7 +57,7 @@ include 'session.php';
 
 <div class="form-group">
     <label for="password">Password</label>
-    <input id="password" type="text" class="form-control" name="number" value='<?php echo $_SESSION['new_password'];?>' required autofocus>
+    <input id="password" type="text" class="form-control" name="newpassword" value='<?php echo $_SESSION['new_password'];?>' required autofocus>
     <div class="invalid-feedback">
       Password is invalid
     </div>
