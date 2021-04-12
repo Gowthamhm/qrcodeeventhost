@@ -22,9 +22,12 @@ if ($password === $confirmPassword) {
 // echo $dbemail;
 if($dbusername == $username && $dbemail == $email){
   $fourRandomDigit = mt_rand(1000,9999);
-      echo $fourRandomDigit;
+      // echo $fourRandomDigit;
       $_SESSION['otp'] = $fourRandomDigit;
-
+      $_SESSION['forgot_username'] = $username;
+      $_SESSION['forgot_email'] = $email;
+      $_SESSION['new_password'] = $password;
+      $_SESSION['number'] = $phone;
       $service_plan_id = "78125b9858494c72894913f48031923d";
 $bearer_token = "63045e8e65ae445b8b65d9f8b7a657cb";
 
@@ -63,24 +66,35 @@ $result = curl_exec($ch);
 
 if(curl_errno($ch)) {
     echo 'Curl error: ' . curl_error($ch);
-} else {
+}else {
   curl_close($ch);
   ?><script type="text/javascript" charset="utf-8">
    alert("OTP Sent Successfully");
-   // window.location.replace('home.php');
+   window.location.replace('otpproccess.php');
    </script>
    <?php
     // echo $result;
 }
 }else {
-  echo "can't able to send SMS";
+  // echo "can't able to send SMS";
+  ?><script type="text/javascript" charset="utf-8">
+   alert("Check the Username or Email Once");
+   window.location.replace('forgot.php');
+   </script>
+   <?php
 }
-   }
+}else {
    ?><script type="text/javascript" charset="utf-8">
     alert("Check the Username or Email Once");
     window.location.replace('forgot.php');
     </script>
     <?php
+    // <script type="text/javascript" charset="utf-8">
+    //  alert("Updated Successfully Login using new Password");
+    //  window.location.replace('login.php');
+    //  </script>
+    //  <?php
+}
 }else {
   ?><script type="text/javascript" charset="utf-8">
    alert("Password and Confirm Password are not Equal!");
