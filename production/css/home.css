@@ -33,3 +33,11 @@
 .cre:hover {
 	border-radius: 17px;
 }
+.inp{
+   color: white;
+   background: black;
+}
+.inp:hover{
+    color: #400040;
+    background:white;
+}
