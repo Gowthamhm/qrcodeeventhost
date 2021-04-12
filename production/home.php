@@ -130,19 +130,8 @@ include 'error.php';
               </div>
               <nav class="nav navbar-nav">
               <ul class=" navbar-right">
-                <li class="nav-item dropdown open" style="padding-left: 15px;">
-                  // <a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
-                  //   <img src="images/img.jpg" alt="">John Doe
-                  // </a>
+                <li class="nav-item open" style="padding-left: 15px;">
                   <a class="dropdown-item"  href="logout.php"><i class="fa fa-sign-out"></i> Log Out</a>
-                  // <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
-                  //   // <a class="dropdown-item"  href="javascript:;"> Profile</a>
-                  //     // <a class="dropdown-item"  href="javascript:;">
-                  //     //   <span class="badge bg-red pull-right">50%</span>
-                  //     //   <span>Settings</span>
-                  //     // </a>
-                  // // <a class="dropdown-item"  href="javascript:;">Help</a>
-                  // </div>
                 </li>
 
                 <li role="presentation" class="nav-item dropdown open">
