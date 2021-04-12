@@ -114,7 +114,9 @@ include 'error.php';
   <?php
 $query = mysqli_query($conn, 'select * from qrcode');
 while($row = $query->fetch_assoc()){
-  echo "<option value='$row[number]'>$row['number']</option>";
+  ?>
+<option value=<?php echo $row['number'];><?php echo $row['number']; ?></option>
+<?php
 }
   ?>
 </select><span class="fa fa-phone form-control-feedback right" aria-hidden="true"></span>
