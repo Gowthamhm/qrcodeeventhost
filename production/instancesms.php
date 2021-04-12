@@ -112,12 +112,12 @@ include 'error.php';
                     <div class="col-md-9 col-sm-9 ">
                       <select class="select2_single form-control" tabindex="-1">
                         <option></option>
-                        <option value="AK">Alaska</option>
-                        <option value="HI">Hawaii</option>
-                        <option value="CA">California</option>
-                        <option value="NV">Nevada</option>
-                        <option value="OR">Oregon</option>
-                        <option value="WA">Washington</option>
+                        <option value="AK"> <input type="checkbox" value=" ">Alaska</option>
+                        <option value="HI"><input type="checkbox" value=" ">Hawaii</option>
+                        <option value="CA"><input type="checkbox" value=" ">California</option>
+                        <option value="NV"><input type="checkbox" value=" ">Nevada</option>
+                        <option value="OR"><input type="checkbox" value=" ">Oregon</option>
+                        <option value="WA"><input type="checkbox" value=" ">Washington</option>
                         <option value="AZ">Arizona</option>
                         <option value="CO">Colorado</option>
                         <option value="ID">Idaho</option>
