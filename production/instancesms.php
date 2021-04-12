@@ -120,7 +120,7 @@ include 'error.php';
                   // output data of each row
                   while($row = $result->fetch_assoc()) {
                     ?>
-                    <option value="<?php echo $row['folder_name'];?>"><input type="checkbox" value="<?php echo $row['folder_name'];?>"><?php echo $row['number'];?></option>                  <?php
+                    <option value="<?php echo $row['number'];?>"><input type="checkbox" value="<?php echo $row['number'];?>"><?php echo $row['number'];?></option>                  <?php
                   }
                 }
                 ?>
