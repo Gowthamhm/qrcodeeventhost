@@ -65,7 +65,7 @@ include 'error.php';
                   </li>
                   <li><a href="instancesms.php"><i class="fa fa-comments-o"></i> Instance SMS </a>
                   </li>
-                  <li><a href="spreadsheet.php"><i class="fa fa-file-excel-o"></i> Google Sheets</a>
+                  <li><a href="spreadsheet.php?export=true"><i class="fa fa-file-excel-o"></i> Google Sheets</a>
                   </li>
                   </ul>
               </div>
