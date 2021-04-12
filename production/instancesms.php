@@ -113,6 +113,7 @@ include 'error.php';
                         <?php
                 $sql ="SELECT * FROM `qrcode`";
                 $result = $conn->query($sql);
+                $count = $result->num_rows;
                 if ($result->num_rows > 0) {
                   // output data of each row
                   while($row = $result->fetch_assoc()) {
@@ -143,28 +144,10 @@ document.multiselect('#testSelect1')
   .setCheckBoxClick("1", function(target, args) {
     console.log("Checkbox for item with value '1' was clicked and got value ", args.checked);
   });
-
-  // function myFunction(e) {
-  //     document.getElementById("phone").value = e.target.value
-  // }
-//
-//   $(':select').change(function() {
-//     var total = 0;
-//     $(':select:checked').each(function() {
-//         total = total + parseInt( $(this).val() );
-//     });
-//     console.log(total);
-// });
-// $(document).ready(function(){
-//     $("select.form-control").change(function(){
-//         var selectedCountry = $(this).children("option:selected").val();
-//         alert("You have selected the number - " + selectedCountry);
-//     });
-// });
-var e = document.getElementById("testSelect1");
-var strUser = e.options[e.selectedIndex].value;
-alert('strUser');
+var count = <?php echo $count;?>;
+alert('count');
 </script>
+// document.querySelector("#testSelect1_itemList > ul > li.active > label > span").textContent
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
     <!-- jQuery -->
