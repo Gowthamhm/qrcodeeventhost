@@ -96,7 +96,7 @@ include 'error.php';
           <div class="row">
           <div class="col-md-12">
           <button class="btn btn-round btn-success clf" data-toggle="collapse" data-target="#collapseOne" onclick="showf()" >
-              <i class="fas fa-folder pr-2" aria-hidden="true"></i>Create Folder</button>
+              <i class="fa fa-folder-o pr-2" aria-hidden="true"></i>Create Folder</button>
               <div class="collapse" id="collapseOne" style="display:none;">
                              <!--Panel-->
                              <div class="card card-body ml-1" style="background: none;width: 85%;">
@@ -114,9 +114,11 @@ include 'error.php';
                                  </div>
                              </form>
                          </div>
-                         <!--/.Panel-->
+
                      </div>
+                     <!-- /col-md-12 end -->
           </div>
+          <!-- /row end -->
         </div>
           <!-- /top tiles -->
         </div>
@@ -168,14 +170,6 @@ include 'error.php';
 
   </body>
   <script type="text/javascript" charset="utf-8">
-//   $('#collapseOne').on('shown.bs.collapse', function () {
-//     $(".fa").removeClass("fa-folder-o").addClass("fa-folder-open-o");
-// });
-//
-// $('#collapseOne').on('hidden.bs.collapse', function () {
-//     $(".fa").removeClass("fa-folder-open-o").addClass("fa-folder-o");
-// });
-
 function showf() {
     var x = document.getElementById("collapseOne");
     if (x.style.display === "none") {
