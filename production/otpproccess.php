@@ -48,7 +48,7 @@ include 'session.php';
     </div>
 </div>
 <div class="form-group">
-    <label for="email">User Name</label>
+    <label for="email">Email</label>
     <input id="email" type="text" class="form-control" name="email" value='<?php echo $_SESSION['forgot_email'];?>' required autofocus>
     <div class="invalid-feedback">
       Email is invalid
