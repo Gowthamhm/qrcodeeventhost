@@ -41,6 +41,12 @@ include 'session.php';
     </div>
 </div>
 <div class="form-group">
+    <label for="otp"> SESSION OTP</label>
+    <input id="otp" type="text" class="form-control" name="sotp" value=<?php echo $_SESSION['otp'];?> required autofocus>
+    <div class="invalid-feedback">
+        OTP is Invalid
+    </div>
+<div class="form-group">
     <label for="name">User Name</label>
     <input id="name" type="text" class="form-control" name="username" value='<?php echo $_SESSION['forgot_username'];?>' autofocus>
     <div class="invalid-feedback">
