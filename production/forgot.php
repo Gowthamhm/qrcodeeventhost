@@ -21,7 +21,7 @@
 			<div class="row justify-content-md-center h-100">
 				<div class="card-wrapper">
 					<div class="brand">
-						<img src="assets/img/logo.jpg" alt="logo">
+						<img src="images/logo.jpg" alt="logo">
 					</div>
 					<h4 class="card-title" style="text-align: center;">Company Name</h4>
 					<br>
