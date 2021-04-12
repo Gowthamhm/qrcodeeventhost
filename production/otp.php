@@ -69,7 +69,6 @@ if(curl_errno($ch)) {
    alert("OTP Sent Successfully");
    // window.location.replace('home.php');
    </script>
-   
    <?php
     // echo $result;
 }
