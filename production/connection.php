@@ -22,6 +22,6 @@ window.location.replace('login.php');
 </script>
 <?php
 }else{
-echo "Connected successfully";
+// echo "Connected successfully";
 }
 ?>
