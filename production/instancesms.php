@@ -111,8 +111,11 @@ include 'error.php';
                     <label class="control-label col-md-3 col-sm-3 ">Select Custom</label>
                     <div class="col-md-9 col-sm-9 ">
                       <select class="select2_single form-control" tabindex="-1">
-                        <option></option>
-<input type="checkbox" value=" "><option value="AK">Alaska</option>
+                      <option></option>
+<option><lable><input type="checkbox" value=" "></lable></option>
+<option><lable><input type="checkbox" value=" "></lable></option>
+<option><lable><input type="checkbox" value=" "></lable></option>
+<option value="AK">Alaska</option>
                         <input type="checkbox" value=" "><option value="HI">Hawaii</option>
                     <input type="checkbox" value=" ">    <option value="CA">California</option>
                     <input type="checkbox" value=" ">    <option value="NV">Nevada</option>
