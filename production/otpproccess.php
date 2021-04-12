@@ -40,41 +40,41 @@ include 'session.php';
         OTP is Invalid
     </div>
 </div>
-<div class="form-group">
-    <label for="otp"> SESSION OTP</label>
-    <input id="otp" type="text" class="form-control" name="sotp" value=<?php echo $_SESSION['otp'];?> required autofocus>
-    <div class="invalid-feedback">
+<!-- <div class="form-group">
+    <label for="otp"> SESSION OTP</label> -->
+    <input id="otp" type="hidden" class="form-control" name="sotp" value=<?php echo $_SESSION['otp'];?> required autofocus>
+    <!-- <div class="invalid-feedback">
         OTP is Invalid
-    </div>
-<div class="form-group">
-    <label for="name">User Name</label>
-    <input id="name" type="text" class="form-control" name="username" value='<?php echo $_SESSION['forgot_username'];?>' autofocus>
-    <div class="invalid-feedback">
+    </div> -->
+<!-- <div class="form-group">
+    <label for="name">User Name</label> -->
+    <input id="name" type="hidden" class="form-control" name="username" value='<?php echo $_SESSION['forgot_username'];?>' autofocus>
+    <!-- <div class="invalid-feedback">
         Username is invalid
     </div>
-</div>
-<div class="form-group">
-    <label for="email">Email</label>
-    <input id="email" type="text" class="form-control" name="email" value=<?php echo $_SESSION['forgot_email'];?> required autofocus>
-    <div class="invalid-feedback">
-      Email is invalid
-    </div>
-</div>
+</div> -->
+<!-- <div class="form-group"> -->
+    <!-- <label for="email">Email</label> -->
+    <input id="email" type="hidden" class="form-control" name="email" value=<?php echo $_SESSION['forgot_email'];?> required autofocus>
+    <!-- <div class="invalid-feedback"> -->
+      <!-- Email is invalid -->
+    <!-- </div> -->
+<!-- </div> -->
 
-<div class="form-group">
-    <label for="password">Password</label>
-    <input id="password" type="text" class="form-control" name="newpassword" value='<?php echo $_SESSION['new_password'];?>' required autofocus>
-    <div class="invalid-feedback">
-      Password is invalid
-    </div>
-</div>
-<div class="form-group">
-    <label for="number">Phone Number</label>
-    <input id="phone" type="text" class="form-control" name="number" value='<?php echo $_SESSION[number];?>' required autofocus>
-    <div class="invalid-feedback">
-      Number is invalid
-    </div>
-</div>
+<!-- <div class="form-group"> -->
+    <!-- <label for="password">Password</label> -->
+    <input id="password" type="hidden" class="form-control" name="newpassword" value='<?php echo $_SESSION['new_password'];?>' required autofocus>
+    <!-- <div class="invalid-feedback"> -->
+      <!-- Password is invalid -->
+    <!-- </div> -->
+<!-- </div> -->
+<!-- <div class="form-group"> -->
+    <!-- <label for="number">Phone Number</label> -->
+    <input id="phone" type="hidden" class="form-control" name="number" value='<?php echo $_SESSION[number];?>' required autofocus>
+    <!-- <div class="invalid-feedback"> -->
+      <!-- Number is invalid -->
+    <!-- </div> -->
+<!-- </div> -->
                                   <div class="form-group m-0">
                                       <input type="submit" name="otp"class="btn btn-primary btn-block" value="ReSet Password">
                                       </div>

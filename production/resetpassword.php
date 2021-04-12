@@ -12,7 +12,7 @@ $number =mysqli_real_escape_string($conn,$_POST['number']);
 
 $otp = mysqli_real_escape_string($conn,$_POST['eotp']);
 $sotp = mysqli_real_escape_string($conn,$_POST['sotp']);
-echo $username,$email,$password,$number,$otp,$sotp;
+// echo $username,$email,$password,$number,$otp,$sotp;
 if ($sotp == $otp) {
   $update = "UPDATE `users` SET `password`='".$password."' WHERE username='".$username."' and email_id='".$email."'";
     if($conn->query($update) === TRUE){
