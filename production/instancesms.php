@@ -109,14 +109,22 @@ include 'error.php';
 										</div>
                       <div class="form-group row">
                     <label class="control-label col-md-3 col-sm-3 ">Select Custom</label>
-                    <div class="col-md-9 col-sm-9 ">
-                      <select class="select2_single form-control" >
-                      <option></option>
-<lable><input type="checkbox" value=" "></lable>
-<lable><input type="checkbox" value=" "></lable>
-<lable><input type="checkbox" value=" "></lable>
-                      </select>
+                    <div class="col-md-9 col-sm-9 " onclick="show">
                     </div>
+                    <div>
+                    <?php
+                    $sql ="SELECT * FROM `folders`";
+                    $result = $conn->query($sql);
+                    if ($result->num_rows > 0) {
+                      // output data of each row
+                      while($row = $result->fetch_assoc()) {
+                    ?>
+                    <lable><input type="checkbox" value="<?php echo $row['number'];?>"><?php echo $row['number'];?></lable>
+                    <?php
+                  }
+                }
+                    ?>
+                  </div>
                   </div>
                     <input type="submit" name="send" Value="Send">
   									</form>
