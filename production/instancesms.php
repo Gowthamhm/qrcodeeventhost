@@ -103,23 +103,45 @@ include 'error.php';
   								<div class="x_content">
   									<br />
   									<form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" method="post" action="sms.php">
-                    <div class="item form-group">
-											<label class="col-form-label col-md-3 col-sm-3 label-align" for="number">Phone Number<span class="required">*</span>
-											</label>
+                    <div class="col-md-6 col-sm-6  form-group has-feedback">
+											<input type="tel" class="form-control" id="inputSuccess5" placeholder="Phone">
+											<span class="fa fa-phone form-control-feedback right" aria-hidden="true"></span>
+										</div>
                       <div class="form-group row">
-  											<label class="control-label col-md-3 col-sm-3 ">Select Multiple</label>
-  											<div class="col-md-9 col-sm-9 ">
-  												<select class="select2_multiple form-control" multiple="multiple">
-  													<option>Choose option</option>
-  													<option>Option one</option>
-  													<option>Option two</option>
-  													<option>Option three</option>
-  													<option>Option four</option>
-  													<option>Option five</option>
-  													<option>Option six</option>
-  												</select>
-  											</div>
-  										</div>
+                    <label class="control-label col-md-3 col-sm-3 ">Select Custom</label>
+                    <div class="col-md-9 col-sm-9 ">
+                      <select class="select2_single form-control" tabindex="-1">
+                        <option></option>
+                        <option value="AK">Alaska</option>
+                        <option value="HI">Hawaii</option>
+                        <option value="CA">California</option>
+                        <option value="NV">Nevada</option>
+                        <option value="OR">Oregon</option>
+                        <option value="WA">Washington</option>
+                        <option value="AZ">Arizona</option>
+                        <option value="CO">Colorado</option>
+                        <option value="ID">Idaho</option>
+                        <option value="MT">Montana</option>
+                        <option value="NE">Nebraska</option>
+                        <option value="NM">New Mexico</option>
+                        <option value="ND">North Dakota</option>
+                        <option value="UT">Utah</option>
+                        <option value="WY">Wyoming</option>
+                        <option value="AR">Arkansas</option>
+                        <option value="IL">Illinois</option>
+                        <option value="IA">Iowa</option>
+                        <option value="KS">Kansas</option>
+                        <option value="KY">Kentucky</option>
+                        <option value="LA">Louisiana</option>
+                        <option value="MN">Minnesota</option>
+                        <option value="MS">Mississippi</option>
+                        <option value="MO">Missouri</option>
+                        <option value="OK">Oklahoma</option>
+                        <option value="SD">South Dakota</option>
+                        <option value="TX">Texas</option>
+                      </select>
+                    </div>
+                  </div>
                     <input type="submit" name="send" Value="Send">
   									</form>
   								</div>
