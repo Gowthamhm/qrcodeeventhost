@@ -1,5 +1,5 @@
 <?php
-include 'config.php';
+include 'connection.php';
 include 'session.php';
 include 'error.php';
 
