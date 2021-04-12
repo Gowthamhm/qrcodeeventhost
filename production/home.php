@@ -41,16 +41,13 @@ include 'error.php';
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="home.php" class="site_title"><img src="images/logo.jpg" > <span>Company Name</span></a>
+              <a href="home.php" class="site_title"><img src="images/logo.jpg" width="10px" height="10px" style="	border-radius: 50%;"> <span>Company Name</span></a>
             </div>
 
             <div class="clearfix"></div>
 
             <!-- menu profile quick info -->
             <div class="profile clearfix">
-              <div class="profile_pic">
-                <img src="images/logo.jpg" alt="..." class="img-circle profile_img">
-              </div>
               <div class="profile_info">
                 <span>Welcome,</span>
                 <h2><?php echo $_SESSION['active_user'];?></h2>
