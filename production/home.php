@@ -1,6 +1,6 @@
 <?php
 include 'session.php';
-include 'config.php';
+include 'connection.php';
 include 'error.php';
 ?>
 <!DOCTYPE html>
@@ -99,7 +99,7 @@ include 'error.php';
               <i class="fa fa-folder-o pr-2" aria-hidden="true"></i>Create Folder</button>
               <div class="collapse" id="collapseOne" style="display:none;">
                              <!--Panel-->
-                             <div class="card card-body ml-1" style="background: none; width:auto;">
+                             <div class="card card-body ml-1" style="background: none;width:fit-content;">
                                  <h4 class="card-title">Create Folder</h4>
                                  <form action="CreateFolder.php" method="post">
                                      <div class="form-group row">
@@ -119,6 +119,24 @@ include 'error.php';
                      <!-- /col-md-12 end -->
           </div>
           <!-- /row end -->
+        </div>
+        <div class="row">
+        <?php
+$sql ="SELECT * FROM `folders`";
+$result = $conn->query($sql);
+if ($result->num_rows > 0) {
+  // output data of each row
+  while($row = $result->fetch_assoc()) {
+    ?>                 <div class="col-md-6 col-lg-4" >
+    <form method="post" action="folder.php" class="btn btn-default fol" >
+        <input type="hidden" name="foldername" value="<?php echo $row['folder_name'];?>">
+        <i class="fa fa-folder-open"> <input type="submit" class="btn inp" name="view" value="<?php echo $row['folder_name'];?>"></i>
+    </form>
+</div>
+    <?php
+  }
+}
+?>
         </div>
           <!-- /top tiles -->
         </div>
