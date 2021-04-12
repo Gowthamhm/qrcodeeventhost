@@ -144,9 +144,18 @@ document.multiselect('#testSelect1')
     console.log("Checkbox for item with value '1' was clicked and got value ", args.checked);
   });
 
-  function myFunction(e) {
-      document.getElementById("phone").value = e.target.value
-  }
+  // function myFunction(e) {
+  //     document.getElementById("phone").value = e.target.value
+  // }
+
+  $(':select').change(function() {
+    var total = 0;
+    $(':select:checked').each(function() {
+        total = total + parseInt( $(this).val() );
+    });
+    console.log(total);
+});
+
 </script>
     <!-- jQuery -->
     <script src="../vendors/jquery/dist/jquery.min.js"></script>
