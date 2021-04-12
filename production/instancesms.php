@@ -110,7 +110,7 @@ include 'error.php';
 		                    <input type="text" id="phone" required="required" class="form-control " name="phone">
                         <span class="fa fa-phone form-control-feedback right" aria-hidden="true"></span>
                         <select id='testSelect1' class="form-control "  name="phone_number" multiple>
-                        <option value="selectAll">Select All </option>
+                        <option value="selectAll"><input type="checkbox"> Select All </option>
                         <?php
                 $sql ="SELECT * FROM `qrcode`";
                 $result = $conn->query($sql);
@@ -120,7 +120,7 @@ include 'error.php';
                   // output data of each row
                   while($row = $result->fetch_assoc()) {
                     ?>
-                    <option value="<?php echo $row['folder_name'];?>"><?php echo $row['number'];?></option>                  <?php
+                    <option value="<?php echo $row['folder_name'];?>"><input type="checkbox"><?php echo $row['number'];?></option>                  <?php
                   }
                 }
                 ?>
