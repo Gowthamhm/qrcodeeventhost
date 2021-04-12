@@ -114,6 +114,7 @@ include 'error.php';
                 $sql ="SELECT * FROM `qrcode`";
                 $result = $conn->query($sql);
                 $count = $result->num_rows;
+                echo $count;
                 if ($result->num_rows > 0) {
                   // output data of each row
                   while($row = $result->fetch_assoc()) {
@@ -145,7 +146,7 @@ document.multiselect('#testSelect1')
     console.log("Checkbox for item with value '1' was clicked and got value ", args.checked);
   });
 var count = <?php echo $count;?>;
-alert('count');
+alert(count);
 </script>
 // document.querySelector("#testSelect1_itemList > ul > li.active > label > span").textContent
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
