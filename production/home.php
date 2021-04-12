@@ -130,7 +130,7 @@ if ($result->num_rows > 0) {
     ?>                 <div class="col-md-6 col-lg-4" >
     <form method="post" action="folder.php" class="btn btn-default fol" >
         <input type="hidden" name="foldername" value="<?php echo $row['folder_name'];?>">
-        <i class="fa fa-folder-open "> <input type="submit" class="btn btn-round btn-primary inp" name="view" value="<?php echo $row['folder_name'];?>"></i>
+        <i class="fa fa-folder-open btn btn-round btn-primary"> <input type="submit" class="btn btn-round btn-primary inp" name="view" value="<?php echo $row['folder_name'];?>"></i>
     </form>
 </div>
     <?php
