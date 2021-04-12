@@ -109,7 +109,7 @@ include 'error.php';
                       <div class="col-md-6 col-sm-6  form-group has-feedback">
 		                    <input type="text" id="phone" required="required" class="form-control " name="phone">
                         <span class="fa fa-phone form-control-feedback right" aria-hidden="true"></span>
-                        <select id='testSelect1'class="form-control " onchange="myFunction(event)" name="phone_number" multiple>
+                        <select id='testSelect1' class="form-control "  name="phone_number" multiple>
                         <?php
                 $sql ="SELECT * FROM `qrcode`";
                 $result = $conn->query($sql);
@@ -137,23 +137,6 @@ include 'error.php';
       </div>
     </div>
 
-<script type="text/javascript" charset="utf-8">
-document.multiselect('#testSelect1')
-  .setCheckBoxClick("checkboxAll", function(target, args) {
-    console.log("Checkbox 'Select All' was clicked and got value ", args.checked);
-  })
-  .setCheckBoxClick("1", function(target, args) {
-    console.log("Checkbox for item with value '1' was clicked and got value ", args.checked);
-  });
-var count = <?php echo $count;?>;
-for (var i = 1; i <= count; i++) {
-  if(document.querySelector("#testSelect1_itemList > ul > li:nth-child(i)").className = "active"){
-console.log(document.querySelector("#testSelect1_itemList > ul > li:nth-child(i)").innerText);
-document.getElementById("phone").innerHTML = document.querySelector("#testSelect1_itemList > ul > li:nth-child(i)").innerText;
-}
-}
-</script>
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
     <!-- jQuery -->
     <script src="../vendors/jquery/dist/jquery.min.js"></script>
