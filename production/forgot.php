@@ -31,7 +31,7 @@
 							<form method="POST" class="my-login-validation" action="resetpassword.php" novalidate="">
 								<div class="form-group">
 									<label for="name">User Name</label>
-									<input id="email" type="text" class="form-control" name="username" value="" required autofocus>
+									<input id="name" type="text" class="form-control" name="username" value="" required autofocus>
 									<div class="invalid-feedback">
 										Username is invalid
 									</div>
@@ -61,7 +61,7 @@
 											Forgot Password?
 										</a> -->
 									</label>
-									<input id="password" type="password" class="form-control" name="confirmpassword" required data-eye>
+									<input id="confpassword" type="password" class="form-control" name="confirmpassword" required data-eye>
 								    <div class="invalid-feedback">
 								    	Password is required
 							    	</div>
