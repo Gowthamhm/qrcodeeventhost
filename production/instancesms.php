@@ -162,7 +162,7 @@ document.multiselect('#testSelect1')
 //     });
 // });
 var e = document.getElementById("testSelect1");
-var strUser = e.options[e.selectedIndex].text;
+var strUser = e.options[e.selectedIndex].value;
 alert('strUser');
 </script>
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
