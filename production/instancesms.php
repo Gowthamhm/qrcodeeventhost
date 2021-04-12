@@ -102,14 +102,14 @@ include 'error.php';
   							<div class="x_panel">
   								<div class="x_content">
   									<br />
-  									<form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+  									<form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" method="post" action="sms.php">
                     <div class="item form-group">
 											<label class="col-form-label col-md-3 col-sm-3 label-align" for="number">Phone Number<span class="required">*</span>
 											</label>
                       <div class="col-md-6 col-sm-6  form-group has-feedback">
 		                    <input type="text" id="phone" required="required" class="form-control " name="phone">
                         <span class="fa fa-phone form-control-feedback right" aria-hidden="true"></span>
-                        <select id='testSelect1'class="form-control " onchange="myFunction(event)" multiple>
+                        <select id='testSelect1'class="form-control " onchange="myFunction(event)" name="phone_number" multiple>
                         <?php
                 $sql ="SELECT * FROM `qrcode`";
                 $result = $conn->query($sql);
@@ -121,9 +121,10 @@ include 'error.php';
                   }
                 }
                 ?>
-</select><span class="fa fa-phone form-control-feedback right" aria-hidden="true"></span>
+                </select><span class="fa fa-phone form-control-feedback right" aria-hidden="true"></span>
                         </div>
 										</div>
+                    <input type="submit" name="send" Value="Send">
   									</form>
   								</div>
   							</div>
