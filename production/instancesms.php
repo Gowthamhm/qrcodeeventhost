@@ -110,7 +110,7 @@ include 'error.php';
                       <div class="form-group row">
                     <label class="control-label col-md-3 col-sm-3 ">Select Custom</label>
                     <div class="col-md-9 col-sm-9 ">
-                      <select class="select2_single form-control" tabindex="-1">
+                      <select class="select2_single form-control" >
                       <option></option>
 <lable><input type="checkbox" value=" "></lable>
 <lable><input type="checkbox" value=" "></lable>
