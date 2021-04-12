@@ -110,11 +110,13 @@ include 'error.php';
 		                    <input type="text" id="first-name" required="required" class="form-control " name="phone">
                         <span class="fa fa-phone form-control-feedback right" aria-hidden="true"></span>
                         <select id='testSelect1'class="form-control "  multiple>
-	<option value='1'>Item 1</option>
-	<option value='2'>Item 2</option>
-	<option value='3'>Item 3</option>
-	<option value='4'>Item 4</option>
-	<option value='5'>Item 5</option>
+
+  <?php
+$query = mysqli_query($conn, 'select * from qrcode');
+while($row = $query->fetch_assoc()){
+  echo "<option value='$row[number]'>'$row['number']'</option>";
+}
+  ?>
 </select><span class="fa fa-phone form-control-feedback right" aria-hidden="true"></span>
                         </div>
 										</div>
