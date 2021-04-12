@@ -147,16 +147,23 @@ document.multiselect('#testSelect1')
   // function myFunction(e) {
   //     document.getElementById("phone").value = e.target.value
   // }
-
-  $(':select').change(function() {
-    var total = 0;
-    $(':select:checked').each(function() {
-        total = total + parseInt( $(this).val() );
+//
+//   $(':select').change(function() {
+//     var total = 0;
+//     $(':select:checked').each(function() {
+//         total = total + parseInt( $(this).val() );
+//     });
+//     console.log(total);
+// });
+$(document).ready(function(){
+    $("select.form-control").change(function(){
+        var selectedCountry = $(this).children("option:selected").val();
+        alert("You have selected the number - " + selectedCountry);
     });
-    console.log(total);
 });
-
 </script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
     <!-- jQuery -->
     <script src="../vendors/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap -->
