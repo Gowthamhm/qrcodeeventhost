@@ -107,9 +107,9 @@ include 'error.php';
 											<label class="col-form-label col-md-3 col-sm-3 label-align" for="number">Phone Number<span class="required">*</span>
 											</label>
                       <div class="col-md-6 col-sm-6  form-group has-feedback">
-		                    <input type="text" id="first-name" required="required" class="form-control " name="phone">
+		                    <input type="text" id="phone" required="required" class="form-control " name="phone">
                         <span class="fa fa-phone form-control-feedback right" aria-hidden="true"></span>
-                        <select id='testSelect1'class="form-control "  multiple>
+                        <select id='testSelect1'class="form-control " onchange="myFunction(event)" multiple>
                         <?php
                 $sql ="SELECT * FROM `qrcode`";
                 $result = $conn->query($sql);
@@ -143,7 +143,9 @@ document.multiselect('#testSelect1')
     console.log("Checkbox for item with value '1' was clicked and got value ", args.checked);
   });
 
-
+  function myFunction(e) {
+      document.getElementById("phone").value = e.target.value
+  }
 </script>
     <!-- jQuery -->
     <script src="../vendors/jquery/dist/jquery.min.js"></script>
