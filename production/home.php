@@ -95,7 +95,27 @@ include 'error.php';
           <!-- top tiles -->
           <div class="row">
           <div class="col-md-12">
-            
+          <button class="btn btn-round btn-success clf" data-toggle="collapse" data-target="#collapseOne" onclick="showf()" >
+              <i class="fas fa-folder pr-2" aria-hidden="true"></i>Create Folder</button>
+              <div class="collapse" id="collapseOne" style="display:none;">
+                             <!--Panel-->
+                             <div class="card card-body ml-1" style="background: none;width: 85%;">
+                                 <h4 class="card-title">Create Folder</h4>
+                                 <form action="CreateFolder.php" method="post">
+                                     <div class="form-group row">
+                                         <label for="inputPassword" class="col-sm-10 col-form-label">Folder Name</label>
+                                         <div class="col-sm-10">
+                                             <input type="text" class="form-control"  name="folder" placeholder="Enter Folder Name" required="true">
+                                             <input type="hidden" class="form-control"  name="username" value="<?php echo $_SESSION['active_user']?>">
+                                     </div>
+                                 </div>
+                                 <div class="flex-row">
+                                     <input type="submit" class="btn btn-success cre"value="Create" name="create">
+                                 </div>
+                             </form>
+                         </div>
+                         <!--/.Panel-->
+                     </div>
           </div>
         </div>
           <!-- /top tiles -->
@@ -147,4 +167,22 @@ include 'error.php';
     <script src="../build/js/custom.min.js"></script>
 
   </body>
+  <script type="text/javascript" charset="utf-8">
+  $('#collapseOne').on('shown.bs.collapse', function () {
+    $(".fa").removeClass("fa-folder-o").addClass("fa-folder-open-o");
+});
+
+$('#collapseOne').on('hidden.bs.collapse', function () {
+    $(".fa").removeClass("fa-folder-open-o").addClass("fa-folder-o");
+});
+
+function showf() {
+    var x = document.getElementById("collapseOne");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
 </html>

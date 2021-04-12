@@ -1,0 +1,25 @@
+.clf {
+	border: 3px solid whitesmoke;
+	background-color: midnightblue;
+	color: white;
+	border-radius: 17px;
+}
+.clf:hover {
+	border: 3px solid #400040;
+	background-color: #ffffff;
+	color: #400040;
+	border-radius: 17px;
+}
+/* .clfa {
+	border: 3px solid whitesmoke;
+	background-color: green;
+	color: white;
+	border-radius: 17px;
+}
+
+.clfa:hover {
+	border: 3px solid #400040;
+	background-color: #ffffff;
+	color: #400040;
+	border-radius: 17px;
+} */
