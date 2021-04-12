@@ -106,27 +106,20 @@ include 'error.php';
                     <div class="item form-group">
 											<label class="col-form-label col-md-3 col-sm-3 label-align" for="number">Phone Number<span class="required">*</span>
 											</label>
-                      <div class="col-md-6 col-sm-6  form-group has-feedback">
-		                    <input type="text" id="phone" required="required" class="form-control " name="phone">
-                        <span class="fa fa-phone form-control-feedback right" aria-hidden="true"></span>
-                        <select id='testSelect1' class="form-control "  name="phone_number" multiple>
-                        <option value="selectAll"><input type="checkbox"> Select All </option>
-                        <?php
-                $sql ="SELECT * FROM `qrcode`";
-                $result = $conn->query($sql);
-                $count = $result->num_rows;
-                // echo $count;
-                if ($result->num_rows > 0) {
-                  // output data of each row
-                  while($row = $result->fetch_assoc()) {
-                    ?>
-                    <option value="<?php echo $row['number'];?>"><input type="checkbox" value="<?php echo $row['number'];?>"><?php echo $row['number'];?></option>                  <?php
-                  }
-                }
-                ?>
-                </select><span class="fa fa-phone form-control-feedback right" aria-hidden="true"></span>
-                        </div>
-										</div>
+                      <div class="form-group row">
+  											<label class="control-label col-md-3 col-sm-3 ">Select Multiple</label>
+  											<div class="col-md-9 col-sm-9 ">
+  												<select class="select2_multiple form-control" multiple="multiple">
+  													<option>Choose option</option>
+  													<option>Option one</option>
+  													<option>Option two</option>
+  													<option>Option three</option>
+  													<option>Option four</option>
+  													<option>Option five</option>
+  													<option>Option six</option>
+  												</select>
+  											</div>
+  										</div>
                     <input type="submit" name="send" Value="Send">
   									</form>
   								</div>
