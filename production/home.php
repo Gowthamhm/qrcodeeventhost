@@ -67,9 +67,9 @@ include 'error.php';
                 <ul class="nav side-menu">
                   <li><a href="home.php" ><i class="fa fa-home"></i> Home </a>
                   </li>
-                  <li><a href="instancesms.php"><i class="fa-comments-o"></i> Instance SMS </a>
+                  <li><a href="instancesms.php"><i class="fa fa-comments-o"></i> Instance SMS </a>
                   </li>
-                  <li><a href="spreadsheet.php"><i class="fa-file-excel-o"></i> Google Sheets</a>
+                  <li><a href="spreadsheet.php"><i class="fa fa-file-excel-o"></i> Google Sheets</a>
                   </li>
                   </ul>
               </div>
