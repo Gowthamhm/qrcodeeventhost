@@ -103,6 +103,14 @@ include 'error.php';
   <input type="tel" class="form-control" id="inputSuccess5" placeholder="Phone">
   <span class="fa fa-phone form-control-feedback right" aria-hidden="true"></span>
 </div>
+<div class="item form-group">
+											<label class="col-form-label col-md-3 col-sm-3 label-align" for="number">Phone Number<span class="required">*</span>
+											</label>
+                      <div class="col-md-6 col-sm-6  form-group has-feedback">
+		<input type="text" id="first-name" required="required" class="form-control " name="phone">
+    <span class="fa fa-phone form-control-feedback right" aria-hidden="true"></span>
+  </div>
+										</div>
   									</form>
   								</div>
   							</div>
