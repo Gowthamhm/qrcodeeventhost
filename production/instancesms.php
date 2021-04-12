@@ -109,13 +109,13 @@ include 'error.php';
                       <div class="col-md-6 col-sm-6  form-group has-feedback">
 		                    <input type="text" id="first-name" required="required" class="form-control " name="phone">
                         <span class="fa fa-phone form-control-feedback right" aria-hidden="true"></span>
-                        <select id='testSelect1' multiple>
+                        <select id='testSelect1'class="form-control "  multiple>
 	<option value='1'>Item 1</option>
-	<option value='2' selected>Item 2</option>
-	<option value='3' selected>Item 3</option>
+	<option value='2'>Item 2</option>
+	<option value='3'>Item 3</option>
 	<option value='4'>Item 4</option>
 	<option value='5'>Item 5</option>
-</select>
+</select><span class="fa fa-phone form-control-feedback right" aria-hidden="true"></span>
                         </div>
 										</div>
   									</form>
