@@ -24,15 +24,16 @@ $recipient_phone_numbers = [$recipient_phone_numbers];
 for ($i=0; $i < count($recipient_phone_numbers) ; $i++) {
 $number = "91".$recipient_phone_numbers[$i];
 echo $number;
+echo $text;
 // Set necessary fields to be JSON encoded
 $content = [
 'to' => $number,
 'from' => $send_from,
 'body' => $text
 ];
-
+echo $content;
 $data = json_encode($content);
-
+echo $data;
 $ch = curl_init("https://us.sms.api.sinch.com/xms/v1/{$service_plan_id}/batches");
 curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
 curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_BEARER);
@@ -52,7 +53,7 @@ alert("Text Can't able Sent Successfully");
 <?php
 }else {
 curl_close($ch);
-// echo $result;
+echo $result;
 ?><script type="text/javascript" charset="utf-8">
 alert("Text Sent Successfully");
 // window.location.replace('instancesms.php');
