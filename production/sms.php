@@ -107,9 +107,13 @@ include 'error.php';
   				<div class="">
   					<div class="clearfix"></div>
   					<div class="col-md-12 col-sm-12 ">
-              <div id="editor">
-
-  				</div>
+              <form class="" action="send_sms.php" id="qrsubmit" method="post">
+                <input type="text" name="numbers" value="<?php echo $numbers;?>">
+                <textarea name="editor1" id="editor1" rows="10" cols="80">
+               </textarea>
+                <input type="text" name="text"  id="hiddentext" value="">
+                <input type="submit" name="sendsms"  onclick="submitForm()" value="Send Message">
+              </form>
   					</div>
 
   				</div>
@@ -120,6 +124,23 @@ include 'error.php';
     </div>
 <script type="text/javascript">
 	initSample();
+  CKEDITOR.replace( 'editor1' );
+function showeditor() {
+             var x = document.getElementById("collapseOne");
+             if (x.style.display === "none") {
+                 x.style.display = "block";
+             } else {
+                 x.style.display = "none";
+             }
+         }
+         function submitForm() {
+              // $("#hiddentext").val($("").html());
+              var data = CKEDITOR.instances.editor1.getData();
+              console.log(data);
+              document.getElementById("hiddentext").value=data;
+              document.getElementById("qrsubmit").submit();
+              // document.getElementById("qrsubmit").submit();
+          }
 </script>
     <!-- jQuery -->
     <script src="../vendors/jquery/dist/jquery.min.js"></script>
