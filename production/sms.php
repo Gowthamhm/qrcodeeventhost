@@ -21,12 +21,12 @@ include 'error.php';
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" href="images/logo.ico" type="image/ico" />
-  <script src="ckeditor.js"></script>
-  <script src="js/sample.js"></script>
-  <link rel="stylesheet" href="css/samples.css">
-  <link rel="stylesheet" href="toolbarconfigurator/lib/codemirror/neo.css">
 
     <title>Message</title>
+    <script src="ckeditor.js"></script>
+    <script src="js/sample.js"></script>
+    <link rel="stylesheet" href="css/samples.css">
+    <link rel="stylesheet" href="toolbarconfigurator/lib/codemirror/neo.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <!-- Bootstrap -->
     <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -103,16 +103,24 @@ include 'error.php';
         </div>
         <!-- /top navigation -->
         <!-- page content -->
-        <div id="editor">
+  			<div class="right_col" role="main">
+  				<div class="">
+  					<div class="clearfix"></div>
+  					<div class="col-md-12 col-sm-12 ">
+              <div id="editor">
 
-        				</div>
-      	<!-- /page content -->
+  				</div>
+  					</div>
+
+  				</div>
+  			</div>
+  			<!-- /page content -->
 
       </div>
     </div>
-    <script>
-    	initSample();
-    </script>
+<script type="text/javascript">
+	initSample();
+</script>
     <!-- jQuery -->
     <script src="../vendors/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap -->
