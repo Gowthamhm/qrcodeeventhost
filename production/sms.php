@@ -29,11 +29,11 @@ include 'error.php';
     <link rel="stylesheet" href="samples/toolbarconfigurator/lib/codemirror/neo.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <!-- Bootstrap -->
-    <!-- <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
-    <!-- <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet"> -->
+    <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- NProgress -->
-    <!-- <link href="../vendors/nprogress/nprogress.css" rel="stylesheet"> -->
+    <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
     <!-- iCheck -->
     <!-- <link href="../vendors/iCheck/skins/flat/green.css" rel="stylesheet"> -->
 
@@ -45,7 +45,7 @@ include 'error.php';
     <!-- <link href="../vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet"> -->
 
     <!-- Custom Theme Style -->
-    <!-- <link href="../build/css/custom.min.css" rel="stylesheet"> -->
+    <link href="../build/css/custom.min.css" rel="stylesheet">
   </head>
 
   <body class="nav-md">
