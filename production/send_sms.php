@@ -48,7 +48,7 @@ echo 'Curl error: ' . curl_error($ch);
 curl_close($ch);
 ?><script type="text/javascript" charset="utf-8">
 alert("Text Sent Successfully");
-window.location.replace('instancesms.php');
+// window.location.replace('instancesms.php');
 </script>
 <?php
 // echo $result;
