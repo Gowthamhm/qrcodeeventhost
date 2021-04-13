@@ -2,12 +2,8 @@
 if(isset($_POST['send'])){
   $numbers = $_POST['number'];
   echo $numbers;
-
-  echo $_POST['checkall'];
 }
 else{
-    echo $_POST['checkall'];
-  echo $_POST['number'];
 }
 ?>
 <?php
@@ -108,22 +104,12 @@ include 'error.php';
   					<div class="col-md-12 col-sm-12 ">
   						<div class="x_panel">
   							<div class="x_title">
-  								<h2>Text areas<small>Sessions</small></h2>
-  								<ul class="nav navbar-right panel_toolbox">
-  									<li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-  									</li>
-  									<li class="dropdown">
-  										<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-  										<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-  											<a class="dropdown-item" href="#">Settings 1</a>
-  											<a class="dropdown-item" href="#">Settings 2</a>
-  										</div>
-  									</li>
-  									<li><a class="close-link"><i class="fa fa-close"></i></a>
-  									</li>
-  								</ul>
+  								<h2>Enter the Message<small>Sessions</small></h2>
   								<div class="clearfix"></div>
   							</div>
+                <div class="">
+                  <input type="text" name="number" value="<?php echo $numbers;?>">
+                </div>
   							<div class="x_content">
   								<div id="alerts"></div>
   								<div class="btn-toolbar editor" data-role="editor-toolbar" data-target="#editor-one">
@@ -202,13 +188,6 @@ include 'error.php';
   								<br />
 
   								<div class="ln_solid"></div>
-
-  								<div class="form-group">
-  									<label class="control-label col-md-3 col-sm-3 ">Resizable Text area</label>
-  									<div class="col-md-9 col-sm-9 ">
-  										<textarea class="resizable_textarea form-control" placeholder="This text area automatically resizes its height as you fill in more text courtesy of autosize-master it out..."></textarea>
-  									</div>
-  								</div>
   							</div>
   						</div>
   					</div>
