@@ -115,32 +115,39 @@ include 'error.php';
   								<div class="x_content">
   									<br />
   									<form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" method="post" action="sms.php">
-                    <div class="col-md-6 col-sm-6  form-group has-feedback">
-											<input type="tel" class="form-control" id="inputSuccess5" placeholder="Phone">
-											<span class="fa fa-phone form-control-feedback right" aria-hidden="true"></span>
-										</div>
-                      <div class="form-group row">
-                    <label class="control-label col-md-3 col-sm-3 ">Select Custom</label>
-                    <div class="col-md-9 col-sm-9 " onclick="show">
-                    </div>
-                    <div class="example">
-                        <select id="example-includeSelectAllOption" multiple="multiple">
-                      <!-- <lable><input type="checkbox" value="select all">Select All</lable> -->
-                    <?php
+                      <div class="table-responsive">
+                      <table class="table table-striped jambo_table bulk_action">
+                        <thead>
+                          <tr class="headings">
+                            <th>
+                              <input type="checkbox" id="check-all" class="flat">
+                            </th>
+                            <th class="column-title">Phone Number</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <?php
                     $sql ="SELECT * FROM `qrcode`";
                     $result = $conn->query($sql);
                     if ($result->num_rows > 0) {
                       // output data of each row
                       while($row = $result->fetch_assoc()) {
                     ?>
-                    <option value="<?php echo $row['number'];?>"><?php echo $row['number'];?></option>
-                    <?php
+                    <tr class="even pointer">
+                      <td class="a-center ">
+                        <input type="checkbox" class="flat" name="table_records">
+                      </td>
+
+                      <td class=" "><?php echo $row['number'];?></td>
+                    </tr>
+                                    <?php
                   }
                 }
                     ?>
-                  </select>
-                  </div>
-                  </div>
+
+                        </tbody>
+                      </table>
+                    </div>
                     <input type="submit" name="send" Value="Send">
   									</form>
   								</div>
