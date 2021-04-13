@@ -110,9 +110,8 @@ include 'error.php';
                     <table id="datatable-checkbox" class="table table-striped table-bordered bulk_action" style="width:100%">
                       <thead>
                         <tr>
-                          <th>
+
 							 <th><input type="checkbox" id="check-all" name="checkall" onchange="check()"></th>
-						  </th>
                           <th>Phone Number</th>
                         </tr>
                       </thead>
@@ -124,7 +123,7 @@ include 'error.php';
                   if ($result->num_rows > 0) {
                     // output data of each row
                     while($row = $result->fetch_assoc()) {
-                      ?><tr> 
+                      ?><tr>
              <td><input type="checkbox" id="check" name ="check" value="<?php echo $row['number'];?>"></td>
                       <td><?php echo $row['number'];?></td>  </tr>
                       <?php
