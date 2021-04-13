@@ -108,11 +108,6 @@
 							 <th><input type="checkbox" id="check-all" ></th>
 						  </th>
                           <th>Name</th>
-                          <th>Position</th>
-                          <th>Office</th>
-                          <th>Age</th>
-                          <th>Start date</th>
-                          <th>Salary</th>
                         </tr>
                       </thead>
 
@@ -123,7 +118,6 @@
                          $result = $conn->query($query);
                          if ($result->num_rows > 0){
                            while($row = $result->fetch_assoc()){
-
                              ?><tr>
                              <td><?php echo $row['number'];?></td>
                            </tr>
@@ -131,17 +125,6 @@
                            }
                          }
                          ?>
-                        <tr>
-                          <td>
-							 <th><input type="checkbox" id="check-all" ></th>
-						  </td>
-                          <td>Tiger Nixon</td>
-                          <td>System Architect</td>
-                          <td>Edinburgh</td>
-                          <td>61</td>
-                          <td>2011/04/25</td>
-                          <td>$320,800</td>
-                        </tr>
                       </tbody>
                     </table>
                   </div>
