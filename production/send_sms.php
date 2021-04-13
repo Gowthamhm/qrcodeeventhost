@@ -23,6 +23,7 @@ $recipient_phone_numbers = [$recipient_phone_numbers];
 }
 for ($i=0; $i < count($recipient_phone_numbers) ; $i++) {
 $number = "91".$recipient_phone_numbers[$i];
+echo $number;
 // Set necessary fields to be JSON encoded
 $content = [
 'to' => $number,
@@ -44,25 +45,28 @@ curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 $result = curl_exec($ch);
 if(curl_errno($ch)) {
 echo 'Curl error: ' . curl_error($ch);
-}else {
-curl_close($ch);
-// echo $result;
-}
-}
-if(curl_errno($ch)) {
-echo 'Curl error: ' . curl_error($ch);
 ?><script type="text/javascript" charset="utf-8">
 alert("Text Can't able Sent Successfully");
 // window.location.replace('instancesms.php');
 </script>
 <?php
 }else {
+curl_close($ch);
+// echo $result;
+?><script type="text/javascript" charset="utf-8">
+alert("Text Sent Successfully");
+// window.location.replace('instancesms.php');
+</script>
+<?php
+}
+}
+
   ?><script type="text/javascript" charset="utf-8">
-  alert("Text Sent Successfully");
+
   // window.location.replace('instancesms.php');
   </script>
   <?php
-}
+
 
 }
 ?>
