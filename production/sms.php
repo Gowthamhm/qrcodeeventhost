@@ -123,24 +123,24 @@ include 'error.php';
       </div>
     </div>
 <script type="text/javascript">
-	initSample();
-  CKEDITOR.replace( 'editor1' );
-function showeditor() {
-             var x = document.getElementById("collapseOne");
-             if (x.style.display === "none") {
-                 x.style.display = "block";
-             } else {
-                 x.style.display = "none";
-             }
-         }
-         function submitForm() {
-              // $("#hiddentext").val($("").html());
-              var data = CKEDITOR.instances.editor1.getData();
-              console.log(data);
-              document.getElementById("hiddentext").value=data;
-              document.getElementById("qrsubmit").submit();
-              // document.getElementById("qrsubmit").submit();
-          }
+	// initSample();
+  // CKEDITOR.replace( 'editor1' );
+// function showeditor() {
+//              var x = document.getElementById("collapseOne");
+//              if (x.style.display === "none") {
+//                  x.style.display = "block";
+//              } else {
+//                  x.style.display = "none";
+//              }
+//          }
+//          function submitForm() {
+//               // $("#hiddentext").val($("").html());
+//               var data = CKEDITOR.instances.editor1.getData();
+//               console.log(data);
+//               document.getElementById("hiddentext").value=data;
+//               document.getElementById("qrsubmit").submit();
+//               // document.getElementById("qrsubmit").submit();
+//           }
 </script>
     <!-- jQuery -->
     <script src="../vendors/jquery/dist/jquery.min.js"></script>
