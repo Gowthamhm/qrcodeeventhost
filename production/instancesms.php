@@ -33,6 +33,14 @@ include 'error.php';
 
     <!-- Custom Theme Style -->
     <link href="../build/css/custom.min.css" rel="stylesheet">
+    <!-- Datatables -->
+
+<link href="../vendors/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
+<link href="../vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet">
+<link href="../vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
+<link href="../vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
+<link href="../vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
+
   </head>
 
   <body class="nav-md">
@@ -91,6 +99,53 @@ include 'error.php';
         <!-- /top navigation -->
 
         <!-- page content -->
+
+                      <div class="col-md-12 col-sm-12 ">
+                        <div class="x_panel">
+                          <div class="x_title">
+                            <div class="clearfix"></div>
+                          </div>
+                          <div class="x_content">
+                              <div class="row">
+                                  <div class="col-sm-12">
+                                    <div class="card-box table-responsive">
+                            <table id="datatable-checkbox" class="table table-striped table-bordered bulk_action" style="width:100%">
+                              <thead>
+                                <tr>
+                                  <th>
+        							 <th><input type="checkbox" id="check-all" ></th>
+        						  </th>
+                                  <th>Name</th>
+                                  <th>Position</th>
+                                  <th>Office</th>
+                                  <th>Age</th>
+                                  <th>Start date</th>
+                                  <th>Salary</th>
+                                </tr>
+                              </thead>
+
+
+                              <tbody>
+                                <tr>
+                                  <td>
+        							 <th><input type="checkbox" id="check-all" ></th>
+        						  </td>
+                                  <td>Tiger Nixon</td>
+                                  <td>System Architect</td>
+                                  <td>Edinburgh</td>
+                                  <td>61</td>
+                                  <td>2011/04/25</td>
+                                  <td>$320,800</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          </div>
+                      </div>
+                    </div>
+                        </div>
+                      </div>
+
         <!-- /page content -->
 
       </div>
