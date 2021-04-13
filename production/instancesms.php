@@ -94,7 +94,7 @@
               <div class="col-md-12 col-sm-12 ">
                 <div class="x_panel">
                   <div class="x_title">
-                  
+
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
@@ -107,28 +107,30 @@
                           <th>
 							 <th><input type="checkbox" id="check-all" ></th>
 						  </th>
-                          <th>Name</th>
-                          <th>Position</th>
-                          <th>Office</th>
-                          <th>Age</th>
-                          <th>Start date</th>
-                          <th>Salary</th>
+                          <th>Number</th>
                         </tr>
                       </thead>
 
 
                       <tbody>
+                        <?php
+                      $sql ="SELECT * FROM `qrcode`";
+                      $result = $conn->query($sql);
+                      if ($result->num_rows > 0) {
+                      // output data of each row
+                      while($row = $result->fetch_assoc()) {
+                      ?>
                         <tr>
+
                           <td>
 							 <th><input type="checkbox" id="check-all" ></th>
 						  </td>
-                          <td>Tiger Nixon</td>
-                          <td>System Architect</td>
-                          <td>Edinburgh</td>
-                          <td>61</td>
-                          <td>2011/04/25</td>
-                          <td>$320,800</td>
+                          <td><?php echo $row['number'];?></td>
                         </tr>
+                        <?php
+                 }
+               }
+                   ?>
                       </tbody>
                     </table>
                   </div>
@@ -150,26 +152,55 @@
                     <table id="datatable-buttons" class="table table-striped table-bordered" style="width:100%">
                       <thead>
                         <tr>
-                          <th>Name</th>
-                          <th>Position</th>
-                          <th>Office</th>
-                          <th>Age</th>
-                          <th>Start date</th>
-                          <th>Salary</th>
+                          <th>Sl No.</th>
+                             <th id="title">Text</th>
+                             <th>Qouted Text</th>
+                             <th>Number </th>
+                             <th>InText </th>
+                             <th>Out Text </th>
+                             <th>Status</th>
                         </tr>
                       </thead>
 
 
                       <tbody>
-                        <tr>
-                          <td>Tiger Nixon</td>
-                          <td>System Architect</td>
-                          <td>Edinburgh</td>
-                          <td>61</td>
-                          <td>2011/04/25</td>
-                          <td>$320,800</td>
-                        </tr>
-                      </tbody>
+                        <?php
+                                  $select = "SELECT * from qrcode where folder_name = '".$_SESSION['folder_name']."'";
+                                  $result = $conn->query($select);
+                                  $number_of_result = mysqli_num_rows($result);
+                                  //determine the total number of pages available
+                                  $number_of_page = ceil ($number_of_result / $results_per_page);
+                                  $query = "SELECT * from qrcode where folder_name = '".$_SESSION['folder_name'];
+                                  // echo $query;
+                                     $result = $conn->query($query);
+                                  if ($result->num_rows > 0){
+                                    $count = 1;
+                                       while($row = $result->fetch_assoc()){
+                                         ?>
+                                           <tr>
+                                              <td> <input type="checkbox" name="chk"  value="<?php echo $row['slno'] ?>"> </td>
+                                             <td> <?php echo $count; ?></td>
+                                             <td id="title"><?php echo $row['text'];?></td>
+                                             <td><?php echo $row['Qoute'];?></td>
+                                             <td><?php echo $row['number'];?></td>
+                                             <td><?php echo $row['intext'];?></td>
+                                             <td><?php echo $row['outtext'];?></td>
+                                             <td>
+                                             <?php if($row['status'] == 0){
+                                                echo "Not Shared Yet";
+                                             }else if($row['status'] == 1){
+                                               echo "Shared Already";
+                                             }else{
+                                               echo "Already Scanned";
+                                             }
+                                             $count++;
+                                  ?>
+                                  </td>
+                                      </tr>
+                                  <?php
+                                       }
+                                  }
+                                    ?>                      </tbody>
                     </table>
                   </div>
                 </div>
