@@ -133,7 +133,7 @@ include 'error.php';
                   ?>
 <tr>
   <input type="text" name="number" id="num"value="">
-  <input type="submit" name="send" value="Send Message">
+  <input type="submit" name="send" id="sub" value="Send Message">
 </tr>
 </form>
                       </tbody>
@@ -222,6 +222,25 @@ include 'error.php';
     document.getElementById('num').value=document.querySelector("#datatable-checkbox > tbody > tr:nth-child(2) > td:nth-child(1) > input[type=checkbox]").value;
     document.getElementById('num').value=document.querySelector("#datatable-checkbox > tbody > tr:nth-child(3) > td:nth-child(1) > input[type=checkbox]").value;
   }
+</script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $("#sub").click(function () {
+            //Create an Array.
+            var selected = new Array();
+
+            //Reference the CheckBoxes and insert the checked CheckBox value in Array.
+            $("#datatable-checkbox input[type=checkbox]:checked").each(function () {
+                selected.push(this.value);
+            });
+
+            //Display the selected CheckBox values.
+            if (selected.length > 0) {
+                alert("Selected values: " + selected.join(","));
+            }
+        });
+    });
 </script>
     <!-- jQuery -->
     <script src="../vendors/jquery/dist/jquery.min.js"></script>
