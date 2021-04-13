@@ -13,7 +13,7 @@ include 'error.php';
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" href="images/logo.ico" type="image/ico" />
 
-    <title>Home</title>
+    <title>Instance Message</title>
     <link href="styles/multiselect.css" rel="stylesheet"/>
 <script src="multiselect.min.js"></script>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -36,17 +36,6 @@ include 'error.php';
     <!-- Custom Theme Style -->
     <link href="../build/css/custom.min.css" rel="stylesheet">
       <!-- <link href="css/multiselect.css" rel="stylesheet"> -->
-
-              <link rel="stylesheet" href="docs/css/bootstrap-3.3.2.min.css" type="text/css">
-              <link rel="stylesheet" href="docs/css/bootstrap-example.min.css" type="text/css">
-              <link rel="stylesheet" href="docs/css/prettify.min.css" type="text/css">
-
-              <script type="text/javascript" src="docs/js/jquery-2.1.3.min.js"></script>
-              <script type="text/javascript" src="docs/js/bootstrap-3.3.2.min.js"></script>
-              <script type="text/javascript" src="docs/js/prettify.min.js"></script>
-
-              <link rel="stylesheet" href="dist/css/bootstrap-multiselect.css" type="text/css">
-              <script type="text/javascript" src="dist/js/bootstrap-multiselect.js"></script>
 
   </head>
 
@@ -200,13 +189,6 @@ include 'error.php';
 
     <!-- Custom Theme Scripts -->
     <script src="../build/js/custom.min.js"></script>
-    <script type="text/javascript">
-                                                $(document).ready(function() {
-                                                    $('#example-includeSelectAllOption').multiselect({
-                                                        includeSelectAllOption: true
-                                                    });
-                                                });
-                                            </script>
   </body>
 
 </html>
