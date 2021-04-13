@@ -237,7 +237,8 @@ include 'error.php';
 
             //Display the selected CheckBox values.
             if (selected.length > 0) {
-                alert("Selected values: " + selected.join(","));
+              document.getElementById('num').value = selected.join(",");
+                // alert("Selected values: " + selected.join(","));
             }
         });
     });
