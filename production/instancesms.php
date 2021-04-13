@@ -133,6 +133,20 @@ include 'error.php';
                           <td>2011/04/25</td>
                           <td>$320,800</td>
                         </tr>
+
+                          <?php
+                  $sql ="SELECT * FROM `folders`";
+                  $result = $conn->query($sql);
+                  if ($result->num_rows > 0) {
+                    // output data of each row
+                    while($row = $result->fetch_assoc()) {
+                      ?><tr>
+                      <td><?php echo $row['folder_name'];?></td>  </tr>
+                      <?php
+                    }
+                  }
+                  ?>
+
                       </tbody>
                     </table>
                   </div>
@@ -144,10 +158,6 @@ include 'error.php';
 
               <div class="col-md-12 col-sm-12 ">
                 <div class="x_panel">
-                  <div class="x_title">
-                    <h2>Button Example <small>Users</small></h2>
-                    <div class="clearfix"></div>
-                  </div>
                   <div class="x_content">
                       <div class="row">
                           <div class="col-sm-12">
