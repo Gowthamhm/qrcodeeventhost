@@ -24,17 +24,17 @@ $recipient_phone_numbers = [$recipient_phone_numbers];
 }
 for ($i=0; $i < count($recipient_phone_numbers) ; $i++) {
 $number = $recipient_phone_numbers[$i];
-echo $number;
-echo $text;
+// echo $number;
+// echo $text;
 // Set necessary fields to be JSON encoded
 $content = [
 'to' => $number,
 'from' => $send_from,
 'body' => $text
 ];
-echo $content;
+// echo $content;
 $data = json_encode($content);
-echo $data;
+// echo $data;
 $ch = curl_init("https://us.sms.api.sinch.com/xms/v1/{$service_plan_id}/batches");
 curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
 curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_BEARER);
