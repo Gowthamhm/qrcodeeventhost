@@ -111,7 +111,7 @@ include 'error.php';
                       <thead>
                         <tr>
 
-							 <th><input type="checkbox" id="check-all" name="checkall" value="99"></th>
+							 <th><input type="checkbox" id="check-all" name="checkall" value=""></th>
                           <th>Phone Number</th>
                         </tr>
                       </thead>
