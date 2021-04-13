@@ -107,30 +107,41 @@
                           <th>
 							 <th><input type="checkbox" id="check-all" ></th>
 						  </th>
-                          <th>Number</th>
+                          <th>Name</th>
+                          <th>Position</th>
+                          <th>Office</th>
+                          <th>Age</th>
+                          <th>Start date</th>
+                          <th>Salary</th>
                         </tr>
                       </thead>
 
 
                       <tbody>
                         <?php
-                      $sql ="SELECT * FROM `qrcode`";
-                      $result = $conn->query($sql);
-                      if ($result->num_rows > 0) {
-                      // output data of each row
-                      while($row = $result->fetch_assoc()) {
-                      ?>
-                        <tr>
+                        $select = "SELECT * FROM `qrcode`";
+                         $result = $conn->query($query);
+                         if ($result->num_rows > 0){
+                           while($row = $result->fetch_assoc()){
 
+                             ?><tr>
+                             <td><?php echo $row['number'];?></td>
+                           </tr>
+                             <?php
+                           }
+                         }
+                         ?>
+                        <tr>
                           <td>
 							 <th><input type="checkbox" id="check-all" ></th>
 						  </td>
-                          <td><?php echo $row['number'];?></td>
+                          <td>Tiger Nixon</td>
+                          <td>System Architect</td>
+                          <td>Edinburgh</td>
+                          <td>61</td>
+                          <td>2011/04/25</td>
+                          <td>$320,800</td>
                         </tr>
-                        <?php
-                 }
-               }
-                   ?>
                       </tbody>
                     </table>
                   </div>
@@ -152,13 +163,12 @@
                     <table id="datatable-buttons" class="table table-striped table-bordered" style="width:100%">
                       <thead>
                         <tr>
-                          <th>Sl No.</th>
-                           <th id="title">Text</th>
-                           <th>Qouted Text</th>
-                           <th>Number </th>
-                           <th>InText </th>
-                           <th>Out Text </th>
-                           <th>Status</th>
+                          <th>Name</th>
+                          <th>Position</th>
+                          <th>Office</th>
+                          <th>Age</th>
+                          <th>Start date</th>
+                          <th>Salary</th>
                         </tr>
                       </thead>
 
