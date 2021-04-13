@@ -105,13 +105,13 @@ include 'error.php';
   									<br />
   									<form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" method="post" action="sms.php">
                       <div class="table-responsive">
-                      <table class="table table-striped jambo_table bulk_action">
+                      <table class="table table-striped jambo_table bulk_action" >
                         <thead>
                           <tr class="headings">
                             <th>
                               <input type="checkbox" id="check-all" class="flat">
                             </th>
-                            <th class="column-title">Phone Number</th>
+                            <th class="column-title" style="display: table-cell;">Phone Number</th>
                           </tr>
                         </thead>
                         <tbody>
