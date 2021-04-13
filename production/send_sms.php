@@ -17,7 +17,7 @@ $send_from = "+447537454577";
 // Check recipient_phone_numbers for multiple numbers and make it an array.
 // $text = " OTP for reset your password of Username ".$dbusername." is ".$fourRandomDigit;
 if(stristr($recipient_phone_numbers, ',')){
-$recipient_phone_numbers = explode(',', $number);
+$recipient_phone_numbers = explode(',', $recipient_phone_numbers);
 }else{
 $recipient_phone_numbers = [$recipient_phone_numbers];
 }
