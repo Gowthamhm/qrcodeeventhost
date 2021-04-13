@@ -113,27 +113,10 @@ include 'error.php';
                           <th>
 							 <th><input type="checkbox" id="check-all" ></th>
 						  </th>
-                          <th>Name</th>
-                          <th>Position</th>
-                          <th>Office</th>
-                          <th>Age</th>
-                          <th>Start date</th>
-                          <th>Salary</th>
+                          <th>Phone Number</th>
                         </tr>
                       </thead>
                       <tbody>
-                        <tr>
-                          <td>
-							 <th><input type="checkbox" id="check-all" ></th>
-						  </td>
-                          <td>Tiger Nixon</td>
-                          <td>System Architect</td>
-                          <td>Edinburgh</td>
-                          <td>61</td>
-                          <td>2011/04/25</td>
-                          <td>$320,800</td>
-                        </tr>
-
                           <?php
                   $sql ="SELECT * FROM `qrcode`";
                   $result = $conn->query($sql);
