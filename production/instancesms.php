@@ -99,7 +99,7 @@ include 'error.php';
               <div class="col-md-12 col-sm-12 ">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Plus Table Design</small></h2>
+                    <h2>Instance message to numbers</small></h2>
 
                     <div class="clearfix"></div>
                   </div>
@@ -117,6 +117,7 @@ include 'error.php';
                         </tr>
                       </thead>
                       <tbody>
+                        <form action="sms.php" method="post">
                           <?php
                   $sql ="SELECT * FROM `qrcode`";
                   $result = $conn->query($sql);
@@ -131,7 +132,10 @@ include 'error.php';
                     }
                   }
                   ?>
-
+<tr>
+  <input type="submit" name="send" value="Send Message">
+</tr>
+</form>
                       </tbody>
                     </table>
                   </div>
@@ -143,6 +147,10 @@ include 'error.php';
 
               <div class="col-md-12 col-sm-12 ">
                 <div class="x_panel">
+                  <div class="x_title">
+                    <h2>All QrCode Detail</h2>
+                    <div class="clearfix"></div>
+                  </div>
                   <div class="x_content">
                       <div class="row">
                           <div class="col-sm-12">
@@ -179,8 +187,13 @@ include 'error.php';
                           echo "Not Shared Yet";
                        }else if($row['status'] == 1){
                          echo "Shared Already";
+                       }else if($row['status'] == 99){
+                         echo "In QRCODE Scanned";
+                       }
+                       else if($row['status'] == 999){
+                         echo "Out QRCODE Scanned";
                        }else{
-                         echo "Already Scanned";
+                         echo "status is unkown contact admin";
                        }
             ?>
             </td>
