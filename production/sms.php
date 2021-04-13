@@ -1,6 +1,8 @@
 <?php
 if(isset($_POST['send'])){
-  echo $_POST['number'];
+  $numbers = $_POST['number'];
+  echo $numbers;
+
   echo $_POST['checkall'];
 }
 else{
