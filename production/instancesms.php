@@ -218,10 +218,8 @@ include 'error.php';
     </div>
 <script type="text/javascript">
   function check(){
-    console.log(document.querySelector("#check-all").checked);
-    document.getElementById('num').value=document.querySelector("#datatable-checkbox > tbody > tr:nth-child(2) > td:nth-child(1) > input[type=checkbox]").value;
-    document.getElementById('num').value=document.querySelector("#datatable-checkbox > tbody > tr:nth-child(3) > td:nth-child(1) > input[type=checkbox]").value;
-  }
+
+    }
 </script>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script type="text/javascript">
@@ -234,7 +232,10 @@ include 'error.php';
             $("#datatable-checkbox input[type=checkbox]:checked").each(function () {
                 selected.push(this.value);
             });
-
+            var allcheckbox = $('input[type="checkbox"]').length;
+            for (var i = 2; i <= allcheckbox\2; i++) {
+              document.querySelector("#datatable-checkbox > tbody > tr:nth-child(i) > td:nth-child(1) > input[type=checkbox]").checked = true;
+                    }
             //Display the selected CheckBox values.
             if (selected.length > 0) {
               document.getElementById('num').value = selected.join(",");
