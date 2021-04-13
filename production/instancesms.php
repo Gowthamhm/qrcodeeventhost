@@ -165,13 +165,12 @@
 
                       <tbody>
                         <?php
-                                  $select = "SELECT * from qrcode where folder_name = '".$_SESSION['folder_name']."'";
+                                  $select = "SELECT * from qrcode";
                                   $result = $conn->query($select);
                                   $number_of_result = mysqli_num_rows($result);
                                   //determine the total number of pages available
                                   $number_of_page = ceil ($number_of_result / $results_per_page);
-                                  $query = "SELECT * from qrcode where folder_name = '".$_SESSION['folder_name'];
-                                  // echo $query;
+                                  $query = "SELECT * from qrcode where folder_name = '".$_SESSION['folder_name'].'";
                                      $result = $conn->query($query);
                                   if ($result->num_rows > 0){
                                     $count = 1;
