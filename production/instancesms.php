@@ -35,7 +35,18 @@ include 'error.php';
 
     <!-- Custom Theme Style -->
     <link href="../build/css/custom.min.css" rel="stylesheet">
-      <link href="css/multiselect.css" rel="stylesheet">
+      <!-- <link href="css/multiselect.css" rel="stylesheet"> -->
+
+              <link rel="stylesheet" href="docs/css/bootstrap-3.3.2.min.css" type="text/css">
+              <link rel="stylesheet" href="docs/css/bootstrap-example.min.css" type="text/css">
+              <link rel="stylesheet" href="docs/css/prettify.min.css" type="text/css">
+
+              <script type="text/javascript" src="docs/js/jquery-2.1.3.min.js"></script>
+              <script type="text/javascript" src="docs/js/bootstrap-3.3.2.min.js"></script>
+              <script type="text/javascript" src="docs/js/prettify.min.js"></script>
+
+              <link rel="stylesheet" href="dist/css/bootstrap-multiselect.css" type="text/css">
+              <script type="text/javascript" src="dist/js/bootstrap-multiselect.js"></script>
 
   </head>
 
@@ -112,8 +123,9 @@ include 'error.php';
                     <label class="control-label col-md-3 col-sm-3 ">Select Custom</label>
                     <div class="col-md-9 col-sm-9 " onclick="show">
                     </div>
-                    <div class="multiselect">
-                      <lable><input type="checkbox" value="select all">Select All</lable>
+                    <div class="example">
+                        <select id="example-includeSelectAllOption" multiple="multiple">
+                      <!-- <lable><input type="checkbox" value="select all">Select All</lable> -->
                     <?php
                     $sql ="SELECT * FROM `qrcode`";
                     $result = $conn->query($sql);
@@ -121,11 +133,12 @@ include 'error.php';
                       // output data of each row
                       while($row = $result->fetch_assoc()) {
                     ?>
-                    <lable><input type="checkbox" value="<?php echo $row['number'];?>"><?php echo $row['number'];?></lable>
+                    <option value="<?php echo $row['number'];?>"><?php echo $row['number'];?></option>
                     <?php
                   }
                 }
                     ?>
+                  </select>
                   </div>
                   </div>
                     <input type="submit" name="send" Value="Send">
@@ -180,7 +193,13 @@ include 'error.php';
 
     <!-- Custom Theme Scripts -->
     <script src="../build/js/custom.min.js"></script>
-
+    <script type="text/javascript">
+                                                $(document).ready(function() {
+                                                    $('#example-includeSelectAllOption').multiselect({
+                                                        includeSelectAllOption: true
+                                                    });
+                                                });
+                                            </script>
   </body>
 
 </html>
