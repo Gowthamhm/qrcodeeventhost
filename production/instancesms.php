@@ -124,7 +124,7 @@ include 'error.php';
                     // output data of each row
                     while($row = $result->fetch_assoc()) {
                       ?><tr>
-             <td><input type="checkbox" id="check" name ="check" value="<?php echo $row['number'];?>"></td>
+             <td><input type="checkbox"  name ="check" value="<?php echo $row['number'];?>"></td>
                       <td><?php echo $row['number'];?></td>  </tr>
                       <?php
                     }
