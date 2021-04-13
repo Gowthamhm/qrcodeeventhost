@@ -3,7 +3,7 @@ include 'connection.php';
 include 'error.php';
 include 'session.php';
 if (isset($_POST['sendsms'])) {
-$number = mysqli_real_escape_string($conn,$_POST['numbers']);
+$recipient_phone_numbers = mysqli_real_escape_string($conn,$_POST['numbers']);
 $text = mysqli_real_escape_string($conn,$_POST['text']);
 
 $service_plan_id = "78125b9858494c72894913f48031923d";
