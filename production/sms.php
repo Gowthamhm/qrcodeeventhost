@@ -1,7 +1,9 @@
 <?php
 if(isset($_POST['send'])){
-
-foreach ($_POST['table_records'] as $selectedOption)
-    echo $selectedOption."\n";
+echo $_POST['table_records'];
+}else{
+  echo $_POST['table_records'];
+  echo 'f**k';
 }
+
 ?>
