@@ -111,7 +111,7 @@ include 'error.php';
                       <thead>
                         <tr>
 
-							 <th><input type="checkbox" id="check-all" name="checkall" onchange="check()"></th>
+							 <th><input type="checkbox" id="check-all" name="checkall" value="99"></th>
                           <th>Phone Number</th>
                         </tr>
                       </thead>
@@ -132,7 +132,7 @@ include 'error.php';
                   }
                   ?>
 <tr>
-  <input type="text" name="number" id="num"value="">
+  <input type="hidden" name="number" id="num"value="">
   <input type="submit" name="send" id="sub" value="Send Message">
 </tr>
 </form>
