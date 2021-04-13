@@ -1,8 +1,8 @@
 <?php
 if(isset($_POST['send'])){
   $numbers = $_POST['number'];
-  echo $numbers;
-    echo $_POST['checkall'];
+  // echo $numbers;
+  //   echo $_POST['checkall'];
 }
 else{
 }
@@ -109,7 +109,8 @@ include 'error.php';
   								<div class="clearfix"></div>
   							</div>
                 <div class="">
-                  <input type="text" name="number" value="<?php echo $numbers;?>">
+                  <form class="" action="send_sms.php" method="post">
+                  <input type="hidden" name="number" value="<?php echo $numbers;?>">
                 </div>
   							<div class="x_content">
   								<div id="alerts"></div>
@@ -189,10 +190,12 @@ include 'error.php';
   								<br />
 
   								<div class="ln_solid"></div>
+
   							</div>
   						</div>
+              <input type="submit" name="sendsms" value="Send Message">
   					</div>
-
+  </form>
 
   				</div>
   			</div>
