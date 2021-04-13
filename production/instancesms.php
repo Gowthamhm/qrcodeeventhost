@@ -182,7 +182,6 @@ include 'error.php';
                        }else{
                          echo "Already Scanned";
                        }
-                       $count++;
             ?>
             </td>
                 </tr>
