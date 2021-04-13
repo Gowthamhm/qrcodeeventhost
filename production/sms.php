@@ -2,6 +2,7 @@
 if(isset($_POST['send'])){
   $numbers = $_POST['number'];
   echo $numbers;
+    echo $_POST['checkall'];
 }
 else{
 }
