@@ -110,10 +110,19 @@
                           <th>Name</th>
                         </tr>
                       </thead>
-
-
                       <tbody>
-                      
+                        <?php
+                        $select = "SELECT * FROM `qrcode`";
+                         $result = $conn->query($query);
+                         if ($result->num_rows > 0){
+                           while($row = $result->fetch_assoc()){
+                             ?><tr>
+                             <td><?php echo $row['number'];?></td>
+                           </tr>
+                             <?php
+                           }
+                         }
+                         ?>
                       </tbody>
                     </table>
                   </div>
