@@ -13,9 +13,7 @@ include 'error.php';
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" href="images/logo.ico" type="image/ico" />
 
-    <title>Instance Message</title>
-    <link href="styles/multiselect.css" rel="stylesheet"/>
-<script src="multiselect.min.js"></script>
+    <title>Home</title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <!-- Bootstrap -->
     <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -35,20 +33,7 @@ include 'error.php';
 
     <!-- Custom Theme Style -->
     <link href="../build/css/custom.min.css" rel="stylesheet">
-  <!-- Datatables -->
-
-  <link href="../vendors/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
-  <link href="../vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet">
-  <link href="../vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
-  <link href="../vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
-  <link href="../vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
-
-  <!-- Custom Theme Style -->
-  <link href="../build/css/custom.min.css" rel="stylesheet">
-      <!-- <link href="css/multiselect.css" rel="stylesheet"> -->
-
   </head>
-
 
   <body class="nav-md">
     <div class="container body">
@@ -106,108 +91,6 @@ include 'error.php';
         <!-- /top navigation -->
 
         <!-- page content -->
-        <div class="right_col" role="main">
-
-        <div class="row">
-          <div class="col-md-12 col-sm-12 ">
-                      <div class="x_panel">
-                        <div class="x_title">
-                          <h2>Plus Table Design</small></h2>
-                          <ul class="nav navbar-right panel_toolbox">
-                            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                            </li>
-                            <li class="dropdown">
-                              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                  <a class="dropdown-item" href="#">Settings 1</a>
-                                  <a class="dropdown-item" href="#">Settings 2</a>
-                                </div>
-                            </li>
-                            <li><a class="close-link"><i class="fa fa-close"></i></a>
-                            </li>
-                          </ul>
-                          <div class="clearfix"></div>
-                        </div>
-                        <div class="x_content">
-                            <div class="row">
-                                <div class="col-sm-12">
-                                  <div class="card-box table-responsive">
-                          <p class="text-muted font-13 m-b-30">
-                            DataTables has most features enabled by default, so all you need to do to use it with your own tables is to call the construction function: <code>$().DataTable();</code>
-                          </p>
-                          <table id="datatable-checkbox" class="table table-striped table-bordered bulk_action" style="width:100%">
-                            <thead>
-                              <tr>
-                                <th>
-      							 <th><input type="checkbox" id="check-all" ></th>
-      						  </th>
-                                <th>Name</th>
-                                <th>Position</th>
-                                <th>Office</th>
-                                <th>Age</th>
-                                <th>Start date</th>
-                                <th>Salary</th>
-                              </tr>
-                            </thead>
-
-
-                            <tbody>
-                              <tr>
-                                <td>
-      							 <th><input type="checkbox" id="check-all" ></th>
-      						  </td>
-                                <td>Tiger Nixon</td>
-                                <td>System Architect</td>
-                                <td>Edinburgh</td>
-                                <td>61</td>
-                                <td>2011/04/25</td>
-                                <td>$320,800</td>
-                              </tr>
-                              <tr>
-                               <td>
-      							 <th><input type="checkbox" id="check-all" ></th>
-      						  </td>
-                                <td>Garrett Winters</td>
-                                <td>Accountant</td>
-                                <td>Tokyo</td>
-                                <td>63</td>
-                                <td>2011/07/25</td>
-                                <td>$170,750</td>
-                              </tr>
-                              <tr>
-      							<td>
-      								 <th><input type="checkbox" id="check-all" ></th>
-      						  </td>
-                                <td>Ashton Cox</td>
-                                <td>Junior Technical Author</td>
-                                <td>San Francisco</td>
-                                <td>66</td>
-                                <td>2009/01/12</td>
-                                <td>$86,000</td>
-                              </tr>
-                              <tr>
-                                <td>
-      							 <th><input type="checkbox" id="check-all" ></th>
-      						  </td>
-                                <td>Cedric Kelly</td>
-                                <td>Senior Javascript Developer</td>
-                                <td>Edinburgh</td>
-                                <td>22</td>
-                                <td>2012/03/29</td>
-                                <td>$433,060</td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
-                        </div>
-                    </div>
-                  </div>
-                      </div>
-                    </div>
-
-  							</div>
-  						</div>
-  					</div>
         <!-- /page content -->
 
       </div>
@@ -253,6 +136,6 @@ include 'error.php';
 
     <!-- Custom Theme Scripts -->
     <script src="../build/js/custom.min.js"></script>
-  </body>
 
+  </body>
 </html>
