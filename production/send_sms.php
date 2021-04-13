@@ -53,13 +53,13 @@ if(curl_errno($ch)) {
 echo 'Curl error: ' . curl_error($ch);
 ?><script type="text/javascript" charset="utf-8">
 alert("Text Can't able Sent Successfully");
-window.location.replace('instancesms.php');
+// window.location.replace('instancesms.php');
 </script>
 <?php
 }else {
   ?><script type="text/javascript" charset="utf-8">
   alert("Text Sent Successfully");
-  window.location.replace('instancesms.php');
+  // window.location.replace('instancesms.php');
   </script>
   <?php
 }
