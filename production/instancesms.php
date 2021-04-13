@@ -169,7 +169,6 @@ include 'error.php';
                   while($row = $result->fetch_assoc()) {
                     ?> <tr>
                         <td> <input type="checkbox" name="chk"  value="<?php echo $row['slno'] ?>"> </td>
-                       <td> <?php echo $count; ?></td>
                        <td><?php echo $row['text'];?></td>
                        <td><?php echo $row['Qoute'];?></td>
                        <td><?php echo $row['number'];?></td>
