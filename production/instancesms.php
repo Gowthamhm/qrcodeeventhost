@@ -149,7 +149,7 @@ include 'error.php';
                 <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
                       <thead>
                         <tr>
-                          <th>Sl No.</th>
+                          <th><input type="checkbox" name="chk"  value="select all"></th>
    <th>Text</th>
    <th>Qouted Text</th>
    <th>Number </th>
