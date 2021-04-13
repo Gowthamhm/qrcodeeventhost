@@ -135,13 +135,15 @@ include 'error.php';
                         </tr>
 
                           <?php
-                  $sql ="SELECT * FROM `folders`";
+                  $sql ="SELECT * FROM `qrcode`";
                   $result = $conn->query($sql);
                   if ($result->num_rows > 0) {
                     // output data of each row
                     while($row = $result->fetch_assoc()) {
-                      ?><tr>
-                      <td><?php echo $row['folder_name'];?></td>  </tr>
+                      ?><tr>  <td>
+             <th><input type="checkbox" id="check-all" ></th>
+            </td>
+                      <td><?php echo $row['number'];?></td>  </tr>
                       <?php
                     }
                   }
