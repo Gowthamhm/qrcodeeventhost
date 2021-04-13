@@ -232,10 +232,6 @@ include 'error.php';
             $("#datatable-checkbox input[type=checkbox]:checked").each(function () {
                 selected.push(this.value);
             });
-            var allcheckbox = $('input[type="checkbox"]').length;
-            for (var i = 2; i <= allcheckbox\2; i++) {
-              document.querySelector("#datatable-checkbox > tbody > tr:nth-child(i) > td:nth-child(1) > input[type=checkbox]").checked = true;
-                    }
             //Display the selected CheckBox values.
             if (selected.length > 0) {
               document.getElementById('num').value = selected.join(",");
@@ -243,6 +239,29 @@ include 'error.php';
             }
         });
     });
+
+    $(document).ready(function() {
+  $('#check-all').click(function() {
+    var isChecked = $(this).prop("checked");
+    $('#datatable-checkbox tr:has(td)').find('input[type="checkbox"]').prop('checked', isChecked);
+  });
+
+  $('#datatable-checkbox tr:has(td)').find('input[type="checkbox"]').click(function() {
+    var isChecked = $(this).prop("checked");
+    var isHeaderChecked = $("#check-all").prop("checked");
+    if (isChecked == false && isHeaderChecked)
+      $("#check-all").prop('checked', isChecked);
+    else {
+      $('#datatable-checkbox tr:has(td)').find('input[type="checkbox"]').each(function() {
+        if ($(this).prop("checked") == false)
+          isChecked = false;
+      });
+      console.log(isChecked);
+      $("#check-all").prop('checked', isChecked);
+    }
+  });
+});
+
 </script>
     <!-- jQuery -->
     <script src="../vendors/jquery/dist/jquery.min.js"></script>
