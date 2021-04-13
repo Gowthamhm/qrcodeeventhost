@@ -111,7 +111,7 @@ include 'error.php';
                       <thead>
                         <tr>
                           <th>
-							 <th><input type="checkbox" id="check-all" ></th>
+							 <th><input type="checkbox" id="check-all" name="checkall" onchange="check()"></th>
 						  </th>
                           <th>Phone Number</th>
                         </tr>
@@ -125,7 +125,7 @@ include 'error.php';
                     // output data of each row
                     while($row = $result->fetch_assoc()) {
                       ?><tr>  <td>
-             <th><input type="checkbox" id="check-all" ></th>
+             <th><input type="checkbox" id="check" name ="check" value="<?php echo $row['number'];?>"></th>
             </td>
                       <td><?php echo $row['number'];?></td>  </tr>
                       <?php
@@ -216,7 +216,11 @@ include 'error.php';
         <!-- /page content -->
       </div>
     </div>
-
+<script type="text/javascript">
+  function check(){
+    console.log(document.querySelector("#check-all").checked);
+  }
+</script>
     <!-- jQuery -->
     <script src="../vendors/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap -->
