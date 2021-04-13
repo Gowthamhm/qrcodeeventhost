@@ -35,6 +35,7 @@ include 'error.php';
 
     <!-- Custom Theme Style -->
     <link href="../build/css/custom.min.css" rel="stylesheet">
+      <link href="css/multiselect.css" rel="stylesheet">
 
   </head>
 
@@ -112,6 +113,7 @@ include 'error.php';
                     <div class="col-md-9 col-sm-9 " onclick="show">
                     </div>
                     <div class="multiselect">
+                      <lable><input type="checkbox" value="select all">Select All</lable>
                     <?php
                     $sql ="SELECT * FROM `qrcode`";
                     $result = $conn->query($sql);
