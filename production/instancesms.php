@@ -104,41 +104,50 @@ include 'error.php';
   								<div class="x_content">
   									<br />
   									<form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" method="post" action="sms.php">
-                      <div class="table-responsive">
-                      <table class="table table-striped jambo_table bulk_action" >
-                        <thead>
-                          <tr class="headings">
-                            <th>
-                              <input type="checkbox" id="check-all" class="flat">
-                            </th>
-                            <th class="column-title" style="display: table-cell;">Phone Number</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <?php
-                    $sql ="SELECT * FROM `qrcode`";
-                    $result = $conn->query($sql);
-                    if ($result->num_rows > 0) {
-                      // output data of each row
-                      $count = 0;
-                      while($row = $result->fetch_assoc()) {
-                    ?>
-                    <tr class="even pointer">
-                      <td class="a-center ">
-                        <input type="checkbox" class="flat" name="table_records" value="<?php echo $row['number'];?>">
-                      </td>
+                      <div class="x_content">
+                <div class="row">
+                    <div class="col-sm-12">
+                      <div class="card-box table-responsive">
+              <p class="text-muted font-13 m-b-30">
+                DataTables has most features enabled by default, so all you need to do to use it with your own tables is to call the construction function: <code>$().DataTable();</code>
+              </p>
+              <table id="datatable-checkbox" class="table table-striped table-bordered bulk_action" style="width:100%">
+                <thead>
+                  <tr>
+                    <th>
+         <th><input type="checkbox" id="check-all" ></th>
+        </th>
+                    <th>Name</th>
+                    <th>Position</th>
+                    <th>Office</th>
+                    <th>Age</th>
+                    <th>Start date</th>
+                    <th>Salary</th>
+                  </tr>
+                </thead>
 
-                      <td class=" "><?php echo $row['number'];?></td>
-                    </tr>
-                                    <?php
-                          $count++;
-                  }
-                }
-                    ?>
 
-                        </tbody>
-                      </table>
-                    </div>
+                <tbody>
+                  <tr>
+                    <td>
+         <th><input type="checkbox" id="check-all" ></th>
+        </td>
+                    <td>Tiger Nixon</td>
+                    <td>System Architect</td>
+                    <td>Edinburgh</td>
+                    <td>61</td>
+                    <td>2011/04/25</td>
+                    <td>$320,800</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            </div>
+        </div>
+      </div>
+          </div>
+        </div>
+
                     <input type="submit" name="send" Value="Send">
   									</form>
   								</div>
