@@ -156,7 +156,8 @@ document.getElementById("all").value="9999";
   }else{
 document.getElementById("all").value="0";
   }
-  for (var i = 0; i < <?php echo $count;?>; i++) {
+  var count = <?php echo $count;?>;
+  for (var i = 0; i /< count i++) {
     if(document.querySelector("#demo-form2 > div > table > tbody > tr:nth-child(1) > td.a-center > div > input").checked == true){
 console.log(document.querySelector("#demo-form2 > div > table > tbody > tr:nth-child(1) > td.a-center > div > input").value);
     }else{
