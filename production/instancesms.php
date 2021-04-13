@@ -153,48 +153,26 @@
                       <thead>
                         <tr>
                           <th>Sl No.</th>
-                             <th id="title">Text</th>
-                             <th>Qouted Text</th>
-                             <th>Number </th>
-                             <th>InText </th>
-                             <th>Out Text </th>
-                             <th>Status</th>
+                           <th id="title">Text</th>
+                           <th>Qouted Text</th>
+                           <th>Number </th>
+                           <th>InText </th>
+                           <th>Out Text </th>
+                           <th>Status</th>
                         </tr>
                       </thead>
 
 
                       <tbody>
-                        <?php
-                                  $query = "SELECT * from qrcode ";
-                                     $result = $conn->query($query);
-                                  if ($result->num_rows > 0){
-                                    $count = 1;
-                                       while($row = $result->fetch_assoc()){
-                                         ?>
-                                           <tr>
-                                              <td> <input type="checkbox" name="chk"  value="<?php echo $row['slno'] ?>"> </td>
-                                             <td> <?php echo $count; ?></td>
-                                             <td id="title"><?php echo $row['text'];?></td>
-                                             <td><?php echo $row['Qoute'];?></td>
-                                             <td><?php echo $row['number'];?></td>
-                                             <td><?php echo $row['intext'];?></td>
-                                             <td><?php echo $row['outtext'];?></td>
-                                             <td>
-                                             <?php if($row['status'] == 0){
-                                                echo "Not Shared Yet";
-                                             }else if($row['status'] == 1){
-                                               echo "Shared Already";
-                                             }else{
-                                               echo "Already Scanned";
-                                             }
-                                             $count++;
-                                  ?>
-                                  </td>
-                                      </tr>
-                                  <?php
-                                       }
-                                  }
-                                    ?>                      </tbody>
+                        <tr>
+                          <td>Tiger Nixon</td>
+                          <td>System Architect</td>
+                          <td>Edinburgh</td>
+                          <td>61</td>
+                          <td>2011/04/25</td>
+                          <td>$320,800</td>
+                        </tr>
+                      </tbody>
                     </table>
                   </div>
                 </div>
