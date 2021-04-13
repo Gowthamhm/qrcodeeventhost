@@ -125,12 +125,14 @@ include 'error.php';
                     while($row = $result->fetch_assoc()) {
                       ?><tr>
              <td><input type="checkbox"  name ="check" value="<?php echo $row['number'];?>"></td>
-                      <td><?php echo $row['number'];?></td>  </tr>
+                      <td><?php echo $row['number'];?></td>
+                    </tr>
                       <?php
                     }
                   }
                   ?>
 <tr>
+  <input type="text" name="number" id="num"value="">
   <input type="submit" name="send" value="Send Message">
 </tr>
 </form>
@@ -217,6 +219,8 @@ include 'error.php';
 <script type="text/javascript">
   function check(){
     console.log(document.querySelector("#check-all").checked);
+    document.getElementById('num').value=document.querySelector("#datatable-checkbox > tbody > tr:nth-child(2) > td:nth-child(1) > input[type=checkbox]").value;
+    document.getElementById('num').value=document.querySelector("#datatable-checkbox > tbody > tr:nth-child(3) > td:nth-child(1) > input[type=checkbox]").value;
   }
 </script>
     <!-- jQuery -->
