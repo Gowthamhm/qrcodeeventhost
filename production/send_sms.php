@@ -4,8 +4,9 @@ include 'error.php';
 include 'session.php';
 if (isset($_POST['sendsms'])) {
 $recipient_phone_numbers = mysqli_real_escape_string($conn,$_POST['numbers']);
-$text = mysqli_real_escape_string($conn,$_POST['text']);
-
+// $text = mysqli_real_escape_string($conn,$_POST['text']);
+$text = mysqli_real_escape_string($conn,$_POST['editor1']);
+// editor1
 $service_plan_id = "78125b9858494c72894913f48031923d";
 $bearer_token = "63045e8e65ae445b8b65d9f8b7a657cb";
 
