@@ -99,7 +99,9 @@ include 'error.php';
         <!-- /top navigation -->
 
         <!-- page content -->
-        <div class="row">
+        <div class="x_content">
+                          <div class="row">
+                        
                       <div class="col-md-12 col-sm-12 ">
                         <div class="x_panel">
                           <div class="x_title">
@@ -145,6 +147,7 @@ include 'error.php';
                     </div>
                         </div>
                       </div>
+</div>
 </div>
         <!-- /page content -->
 
