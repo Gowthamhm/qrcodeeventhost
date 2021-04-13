@@ -23,7 +23,7 @@ $recipient_phone_numbers = explode(',', $recipient_phone_numbers);
 $recipient_phone_numbers = [$recipient_phone_numbers];
 }
 for ($i=0; $i < count($recipient_phone_numbers) ; $i++) {
-$number = "91".$recipient_phone_numbers[$i];
+$number = $recipient_phone_numbers[$i];
 echo $number;
 echo $text;
 // Set necessary fields to be JSON encoded
