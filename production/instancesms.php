@@ -107,7 +107,6 @@ include 'error.php';
                       <div class="table-responsive">
                       <table class="table table-striped jambo_table bulk_action" >
                         <thead>
-                          <input type ="text" name="all" id= "all"value="">
                           <tr class="headings">
                             <th>
                               <input type="checkbox" id="check-all" class="flat">
@@ -150,21 +149,6 @@ include 'error.php';
 
       </div>
     </div>
-<script type="text/javascript">
-  if(document.querySelector("#check-all").checked == true){
-document.getElementById("all").value="9999";
-  }else{
-document.getElementById("all").value="0";
-  }
-  var count = <?php echo $count;?>;
-  for (var i = 0; i /< count i++) {
-    if(document.querySelector("#demo-form2 > div > table > tbody > tr:nth-child(1) > td.a-center > div > input").checked == true){
-console.log(document.querySelector("#demo-form2 > div > table > tbody > tr:nth-child(1) > td.a-center > div > input").value);
-    }else{
-      console.log(document.querySelector("#demo-form2 > div > table > tbody > tr:nth-child(1) > td.a-center > div > input").value);
-    }
-  }
-    </scrip>
 
     <!-- jQuery -->
     <script src="../vendors/jquery/dist/jquery.min.js"></script>
