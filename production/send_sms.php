@@ -26,39 +26,48 @@ if(stristr($recipient_phone_numbers, ',')){
 }else{
   $recipient_phone_numbers = [$recipient_phone_numbers];
 }
+for ($i=0; $i < count($recipient_phone_numbers); $i++) {
+$number = "91".$recipient_phone_numbers[$i];
+if (strlen($number == 12)) {
+  // Set necessary fields to be JSON encoded
+  $content = [
+    'to' => $number,
+    'from' => $send_from,
+    'body' => $text
+  ];
 
-// Set necessary fields to be JSON encoded
-$content = [
-  'to' => array_values($recipient_phone_numbers),
-  'from' => $send_from,
-  'body' => $text
-];
+  $data = json_encode($content);
 
-$data = json_encode($content);
+  $ch = curl_init("https://us.sms.api.sinch.com/xms/v1/{$service_plan_id}/batches");
+  curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
+  curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_BEARER);
+  curl_setopt($ch, CURLOPT_XOAUTH2_BEARER, $bearer_token);
+  curl_setopt($ch, CURLOPT_POST, true);
+  curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+  curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+  curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 
-$ch = curl_init("https://us.sms.api.sinch.com/xms/v1/{$service_plan_id}/batches");
-curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
-curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_BEARER);
-curl_setopt($ch, CURLOPT_XOAUTH2_BEARER, $bearer_token);
-curl_setopt($ch, CURLOPT_POST, true);
-curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+  $result = curl_exec($ch);
 
-$result = curl_exec($ch);
-
-if(curl_errno($ch)) {
-    echo 'Curl error: ' . curl_error($ch);
-} else {
-  curl_close($ch);
+  if(curl_errno($ch)) {
+      echo 'Curl error: ' . curl_error($ch);
+  } else {
+    curl_close($ch);
+    ?><script type="text/javascript" charset="utf-8">
+     alert("Message Sent Successfully");
+     // window.location.replace('instancesms.php');
+     </script>
+     <?php
+      echo $result;
+  }
+}else {
   ?><script type="text/javascript" charset="utf-8">
-   alert("Message Sent Successfully");
+   alert("number invalid");
    // window.location.replace('instancesms.php');
    </script>
    <?php
-    echo $result;
 }
-
+}
 }else {
   echo "can't able to send SMS";
 }
