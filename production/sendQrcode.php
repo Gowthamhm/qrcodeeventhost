@@ -106,10 +106,10 @@ include 'error.php';
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
-                      <div class="row">
                         <form action="share.php" method="post">
-                          <div class="col-sm-12">
-                            <div class="card-box table-responsive">
+    <div class="row">
+        <div class="col-sm-12">
+          <div class="card-box table-responsive">
                     <table id="datatable-checkbox" class="table table-striped table-bordered bulk_action" style="width:100%">
                       <thead>
                         <tr>
