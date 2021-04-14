@@ -20,10 +20,11 @@ if(stristr($recipient_phone_numbers, ',')){
 }else{
   $recipient_phone_numbers = [$recipient_phone_numbers];
 }
-echo $recipient_phone_numbers;
+// echo $recipient_phone_numbers;
 for ($i=0; $i < count($recipient_phone_numbers) ; $i++) {
-$recipient_phone_number = ["+91".$recipient_phone_numbers[$i]];
+$recipient_phone_number = "+91".$recipient_phone_numbers[$i];
 if (strlen($recipient_phone_number)==13) {
+  $recipient_phone_number = ["+91".$recipient_phone_numbers[$i]];
 $text = strip_tags($text);
 $content = [
   'to' => array_values($recipient_phone_number),
