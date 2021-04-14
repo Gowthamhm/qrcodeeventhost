@@ -65,6 +65,7 @@ if ($result->num_rows > 0) {
                <?php
             }
           }
+        }
           else {
             ?><script type="text/javascript" charset="utf-8">
              alert("message not send Successfully");
