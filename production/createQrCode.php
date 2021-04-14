@@ -63,7 +63,7 @@ if(preg_match('~&quot;(.*?)&quot;~', $originText, $m)){
             ?>
             <script type='text/javascript' charset='utf-8'>
              alert("QrCode Created in Folder Successfully and ");
-             // window.location.replace('folder.php');
+             window.location.replace('folder.php');
              </script>
              <?php
           }
@@ -75,7 +75,7 @@ if(preg_match('~&quot;(.*?)&quot;~', $originText, $m)){
           ?>
           <script type="text/javascript" charset="utf-8">
            alert("QrCode Create in Folder Successfully without creating folder");
-           // window.location.replace('folder.php');
+           window.location.replace('folder.php');
            </script>
            <?php
         }
@@ -83,7 +83,7 @@ if(preg_match('~&quot;(.*?)&quot;~', $originText, $m)){
       ?>
 <script type='text/javascript' charset='utf-8'>
        alert("Can't able to insert into db");
-        // window.location.replace('folder.php');
+        window.location.replace('folder.php');
        </script>
        <?php
     }
