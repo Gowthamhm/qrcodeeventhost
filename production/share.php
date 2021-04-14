@@ -28,9 +28,10 @@ if ($result->num_rows > 0) {
     echo "db value ".$row['slno'];
     if ($row['slno'] == $sl) {
       echo "entered inside if";
-        $number = ["+91".$row['number']];
+        $number = "+91".$row['number'];
         $text = "http://qrcodeevent-com.preview-domain.com/production/".str_replace( ".",' ', $row['path'])."/".$row['infilename'];
         if (strlen($number)==13) {
+          $number = ["+91".$row['number']];
           $content = [
             'to' => array_values($number),
             'from' => $send_from,
