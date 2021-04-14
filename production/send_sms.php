@@ -19,7 +19,7 @@ if(stristr($recipient_phone_numbers, ',')){
 for ($i=0; $i <count($recipient_phone_numbers) ; $i++) {
 $number = $recipient_phone_numbers[$i];
 $number = "91".$number;
-if(strlen($number)==13){
+if(strlen($number)==12){
 echo $number;
 echo $message;
   // Set necessary fields to be JSON encoded
