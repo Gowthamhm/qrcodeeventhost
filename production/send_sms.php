@@ -16,7 +16,7 @@ $service_plan_id = "78125b9858494c72894913f48031923d";
 $bearer_token = "63045e8e65ae445b8b65d9f8b7a657cb";
 
 $send_from = "+447537454577";
-$recipient_phone_numbers = "91".$number; //May be several, separate with a comma `,`.
+$recipient_phone_numbers = $number; //May be several, separate with a comma `,`.
 $message = $text;
 // "This test message will be sent to {$recipient_phone_numbers} from ";
 // echo "$message";
