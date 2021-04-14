@@ -2,6 +2,15 @@
 include 'session.php';
 include 'connection.php';
 include 'error.php';
+
+if (!empty($_SESSION['folder_name'])) {
+  // echo $_SESSION['folder_name'];
+}else {
+  ?><script type="text/javascript" charset="utf-8">
+   window.location.replace('home.php');
+   </script>
+   <?php
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
