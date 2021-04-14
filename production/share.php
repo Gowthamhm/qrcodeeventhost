@@ -7,7 +7,6 @@ include 'session.php';
 if (isset($_POST['send'])) {
  $slno = $_POST['slno'];
 
-
  if(stristr($slno, ',')){
    $slnos = explode(',', $slno);
  }else{
@@ -25,9 +24,8 @@ $sql ="SELECT * FROM `qrcode`";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
   while($row = $result->fetch_assoc()) {
-    echo $slno;
+    // echo $slno;
     if ($row['slno'] == $slno) {
-
         $number = ["+91".$row['number']];
         $text = "http://qrcodeevent-com.preview-domain.com/production/".str_replace( ".",' ', $row['path'])."/".$row['infilename'];
         if (strlen($number==13)) {
