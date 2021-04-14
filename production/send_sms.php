@@ -19,7 +19,7 @@ $send_from = "+447537454577";
 $recipient_phone_numbers = $number; //May be several, separate with a comma `,`.
 $message = $text;
 // "This test message will be sent to {$recipient_phone_numbers} from ";
-// echo $message;
+// echo "$message";
 // Check recipient_phone_numbers for multiple numbers and make it an array.
 if(stristr($recipient_phone_numbers, ',')){
   $recipient_phone_numbers = explode(',', $recipient_phone_numbers);
@@ -29,8 +29,7 @@ if(stristr($recipient_phone_numbers, ',')){
 for ($i=0; $i < count($recipient_phone_numbers); $i++) {
 $number = "91".$recipient_phone_numbers[$i];
 echo strlen($number);
-echo $number
-// if (strlen($number) ==12) {
+if (strlen($number)==12) {
   // Set necessary fields to be JSON encoded
   $content = [
     'to' => $number,
@@ -62,13 +61,13 @@ echo $number
      <?php
       echo $result;
   }
-// }else {
+}else {
   ?><script type="text/javascript" charset="utf-8">
    alert("number invalid");
    // window.location.replace('instancesms.php');
    </script>
    <?php
-// }
+}
 }
 }else {
   echo "can't able to send SMS";
