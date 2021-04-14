@@ -1,5 +1,4 @@
-<?php
-include 'session.php';
+<?php include 'session.php';
 include 'connection.php';
 include 'error.php';
 
@@ -30,7 +29,11 @@ $user = $_SESSION['folder_name'];
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" href="images/logo.ico" type="image/ico" />
 
-    <title><?php echo   $user; ?></title>
+     <title><?php echo   $user; ?></title>
+    <script src="ckeditor.js"></script>
+    <script src="js/sample.js"></script>
+    <link rel="stylesheet" href="css/samples.css">
+    <link rel="stylesheet" href="samples/toolbarconfigurator/lib/codemirror/neo.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <!-- Bootstrap -->
     <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -84,8 +87,6 @@ $user = $_SESSION['folder_name'];
                   </li>
                   <li><a href="spreadsheet.php?export=true"><i class="fa fa-file-excel-o"></i> Google Sheets</a>
                   </li>
-                  <li><a href="sendQrcode.php"><i class="fa fa-comments-o"></i> Share QrCode </a>
-                  </li>
                   </ul>
               </div>
             </div>
@@ -108,105 +109,75 @@ $user = $_SESSION['folder_name'];
           </div>
         </div>
         <!-- /top navigation -->
-
         <!-- page content -->
-        <div class="right_col" role="main">
-          <!-- top tiles -->
-          <div class="row">
-          <div class="col-md-12">
-          <div class="col-md-6 col-lg-4" >
-          <!-- <button class="btn btn-default clf" >
-              QR CODE</button> -->
-              <a href="qrcodeDisplay.php" class="btn btn-default clf">QR CODE</a>
-      </div>
-      <div class="col-md-6 col-lg-4" >
-          <button class="btn btn-default clf"  >
-              Scanned Info</button>
-      </div>
-      <div class="col-md-6 col-lg-4" >
-          <!-- <button class="btn btn-default clf" >
-              Google Sheets</button> -->
-              <a href="googlesheet.php?export=true" class="btn btn-default clf" >Google Sheets</a>
-      </div>
-  </div>
-  <div class="row">
-      <!-- Grid column -->
-      <div class="col-md-6 col-lg-4" >
-          <button class="btn btn-default clfa"  onclick="showeditor()" >
-              New</button>
-              <!-- <a href="editor.php" class="btn btn-default clfa" >New</a> -->
-      </div>
-      <div class="col-md-6 col-lg-4" >
-          <!-- <button class="btn btn-default clfa"  >
-              Preview</button> -->
-              <a href="preview.php" class="btn btn-default clf" >Preview</a>
-      </div>
-      <!--    <div class="col-md-6 col-lg-4" >
-             <button class="btn btn-default clf" >
-         Google Sheets</button>
-        </div>-->
-  </div>
-                     <!-- /col-md-12 end -->
-          </div>
-          <!-- /row end -->
-        </div>
-          <!-- /top tiles -->
-        </div>
-        <!-- /page content -->
+  			<div class="right_col" role="main">
+  				<div class="">
+  					<div class="clearfix"></div>
+  					<div class="col-md-12 col-sm-12 ">
+              <form class="" action="send_sms.php" id="qrsubmit" method="post">
+                <input type="hidden" name="numbers" value="<?php echo $numbers;?>">
+                <textarea name="editor1" id="editor1" rows="10" cols="80">
+               </textarea>
+                <input type="hidden" name="text"  id="hiddentext" value="">
+                <input type="submit" name="sendsms"  onclick="submitForm()" value="Send Message">
+              </form>
+  					</div>
+
+  				</div>
+  			</div>
+  			<!-- /page content -->
 
       </div>
     </div>
-
+<script type="text/javascript">
+	initSample();
+  CKEDITOR.replace( 'editor1' );
+function showeditor() {
+             var x = document.getElementById("collapseOne");
+             if (x.style.display === "none") {
+                 x.style.display = "block";
+             } else {
+                 x.style.display = "none";
+             }
+         }
+         function submitForm() {
+              // $("#hiddentext").val($("").html());
+              var data = CKEDITOR.instances.editor1.getData();
+              console.log(data);
+              document.getElementById("hiddentext").value=data;
+              document.getElementById("qrsubmit").submit();
+              // document.getElementById("qrsubmit").submit();
+          }
+</script>
     <!-- jQuery -->
     <script src="../vendors/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap -->
-    <script src="../vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+   <script src="../vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <!-- FastClick -->
     <script src="../vendors/fastclick/lib/fastclick.js"></script>
     <!-- NProgress -->
     <script src="../vendors/nprogress/nprogress.js"></script>
-    <!-- Chart.js -->
-    <script src="../vendors/Chart.js/dist/Chart.min.js"></script>
-    <!-- gauge.js -->
-    <script src="../vendors/gauge.js/dist/gauge.min.js"></script>
-    <!-- bootstrap-progressbar -->
-    <script src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
     <!-- iCheck -->
     <script src="../vendors/iCheck/icheck.min.js"></script>
-    <!-- Skycons -->
-    <script src="../vendors/skycons/skycons.js"></script>
-    <!-- Flot -->
-    <script src="../vendors/Flot/jquery.flot.js"></script>
-    <script src="../vendors/Flot/jquery.flot.pie.js"></script>
-    <script src="../vendors/Flot/jquery.flot.time.js"></script>
-    <script src="../vendors/Flot/jquery.flot.stack.js"></script>
-    <script src="../vendors/Flot/jquery.flot.resize.js"></script>
-    <!-- Flot plugins -->
-    <script src="../vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
-    <script src="../vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
-    <script src="../vendors/flot.curvedlines/curvedLines.js"></script>
-    <!-- DateJS -->
-    <script src="../vendors/DateJS/build/date.js"></script>
-    <!-- JQVMap -->
-    <script src="../vendors/jqvmap/dist/jquery.vmap.js"></script>
-    <script src="../vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
-    <script src="../vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
-    <!-- bootstrap-daterangepicker -->
-    <script src="../vendors/moment/min/moment.min.js"></script>
-    <script src="../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <!-- Datatables -->
+    <script src="../vendors/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="../vendors/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+    <script src="../vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="../vendors/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+    <script src="../vendors/datatables.net-buttons/js/buttons.flash.min.js"></script>
+    <script src="../vendors/datatables.net-buttons/js/buttons.html5.min.js"></script>
+    <script src="../vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
+    <script src="../vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js"></script>
+    <script src="../vendors/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
+    <script src="../vendors/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="../vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
+    <script src="../vendors/datatables.net-scroller/js/dataTables.scroller.min.js"></script>
+    <script src="../vendors/jszip/dist/jszip.min.js"></script>
+    <script src="../vendors/pdfmake/build/pdfmake.min.js"></script>
+    <script src="../vendors/pdfmake/build/vfs_fonts.js"></script>
 
     <!-- Custom Theme Scripts -->
     <script src="../build/js/custom.min.js"></script>
 
   </body>
-  <script type="text/javascript" charset="utf-8">
-function showf() {
-    var x = document.getElementById("collapseOne");
-    if (x.style.display === "none") {
-        x.style.display = "block";
-    } else {
-        x.style.display = "none";
-    }
-}
-</script>
 </html>
