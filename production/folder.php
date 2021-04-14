@@ -89,7 +89,7 @@ $user = $_SESSION['folder_name'];
                   </li>
                   <li><a href="sendQrcode.php"><i class="fa fa-comments-o"></i> Share QrCode </a>
                   </li>
-                  
+
                   </ul>
               </div>
             </div>
@@ -117,13 +117,13 @@ $user = $_SESSION['folder_name'];
   				<div class="">
   					<div class="clearfix"></div>
 
-            <div class="col-md-6 col-sm-6  form-group has-feedback">
-            <a href="sendQrcode.php" class="btn btn-round btn-primary"> QrCode </a>
+            <div class="col-md-3 col-sm-3  form-group has-feedback">
+            <a href="sendQrcode.php" class="btn btn-round btn-success"> QrCode </a>
 
                     </div>
 
-                  <div class="col-md-6 col-sm-6  form-group has-feedback">
-                    <button type="button" class="btn btn-round btn-primary" onclick="showeditor()">New</button>
+                  <div class="col-md-3 col-sm-3  form-group has-feedback">
+                    <button type="button" class="btn btn-round btn-success" onclick="showeditor()">New</button>
                       </div>
 
   					<div class="col-md-12 col-sm-12 " id="collapseOne" style="display:none;">

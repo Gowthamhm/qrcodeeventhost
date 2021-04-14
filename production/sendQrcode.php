@@ -14,6 +14,10 @@ include 'error.php';
 	<link rel="icon" href="images/logo.ico" type="image/ico" />
 
     <title>Share QrCode</title>
+    <script src="ckeditor.js"></script>
+    <script src="js/sample.js"></script>
+    <link rel="stylesheet" href="css/samples.css">
+    <link rel="stylesheet" href="samples/toolbarconfigurator/lib/codemirror/neo.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <!-- Bootstrap -->
     <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -130,7 +134,7 @@ include 'error.php';
                       </thead>
                       <tbody>
                           <?php
-                  $sql ="SELECT * FROM `qrcode`";
+                  $sql ="SELECT * FROM `qrcode` where folder_name='".$_SESSION['folder_name']."'";
                   $result = $conn->query($sql);
                   if ($result->num_rows > 0) {
                     // output data of each row
@@ -176,6 +180,27 @@ include 'error.php';
                   <input type="submit" name="send" class="btn btn-round btn-success" id="sub" value="Send QRCODE">
                 </form>
                   </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-3 col-sm-3  form-group has-feedback">
+                <button type="button" class="btn btn-round btn-success" onclick="showeditor()">New</button>
+                  </div>
+
+        <div class="col-md-12 col-sm-12 " id="collapseOne" style="display:none;">
+          <form class="input_mask" action="createQrCode.php" id="qrsubmit" method="post">
+                      <input type="hidden" name="foldername" value=<?php echo $user; ?>
+            <textarea name="editor1" id="editor1" rows="10" cols="80">
+           </textarea>
+            <input type="hidden" name="hiddentext"  id="hiddentext" value="">
+            <br><br>
+            <div class="col-md-6 col-sm-6  form-group has-feedback">
+                  <input type="tel" class="form-control" name="number" id="inputSuccess5" placeholder="Phone" required>
+                  <span class="fa fa-phone form-control-feedback right" aria-hidden="true"></span>
+                </div>
+            <input type="submit" name="sendsms" class="btn btn-round btn-success" onclick="submitForm()" value="Send Message">
+          </form>
+        </div>
               </div>
             </div>
                 </div>
@@ -229,6 +254,26 @@ include 'error.php';
   });
 });
 
+</script>
+<script type="text/javascript">
+	initSample();
+  CKEDITOR.replace( 'editor1' );
+function showeditor() {
+             var x = document.getElementById("collapseOne");
+             if (x.style.display === "none") {
+                 x.style.display = "block";
+             } else {
+                 x.style.display = "none";
+             }
+         }
+         function submitForm() {
+              // $("#hiddentext").val($("").html());
+              var data = CKEDITOR.instances.editor1.getData();
+              console.log(data);
+              document.getElementById("hiddentext").value=data;
+              document.getElementById("qrsubmit").submit();
+              // document.getElementById("qrsubmit").submit();
+          }
 </script>
     <!-- jQuery -->
     <script src="../vendors/jquery/dist/jquery.min.js"></script>
