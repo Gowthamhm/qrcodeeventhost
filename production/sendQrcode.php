@@ -166,12 +166,11 @@ include 'error.php';
                     }
                   }
                   ?>
-<tr>
-  <input type="text" name="slno" id="num"value="">
-  <input type="submit" name="send" id="sub" value="Enter Message">
-</tr>
-</form>
+
                       </tbody>
+                        <input type="text" name="slno" id="num"value="">
+                        <input type="submit" name="send" id="sub" value="Enter Message">
+                      </form>
                     </table>
                   </div>
                   </div>
