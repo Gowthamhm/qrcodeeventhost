@@ -6,7 +6,7 @@ include 'session.php';
 
 if (isset($_POST['send'])) {
  $slno = $_POST['slno'];
- echo "entered sl no ".$slno;
+ // echo "entered sl no ".$slno;
  if(stristr($slno, ',')){
    $slnos = explode(',', $slno);
  }else{
@@ -17,17 +17,17 @@ $service_plan_id = "78125b9858494c72894913f48031923d";
 $bearer_token = "63045e8e65ae445b8b65d9f8b7a657cb";
 
 $send_from = "+447537454577";
-echo "count ".count($slnos);
+// echo "count ".count($slnos);
 for ($i=0; $i < count($slnos) ; $i++) {
 $sl = $slnos[$i];
 $sql ="SELECT * FROM `qrcode` WHERE slno ='". $sl."'";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
-      echo "array split ".$sl;
-      echo "db value ".$row['slno'];
+      // echo "array split ".$sl;
+      // echo "db value ".$row['slno'];
       if ($row['slno'] == $sl) {
-        echo "entered inside if";
+        // echo "entered inside if";
           $number = "+91".$row['number'];
           $text = "http://qrcodeevent-com.preview-domain.com/production".str_replace( ".",'', $row['path'])."/".$row['infilename'];
           if (strlen($number)==13) {
@@ -50,11 +50,11 @@ if ($result->num_rows > 0) {
             curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 
             $result = curl_exec($ch);
-            echo "result".$result;
+            // echo "result".$result;
             if(curl_errno($ch)) {
                 echo 'Curl error: ' . curl_error($ch);
             }else {
-              echo "result".$result;
+              // echo "result".$result;
               curl_close($ch);
               ?><script type="text/javascript" charset="utf-8">
                alert("Message Send Successfully");
@@ -70,10 +70,11 @@ if ($result->num_rows > 0) {
           }
       }else{
         ?><script type="text/javascript" charset="utf-8">
-         alert("entered and db value not equal");
+         // alert("entered and db value not equal");
          </script>
          <?php
       }
+
     }
 }
 else {
