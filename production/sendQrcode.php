@@ -172,7 +172,7 @@ include 'error.php';
                     </table>
 
                   </div>
-                  <input type="text" name="slno" id="num"value="">
+                  <input type="hidden" name="slno" id="num"value="">
                   <input type="submit" name="send" id="sub" value="Send QRCODE">
                 </form>
                   </div>
