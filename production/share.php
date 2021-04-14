@@ -22,6 +22,7 @@ for ($i=0; $i < count($slnos) ; $i++) {
 $sl = $slnos[$i];
 $sql ="SELECT * FROM `qrcode` WHERE slno ='". $sl."'";
 $result = $conn->query($sql);
+echo "no ".$result->num_rows;
 if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
       // echo "array split ".$sl;
