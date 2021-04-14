@@ -20,10 +20,10 @@ if(stristr($recipient_phone_numbers, ',')){
 }else{
   $recipient_phone_numbers = [$recipient_phone_numbers];
 }
-
-// Set necessary fields to be JSON encoded
+for ($i=0; $i < count($recipient_phone_numbers) ; $i++) {
+$recipient_phone_number = [$recipient_phone_numbers[i]];
 $content = [
-  'to' => array_values($recipient_phone_numbers),
+  'to' => array_values($recipient_phone_number),
   'from' => $send_from,
   'body' => $text
 ];
@@ -47,6 +47,9 @@ if(curl_errno($ch)) {
   curl_close($ch);
     echo "result".$result;
 }
+}
+// Set necessary fields to be JSON encoded
+
 }
 
  ?>
