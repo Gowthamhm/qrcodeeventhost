@@ -142,7 +142,7 @@ include 'error.php';
                                   <td><?php echo $row['text'];?></td>
                                   <td><?php echo $row['Qoute'];?></td>
                                   <td><?php echo $row['number'];?></td>
-                                  <td><?php echo $row['path'];?></td>
+                                  <td><?php echo  "http://qrcodeevent-com.preview-domain.com/production/".str_replace( ".", $row['path']);?></td>
                                   <td><?php echo $row['infilename'];?></td>
                                   <td><?php echo $row['outfilename'];?></td>
                                   <?php
