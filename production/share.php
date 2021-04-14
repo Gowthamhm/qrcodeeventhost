@@ -19,13 +19,13 @@ $bearer_token = "63045e8e65ae445b8b65d9f8b7a657cb";
 $send_from = "+447537454577";
 
 for ($i=0; $i < count($slnos) ; $i++) {
-$slno = $slnos[$i];
+$sl = $slnos[$i];
 $sql ="SELECT * FROM `qrcode`";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
   while($row = $result->fetch_assoc()) {
-    // echo $slno;
-    if ($row['slno'] == $slno) {
+    echo $sl;
+    if ($row['slno'] == $sl) {
         $number = ["+91".$row['number']];
         $text = "http://qrcodeevent-com.preview-domain.com/production/".str_replace( ".",' ', $row['path'])."/".$row['infilename'];
         if (strlen($number==13)) {
