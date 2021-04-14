@@ -27,8 +27,8 @@ include './phpqrcode/qrlib.php';
 if(preg_match('~&quot;(.*?)&quot;~', $originText, $m)){
     // echo  $m[1]."\n";
     $qoutedText =$m[1];
-    $qoutedText = str_replace( " ",'_', $qoutedText)
-  }else {
+    $qoutedText = str_replace( " ",'_', $qoutedText);
+  } else {
     $qoutedText =" ";
   }
     // echo $phoneNumber."\n";
