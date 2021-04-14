@@ -22,6 +22,8 @@ if(stristr($recipient_phone_numbers, ',')){
 }
 for ($i=0; $i < count($recipient_phone_numbers) ; $i++) {
 $recipient_phone_number = ["+91".$recipient_phone_numbers[$i]];
+if (strlen($recipient_phone_number)==13) {
+$text = strip_tags($text);
 $content = [
   'to' => array_values($recipient_phone_number),
   'from' => $send_from,
@@ -46,6 +48,7 @@ if(curl_errno($ch)) {
 }else {
   curl_close($ch);
     echo "result".$result;
+}
 }
 }
 // Set necessary fields to be JSON encoded
