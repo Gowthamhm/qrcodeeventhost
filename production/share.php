@@ -24,7 +24,6 @@ $slno = $slnos[$i];
 $sql ="SELECT * FROM `qrcode`";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
-  // output data of each row
   while($row = $result->fetch_assoc()) {
     echo $slno;
     if ($row['slno'] == $slno) {
@@ -33,7 +32,7 @@ if ($result->num_rows > 0) {
         $text = "http://qrcodeevent-com.preview-domain.com/production/".str_replace( ".",' ', $row['path'])."/".$row['infilename'];
         if (strlen($number==13)) {
           $content = [
-            'to' => $number,
+            'to' => array_values($number),
             'from' => $send_from,
             'body' => $text
           ];
@@ -67,11 +66,6 @@ if ($result->num_rows > 0) {
            </script>
            <?php
         }
-    }else {
-      ?><script type="text/javascript" charset="utf-8">
-       alert("slno");
-       </script>
-       <?php
     }
   }
 }
