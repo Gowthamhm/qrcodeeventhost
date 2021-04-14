@@ -130,7 +130,7 @@ $user = $_SESSION['folder_name'];
                           <input type="hidden" name="foldername" value=<?php echo $user; ?>
                 <textarea name="editor1" id="editor1" rows="10" cols="80">
                </textarea>
-                <input type="hidden" name="text"  id="hiddentext" value="">
+                <input type="hidden" name="hiddentext"  id="hiddentext" value="">
                 <br><br>
                 <div class="col-md-6 col-sm-6  form-group has-feedback">
 											<input type="tel" class="form-control" name="number" id="inputSuccess5" placeholder="Phone" required>
