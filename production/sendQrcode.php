@@ -107,6 +107,7 @@ include 'error.php';
                   </div>
                   <div class="x_content">
                       <div class="row">
+                        <form action="share.php" method="post">
                           <div class="col-sm-12">
                             <div class="card-box table-responsive">
                     <table id="datatable-checkbox" class="table table-striped table-bordered bulk_action" style="width:100%">
@@ -128,7 +129,6 @@ include 'error.php';
                         </tr>
                       </thead>
                       <tbody>
-                        <form action="share.php" method="post">
                           <?php
                   $sql ="SELECT * FROM `qrcode`";
                   $result = $conn->query($sql);
@@ -188,11 +188,6 @@ include 'error.php';
         <!-- /page content -->
       </div>
     </div>
-<script type="text/javascript">
-  function check(){
-
-    }
-</script>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script type="text/javascript">
     $(function () {
