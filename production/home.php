@@ -69,6 +69,8 @@ include 'error.php';
                   </li>
                   <li><a href="sendQrcode.php"><i class="fa fa-comments-o"></i> Share QrCode </a>
                   </li>
+                  <li><a href="download.php"><i class="fa fa-download"></i> Download</a>
+                  </li>
                   </ul>
               </div>
             </div>
