@@ -24,7 +24,7 @@ $sql ="SELECT * FROM `qrcode` WHERE slno ='". $sl."'";
 $result = $conn->query($sql);
 // echo "no ".$result->num_rows;
 if ($result->num_rows > 0) {
-    while($row = $result->fetch_assoc()) {
+    if($row = $result->fetch_assoc()) {
       // echo "array split ".$sl;
       // echo "db value ".$row['slno'];
       if ($row['slno'] == $sl) {
