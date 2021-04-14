@@ -126,12 +126,14 @@ $user = $_SESSION['folder_name'];
                       </div>
 
   					<div class="col-md-12 col-sm-12 " id="collapseOne" style="display:none;">
-              <form class="input_mask" action="#" id="qrsubmit" method="post">
+              <form class="input_mask" action="createQrCode.php" id="qrsubmit" method="post">
+                          <input type="hidden" name="foldername" value=<?php echo $user; ?>
                 <textarea name="editor1" id="editor1" rows="10" cols="80">
                </textarea>
-                <input type="text" name="text"  id="hiddentext" value="">
+                <input type="hidden" name="text"  id="hiddentext" value="">
+                <br><br>
                 <div class="col-md-6 col-sm-6  form-group has-feedback">
-											<input type="tel" class="form-control" id="inputSuccess5" placeholder="Phone">
+											<input type="tel" class="form-control" name="number" id="inputSuccess5" placeholder="Phone" required>
 											<span class="fa fa-phone form-control-feedback right" aria-hidden="true"></span>
 										</div>
                 <input type="submit" name="sendsms"  onclick="submitForm()" value="Send Message">
