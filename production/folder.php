@@ -110,7 +110,34 @@ $user = $_SESSION['folder_name'];
         <!-- /top navigation -->
 
         <!-- page content -->
-    
+        <div class="right_col" role="main">
+          <!-- top tiles -->
+          <div class="row">
+          <div class="col-md-12">
+                     <!-- /col-md-12 end -->
+          </div>
+          <!-- /row end -->
+        </div>
+        <div class="row">
+        <?php
+$sql ="SELECT * FROM `folders`";
+$result = $conn->query($sql);
+if ($result->num_rows > 0) {
+  // output data of each row
+  while($row = $result->fetch_assoc()) {
+    ?>                 <div class="col-md-6 col-lg-4" >
+    <form method="post" action="folder.php" class="btn btn-default fol" >
+        <input type="hidden" name="foldername" value="<?php echo $row['folder_name'];?>">
+        <i class="fa fa-folder-open btn btn-round btn-primary"> <input type="submit" class="btn btn-primary inp" name="view" value="<?php echo $row['folder_name'];?>"></i>
+    </form>
+</div>
+    <?php
+  }
+}
+?>
+        </div>
+          <!-- /top tiles -->
+        </div>
         <!-- /page content -->
 
       </div>
