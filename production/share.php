@@ -83,7 +83,7 @@ if ($result->num_rows > 0) {
 }
 else {
   ?><script type="text/javascript" charset="utf-8">
-   alert("Please Select a Valid Number");
+   // alert("Please Select a Valid Number");
    </script>
    <?php
 }
