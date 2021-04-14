@@ -114,11 +114,13 @@ $user = $_SESSION['folder_name'];
   				<div class="">
   					<div class="clearfix"></div>
   					<div class="col-md-12 col-sm-12 ">
-              <form class="" action="send_sms.php" id="qrsubmit" method="post">
-                <input type="hidden" name="numbers" value="<?php echo $numbers;?>">
+              <form class="" action="generateQr.php" id="qrsubmit" method="post">
                 <textarea name="editor1" id="editor1" rows="10" cols="80">
                </textarea>
-                <input type="hidden" name="text"  id="hiddentext" value="">
+               <div class="col-md-6 col-sm-6  form-group has-feedback">
+ 											<input type="tel" class="form-control" id="inputSuccess5" placeholder="Phone">
+ 											<span class="fa fa-phone form-control-feedback right" aria-hidden="true"></span>
+ 										</div>
                 <input type="submit" name="sendsms"  onclick="submitForm()" value="Send Message">
               </form>
   					</div>
