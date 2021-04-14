@@ -49,12 +49,22 @@ if(curl_errno($ch)) {
     echo 'Curl error: ' . curl_error($ch);
 }else {
   curl_close($ch);
-    echo "result".$result;
+  ?><script type="text/javascript" charset="utf-8">
+   alert("message  send Successfully");
+   </script>
+   <?php
+    // echo "result".$result;
+}
+}else {
+  ?><script type="text/javascript" charset="utf-8">
+   alert("message not send Successfully");
+   </script>
+   <?php
 }
 }
+?><script type="text/javascript" charset="utf-8">
+  window.location.replace('instancesms.php');
+ </script>
+ <?php
 }
-// Set necessary fields to be JSON encoded
-
-}
-
  ?>
