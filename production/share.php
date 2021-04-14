@@ -23,7 +23,6 @@ $sl = $slnos[$i];
 $sql ="SELECT * FROM `qrcode` WHERE slno ='". $sl ."'";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
-  try{
     while($row = $result->fetch_assoc()) {
       echo "array split ".$sl;
       echo "db value ".$row['slno'];
@@ -76,13 +75,6 @@ if ($result->num_rows > 0) {
          <?php
       }
     }
-  }catch(Exception $e) {
-  echo 'Message: ' .$e->getMessage();
-  ?><script type="text/javascript" charset="utf-8">
-  window.location.replace('sendQrcode.php');
-   </script>
-   <?php
-}
 }
 else {
   ?><script type="text/javascript" charset="utf-8">
