@@ -21,7 +21,7 @@ if(stristr($recipient_phone_numbers, ',')){
   $recipient_phone_numbers = [$recipient_phone_numbers];
 }
 for ($i=0; $i < count($recipient_phone_numbers) ; $i++) {
-$recipient_phone_number = [$recipient_phone_numbers[i]];
+$recipient_phone_number = ["+91".$recipient_phone_numbers[$i]];
 $content = [
   'to' => array_values($recipient_phone_number),
   'from' => $send_from,
