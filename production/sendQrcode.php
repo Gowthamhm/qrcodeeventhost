@@ -168,11 +168,13 @@ include 'error.php';
                   ?>
 
                       </tbody>
-                        <input type="text" name="slno" id="num"value="">
-                        <input type="submit" name="send" id="sub" value="Enter Message">
-                      </form>
+
                     </table>
+
                   </div>
+                  <input type="text" name="slno" id="num"value="">
+                  <input type="submit" name="send" id="sub" value="Enter Message">
+                </form>
                   </div>
               </div>
             </div>
