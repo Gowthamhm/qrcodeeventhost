@@ -1,6 +1,6 @@
 <?php
 include 'session.php';
-include 'config.php';
+include 'connection.php';
 include 'error.php';
 include './phpqrcode/qrlib.php';
 
