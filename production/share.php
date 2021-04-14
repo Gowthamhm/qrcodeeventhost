@@ -25,7 +25,8 @@ $result = $conn->query($sql);
 // echo "no ".$result->num_rows;
 if ($result->num_rows > 0) {
   echo "fvbgdfs";
-  echo $row = $result->fetch_assoc();
+   $row = $result->fetch_assoc();
+   echo $row;
     while($row = $result->fetch_assoc()) {
       echo "fbg"
       // echo "array split ".$sl;
