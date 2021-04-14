@@ -58,7 +58,7 @@ if ($result->num_rows > 0) {
               // echo "result".$result;
               curl_close($ch);
           $updatestatus=  "UPDATE `qrcode` SET `status`=1 WHERE `slno` = ".$sl;
-          if($conn->query($update) === TRUE){
+          if($conn->query($updatestatus) === TRUE){
             ?><script type="text/javascript" charset="utf-8">
             alert("Message Send Successfully");
              </script>
