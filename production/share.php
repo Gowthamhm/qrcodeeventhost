@@ -6,7 +6,7 @@ include 'session.php';
 
 if (isset($_POST['send'])) {
  $slno = $_POST['slno'];
-echo "entered sl no ".$slno;
+ echo "entered sl no ".$slno;
  if(stristr($slno, ',')){
    $slnos = explode(',', $slno);
  }else{
@@ -20,7 +20,7 @@ $send_from = "+447537454577";
 echo "count ".count($slnos);
 for ($i=0; $i < count($slnos) ; $i++) {
 $sl = $slnos[$i];
-$sql ="SELECT * FROM `qrcode`";
+$sql ="SELECT * FROM `qrcode` WHERE slno ='". $sl ."'";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
   try{
