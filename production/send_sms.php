@@ -28,7 +28,8 @@ if(stristr($recipient_phone_numbers, ',')){
 }
 for ($i=0; $i < count($recipient_phone_numbers); $i++) {
 $number = "91".$recipient_phone_numbers[$i];
-if (strlen($number == 12)) {
+echo strlen($number);
+if (strlen($number)==12) {
   // Set necessary fields to be JSON encoded
   $content = [
     'to' => $number,
