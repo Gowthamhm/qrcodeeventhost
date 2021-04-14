@@ -48,13 +48,14 @@ if ($result->num_rows > 0) {
           curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 
           $result = curl_exec($ch);
-
+          echo "result".$result;
           if(curl_errno($ch)) {
               echo 'Curl error: ' . curl_error($ch);
           }else {
+            echo "result".$result;
             curl_close($ch);
             ?><script type="text/javascript" charset="utf-8">
-             alert("message  send Successfully");
+             alert("Message Send Successfully");
              </script>
              <?php
           }
