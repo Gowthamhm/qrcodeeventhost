@@ -112,7 +112,7 @@ include 'error.php';
     <div class="row">
         <div class="col-sm-12">
           <div class="card-box table-responsive">
-                    <table id="datatable-checkbox datatable-buttons" class="table table-striped table-bordered bulk_action" style="width:100%">
+                    <table id="datatable-checkbox " class="table table-striped table-bordered bulk_action" style="width:100%">
                       <thead>
                         <tr>
 
