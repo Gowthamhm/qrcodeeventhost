@@ -20,7 +20,7 @@ $send_from = "+447537454577";
 echo "count ".count($slnos);
 for ($i=0; $i < count($slnos) ; $i++) {
 $sl = $slnos[$i];
-$sql ="SELECT * FROM `qrcode` WHERE slno ='". $sl ."'";
+$sql ="SELECT * FROM `qrcode` WHERE slno ='". $sl."'";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
