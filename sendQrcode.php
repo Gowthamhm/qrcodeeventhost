@@ -114,11 +114,21 @@ include 'error.php';
                         <tr>
 
 							 <th><input type="checkbox" id="check-all" name="checkall" value=""></th>
+                          <th>slno</th>
+                          <th>Folder_name</th>
+                          <th>Original Text</th>
+                          <th>Qouteed Text</th>
                           <th>Phone Number</th>
+                          <th>path</th>
+                          <th>InFilename</th>
+                          <th>OutFilename</th>
+                          <th>Status</th>
+                          <th>In Text</th>
+                          <th>Out Text</th>
                         </tr>
                       </thead>
                       <tbody>
-                        <form action="sms.php" method="post">
+                        <form action="share.php" method="post">
                           <?php
                   $sql ="SELECT * FROM `qrcode`";
                   $result = $conn->query($sql);
@@ -126,15 +136,38 @@ include 'error.php';
                     // output data of each row
                     while($row = $result->fetch_assoc()) {
                       ?><tr>
-             <td><input type="checkbox"  name ="check" value="<?php echo $row['number'];?>"></td>
-                      <td><?php echo $row['number'];?></td>
+             <td><input type="checkbox"  name ="check" value="<?php echo $row['slno'];?>"></td>
+                                   <td><?php echo $row['slno'];?></td>
+                                   <td><?php echo $row['folder_name'];?></td>
+                                  <td><?php echo $row['text'];?></td>
+                                  <td><?php echo $row['Qoute'];?></td>
+                                  <td><?php echo $row['number'];?></td>
+                                  <td><?php echo $row['path'];?></td>
+                                  <td><?php echo $row['infilename'];?></td>
+                                  <td><?php echo $row['outfilename'];?></td>
+                                  <?php
+                                    if($row['status']==0){
+                                      ?>  <td><?php echo "Not Shared Yet";?></td><?php
+                                    }else if($row['status']==1){
+                                        ?>  <td><?php echo "In QrCode Shared";?></td><?php
+                                    }
+                                    else if($row['status']==99){
+                                        ?>  <td><?php echo "All Done";?></td><?php
+                                    }
+                                    else {
+                                        ?>  <td><?php echo "No Status";?></td><?php
+                                    }
+                                    ?>
+
+                                  <td><?php echo $row['intext'];?></td>
+                                  <td><?php echo $row['outtext'];?></td>
                     </tr>
                       <?php
                     }
                   }
                   ?>
 <tr>
-  <input type="hidden" name="number" id="num"value="">
+  <input type="text" name="slno" id="num"value="">
   <input type="submit" name="send" id="sub" value="Enter Message">
 </tr>
 </form>

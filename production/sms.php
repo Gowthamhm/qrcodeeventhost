@@ -108,10 +108,10 @@ include 'error.php';
   					<div class="clearfix"></div>
   					<div class="col-md-12 col-sm-12 ">
               <form class="" action="send_sms.php" id="qrsubmit" method="post">
-                <input type="text" name="numbers" value="<?php echo $numbers;?>">
+                <input type="hidden" name="numbers" value="<?php echo $numbers;?>">
                 <textarea name="editor1" id="editor1" rows="10" cols="80">
                </textarea>
-                <input type="text" name="text"  id="hiddentext" value="">
+                <input type="hidden" name="text"  id="hiddentext" value="">
                 <input type="submit" name="sendsms"  onclick="submitForm()" value="Send Message">
               </form>
   					</div>

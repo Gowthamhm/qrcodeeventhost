@@ -67,6 +67,8 @@ include 'error.php';
                   </li>
                   <li><a href="spreadsheet.php?export=true"><i class="fa fa-file-excel-o"></i> Google Sheets</a>
                   </li>
+                  <li><a href="sendQrcode.php"><i class="fa fa-comments-o"></i> Share QrCode </a>
+                  </li>
                   </ul>
               </div>
             </div>
