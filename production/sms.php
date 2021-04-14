@@ -80,6 +80,8 @@ include 'error.php';
                   </li>
                   <li><a href="spreadsheet.php?export=true"><i class="fa fa-file-excel-o"></i> Google Sheets</a>
                   </li>
+                  <li><a href="sendQrcode.php"><i class="fa fa-comments-o"></i> Share QrCode </a>
+                  </li>
                   </ul>
               </div>
             </div>
@@ -112,7 +114,7 @@ include 'error.php';
                 <textarea name="editor1" id="editor1" rows="10" cols="80">
                </textarea>
                 <input type="hidden" name="text"  id="hiddentext" value="">
-                <input type="submit" name="sendsms"  onclick="submitForm()" value="Send Message">
+                <input type="submit" name="sendsms" class="btn btn-round btn-success"  onclick="submitForm()" value="Send Message">
               </form>
   					</div>
 

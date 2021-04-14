@@ -173,7 +173,7 @@ include 'error.php';
 
                   </div>
                   <input type="hidden" name="slno" id="num"value="">
-                  <input type="submit" name="send" id="sub" value="Send QRCODE">
+                  <input type="submit" name="send" class="btn btn-round btn-success" id="sub" value="Send QRCODE">
                 </form>
                   </div>
               </div>

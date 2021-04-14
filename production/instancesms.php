@@ -135,7 +135,7 @@ include 'error.php';
                   ?>
 <tr>
   <input type="hidden" name="number" id="num"value="">
-  <input type="submit" name="send" id="sub" value="Enter Message">
+  <input type="submit" name="send" class="btn btn-round btn-success" id="sub" value="Enter Message">
 </tr>
 </form>
                       </tbody>
