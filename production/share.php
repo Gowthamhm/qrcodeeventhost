@@ -78,6 +78,10 @@ if ($result->num_rows > 0) {
     }
   }catch(Exception $e) {
   echo 'Message: ' .$e->getMessage();
+  ?><script type="text/javascript" charset="utf-8">
+  window.location.replace('sendQrcode.php');
+   </script>
+   <?php
 }
 }
 else {
