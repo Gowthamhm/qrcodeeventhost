@@ -30,7 +30,7 @@ for ($i=0; $i < count($recipient_phone_numbers); $i++) {
 $number = $recipient_phone_numbers[$i];
 echo strlen($number);
 echo $number;
-if (strlen($number)==12) {
+if (strlen($number)==10) {
   // Set necessary fields to be JSON encoded
   $content = [
     'to' => $number,
