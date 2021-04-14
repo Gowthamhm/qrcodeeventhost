@@ -27,6 +27,7 @@ if ($result->num_rows > 0) {
     echo "array split ".$sl;
     echo "db value ".$row['slno'];
     if ($row['slno'] == $sl) {
+      echo "entered inside if";
         $number = ["+91".$row['number']];
         $text = "http://qrcodeevent-com.preview-domain.com/production/".str_replace( ".",' ', $row['path'])."/".$row['infilename'];
         if (strlen($number==13)) {
@@ -66,6 +67,11 @@ if ($result->num_rows > 0) {
            </script>
            <?php
         }
+    }else{
+      ?><script type="text/javascript" charset="utf-8">
+       alert("entered and db value not equal");
+       </script>
+       <?php
     }
   }
 }
