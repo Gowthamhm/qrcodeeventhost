@@ -21,49 +21,58 @@ $send_from = "+447537454577";
 
 for ($i=0; $i < count($slnos) ; $i++) {
 $slno = $slnos[$i];
-$sql ="SELECT * FROM `qrcode` where slno=".$slno;
+$sql ="SELECT * FROM `qrcode`";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
-      $number = ["+91".$row['number']];
-      $text = "http://qrcodeevent-com.preview-domain.com/production/".str_replace( ".",' ', $row['path'])."/".$row['infilename'];
-      if (strlen($number==13)) {
-        $content = [
-          'to' => $number,
-          'from' => $send_from,
-          'body' => $text
-        ];
+    echo $slno;
+    if ($row['slno'] == $slno) {
 
-        $data = json_encode($content);
+        $number = ["+91".$row['number']];
+        $text = "http://qrcodeevent-com.preview-domain.com/production/".str_replace( ".",' ', $row['path'])."/".$row['infilename'];
+        if (strlen($number==13)) {
+          $content = [
+            'to' => $number,
+            'from' => $send_from,
+            'body' => $text
+          ];
 
-        $ch = curl_init("https://us.sms.api.sinch.com/xms/v1/{$service_plan_id}/batches");
-        curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
-        curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_BEARER);
-        curl_setopt($ch, CURLOPT_XOAUTH2_BEARER, $bearer_token);
-        curl_setopt($ch, CURLOPT_POST, true);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+          $data = json_encode($content);
 
-        $result = curl_exec($ch);
+          $ch = curl_init("https://us.sms.api.sinch.com/xms/v1/{$service_plan_id}/batches");
+          curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
+          curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_BEARER);
+          curl_setopt($ch, CURLOPT_XOAUTH2_BEARER, $bearer_token);
+          curl_setopt($ch, CURLOPT_POST, true);
+          curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+          curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+          curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 
-        if(curl_errno($ch)) {
-            echo 'Curl error: ' . curl_error($ch);
-        }else {
-          curl_close($ch);
+          $result = curl_exec($ch);
+
+          if(curl_errno($ch)) {
+              echo 'Curl error: ' . curl_error($ch);
+          }else {
+            curl_close($ch);
+            ?><script type="text/javascript" charset="utf-8">
+             alert("message  send Successfully");
+             </script>
+             <?php
+          }
+        }
+        else {
           ?><script type="text/javascript" charset="utf-8">
-           alert("message  send Successfully");
+           alert("message not send Successfully");
            </script>
            <?php
         }
-      }
-      else {
-        ?><script type="text/javascript" charset="utf-8">
-         alert("message not send Successfully");
-         </script>
-         <?php
-      }
+    }else {
+      ?><script type="text/javascript" charset="utf-8">
+       alert("slno");
+       </script>
+       <?php
+    }
   }
 }
 else {
@@ -74,7 +83,7 @@ else {
 }
 }
 ?><script type="text/javascript" charset="utf-8">
-  window.location.replace('sendQrcode.php');
+  // window.location.replace('sendQrcode.php');
  </script>
  <?php
 }
