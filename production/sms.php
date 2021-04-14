@@ -35,14 +35,14 @@ include 'error.php';
     <!-- NProgress -->
     <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
     <!-- iCheck -->
-    <!-- <link href="../vendors/iCheck/skins/flat/green.css" rel="stylesheet"> -->
+    <link href="../vendors/iCheck/skins/flat/green.css" rel="stylesheet">
 
     <!-- bootstrap-progressbar -->
-    <!-- <link href="../vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet"> -->
+    <link href="../vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
     <!-- JQVMap -->
-    <!-- <link href="../vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet"/> -->
+    <link href="../vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet"/>
     <!-- bootstrap-daterangepicker -->
-    <!-- <link href="../vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet"> -->
+    <link href="../vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
 
     <!-- Custom Theme Style -->
     <link href="../build/css/custom.min.css" rel="stylesheet">
@@ -123,37 +123,37 @@ include 'error.php';
       </div>
     </div>
 <script type="text/javascript">
-	// initSample();
-  // CKEDITOR.replace( 'editor1' );
-// function showeditor() {
-//              var x = document.getElementById("collapseOne");
-//              if (x.style.display === "none") {
-//                  x.style.display = "block";
-//              } else {
-//                  x.style.display = "none";
-//              }
-//          }
-//          function submitForm() {
-//               // $("#hiddentext").val($("").html());
-//               var data = CKEDITOR.instances.editor1.getData();
-//               console.log(data);
-//               document.getElementById("hiddentext").value=data;
-//               document.getElementById("qrsubmit").submit();
-//               // document.getElementById("qrsubmit").submit();
-//           }
+	initSample();
+  CKEDITOR.replace( 'editor1' );
+function showeditor() {
+             var x = document.getElementById("collapseOne");
+             if (x.style.display === "none") {
+                 x.style.display = "block";
+             } else {
+                 x.style.display = "none";
+             }
+         }
+         function submitForm() {
+              // $("#hiddentext").val($("").html());
+              var data = CKEDITOR.instances.editor1.getData();
+              console.log(data);
+              document.getElementById("hiddentext").value=data;
+              document.getElementById("qrsubmit").submit();
+              // document.getElementById("qrsubmit").submit();
+          }
 </script>
     <!-- jQuery -->
     <script src="../vendors/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap -->
    <script src="../vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <!-- FastClick -->
-    <!-- <script src="../vendors/fastclick/lib/fastclick.js"></script> -->
+    <script src="../vendors/fastclick/lib/fastclick.js"></script>
     <!-- NProgress -->
-    <!-- <script src="../vendors/nprogress/nprogress.js"></script> -->
+    <script src="../vendors/nprogress/nprogress.js"></script>
     <!-- iCheck -->
-    <!-- <script src="../vendors/iCheck/icheck.min.js"></script> -->
+    <script src="../vendors/iCheck/icheck.min.js"></script>
     <!-- Datatables -->
-    <!-- <script src="../vendors/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="../vendors/datatables.net/js/jquery.dataTables.min.js"></script>
     <script src="../vendors/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
     <script src="../vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
     <script src="../vendors/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
@@ -167,10 +167,10 @@ include 'error.php';
     <script src="../vendors/datatables.net-scroller/js/dataTables.scroller.min.js"></script>
     <script src="../vendors/jszip/dist/jszip.min.js"></script>
     <script src="../vendors/pdfmake/build/pdfmake.min.js"></script>
-    <script src="../vendors/pdfmake/build/vfs_fonts.js"></script> -->
+    <script src="../vendors/pdfmake/build/vfs_fonts.js"></script>
 
     <!-- Custom Theme Scripts -->
-    <!-- <script src="../build/js/custom.min.js"></script> -->
+    <script src="../build/js/custom.min.js"></script>
 
   </body>
 </html>
