@@ -8,6 +8,7 @@ $filename	=	'qrcodes.zip';
 	$zip = new ZipArchive;
 	if ($zip->open($filename,  ZipArchive::CREATE)){
 		while($row	=	$fileQry->fetch_assoc()){
+      echo getcwd();
 			$zip->addFile(getcwd().'./'.'resource/'.$row['folder_name'].'/', $row['infilename']);
 		}
 
