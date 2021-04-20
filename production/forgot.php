@@ -38,7 +38,7 @@
 								</div>
 								<div class="form-group">
 									<label for="name">Email</label>
-									<input id="email" type="emal" class="form-control" name="email" value="" required autofocus>
+									<input id="email" type="email" class="form-control" name="email" value="" required autofocus>
 									<div class="invalid-feedback">
 										Email is invalid
 									</div>
@@ -63,7 +63,7 @@
 									</label>
 									<input id="confpassword" type="password" class="form-control" name="confirmpassword" required data-eye>
 								    <div class="invalid-feedback">
-								    	Password is required
+								    	Confirm  Password is required
 							    	</div>
 								</div>
 								<div class="form-group" style="height: 10px;">
