@@ -99,7 +99,7 @@ include 'error.php';
           <div class="row">
           <div class="col-md-12">
           <button class="btn btn-round btn-success clf" data-toggle="collapse" data-target="#collapseOne" onclick="showf()" >
-              <i class="fa fa-folder-o pr-2" aria-hidden="true"></i>    Create Folder    &nbsp;&nbsp;&nbsp;<i class="fa fa-plus"></i></button>
+              <i class="fa fa-folder-o pr-2" aria-hidden="true"></i>    Create Folder    &nbsp;<i class="fa fa-plus"></i></button>
               <div class="collapse" id="collapseOne" style="display:none;">
                              <!--Panel-->
                              <div class="card card-body ml-1" style="background: none;width:fit-content;">

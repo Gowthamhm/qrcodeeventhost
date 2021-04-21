@@ -123,7 +123,7 @@ $user = $_SESSION['folder_name'];
                     </div>
 
                   <div class="col-md-3 col-sm-3  form-group has-feedback">
-                    <button type="button" class="btn btn-round btn-success" onclick="showeditor()">   New &nbsp;&nbsp;&nbsp;  <i class="fa fa-plus"></i></button>
+                    <button type="button" class="btn btn-round btn-success" onclick="showeditor()">   New &nbsp;  <i class="fa fa-plus"></i></button>
                       </div>
 
   					<div class="col-md-12 col-sm-12 " id="collapseOne" style="display:none;">
