@@ -1,3 +1,9 @@
+<?php
+if(isset(submit)){
+  $barcodedate = $_POST['qrcode'];
+  echo $barcodedate;
+}
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -12,6 +18,5 @@
 <input type="text" name="qrcode" value="">
 <input type="submit" name="submit" value="Submit">
 </form>
-
   </body>
 </html>
