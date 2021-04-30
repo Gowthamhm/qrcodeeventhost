@@ -2,6 +2,8 @@
 if(isset(submit)){
   $barcodedate = $_POST['qrcode'];
   echo $barcodedate;
+}else {
+  
 }
 ?>
 <!doctype html>
