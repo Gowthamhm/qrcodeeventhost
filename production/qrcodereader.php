@@ -1,9 +1,9 @@
 <?php
-if(isset(submit)){
+if(isset($_POST['submit'])){
   $barcodedate = $_POST['qrcode'];
   echo $barcodedate;
 }else {
-  
+
 }
 ?>
 <!doctype html>
