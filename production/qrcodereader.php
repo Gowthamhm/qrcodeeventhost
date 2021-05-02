@@ -154,7 +154,7 @@ a:hover {
   											<input type="text" class="form-control has-feedback-left" name="qrcode" id="inputSuccess2" placeholder="Focus Before Scan">
   											<span class="fas fa-scanner form-control-feedback left" aria-hidden="true"></span>
   										</div>
-<input type="submit" name="submit" value="Submit">
+<input type="submit" class="btn btn-success" name="submit" value="Submit">
 </form>
   </body>
 
