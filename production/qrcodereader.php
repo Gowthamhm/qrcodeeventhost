@@ -125,10 +125,12 @@ a:hover {
 }
   </style>
   <body>
-
-<form class="" method="post">
-<input type="text" name="qrcode" value="">
-<input type="submit" name="submit" value="Submit">
-</form>
+    <form class="form-label-left input_mask" method="post">
+  										<div class="col-md-6 col-sm-6  form-group has-feedback">
+  											<input type="text" class="form-control has-feedback-left" id="inputSuccess2" placeholder="First Name">
+  											<span class="fas fa-scanner form-control-feedback left" aria-hidden="true"></span>
+  										</div>
+                      <input type="submit" class="btn btn-success" name="submit" value="Submit">
+                    </form>
   </body>
 </html>
