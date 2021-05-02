@@ -124,10 +124,15 @@ a:hover {
   }
 }
   </style>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/duotone.css" integrity="sha384-R3QzTxyukP03CMqKFe0ssp5wUvBPEyy9ZspCB+Y01fEjhMwcXixTyeot+S40+AjZ" crossorigin="anonymous"/>
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/fontawesome.css" integrity="sha384-eHoocPgXsiuZh+Yy6+7DsKAerLXyJmu2Hadh4QYyt+8v86geixVYwFqUvMU8X90l" crossorigin="anonymous"/>
   <body>
-
 <form class="" method="post">
-<input type="text" name="qrcode" value="">
+  <div class="col-md-6 col-sm-6  form-group has-feedback">
+  											<input type="text" class="form-control has-feedback-left" name="qrcode" id="inputSuccess2" placeholder="Focus Before Scan">
+  											<span class="fas fa-scanner form-control-feedback left" aria-hidden="true"></span>
+  										</div>
 <input type="submit" name="submit" value="Submit">
 </form>
   </body>
