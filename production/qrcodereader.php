@@ -146,11 +146,13 @@ a:hover {
 
 	<!-- Custom Theme Style -->
 	<link href="../build/css/custom.min.css" rel="stylesheet">
+<!-- Font Awsome CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni" crossorigin="anonymous">
   <body>
     <form class="form-label-left input_mask" method="post">
   										<div class="col-md-6 col-sm-6  form-group has-feedback">
   											<input type="text" class="form-control has-feedback-left" id="inputSuccess2" placeholder="First Name">
-  											<span class="fa fa-scanner form-control-feedback left" aria-hidden="true"></span>
+  											<span class="fas fa-scanner form-control-feedback left" aria-hidden="true"></span>
   										</div>
                       <input type="submit" class="btn btn-success" name="submit" value="Submit">
                     </form>
