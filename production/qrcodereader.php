@@ -101,11 +101,10 @@ include 'error.php';
       						<div class="col-md-12 ">
                 <div class="x_content">
                 <form class="form-label-left input_mask">
-                <div class="col-md-9 col-sm-9  form-group has-feedback">
-											<input type="text" class="form-control has-feedback-left" id="inputSuccess2" placeholder="Focus Before Scan">
+                <div class="col-md-6 col-sm-6  form-group has-feedback">
+											<input type="text" name="qrcode" class="form-control has-feedback-left" id="inputSuccess2" placeholder="Focus Before Scan">
 											<span class="fas fa-scanner form-control-feedback left" aria-hidden="true"></span>
 										</div>
-
 <input type="submit" class="btn btn-success" name="submit" value="Auto Submit">
                 </form>
                 </div>
