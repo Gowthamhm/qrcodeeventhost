@@ -97,7 +97,20 @@ include 'error.php';
           </div>
         </div>
         <!-- /top navigation -->
+        <div class="row">
+      						<div class="col-md-12 ">
+                <div class="x_content">
+                <form class="form-label-left input_mask">
+                <div class="col-md-9 col-sm-9  form-group has-feedback">
+											<input type="text" class="form-control has-feedback-left" id="inputSuccess2" placeholder="Focus Before Scan">
+											<span class="fas fa-scanner form-control-feedback left" aria-hidden="true"></span>
+										</div>
 
+<input type="submit" class="btn btn-success" name="submit" value="Auto Submit">
+                </form>
+                </div>
+                  </div>
+                  </div>
         <!-- page content -->
         <div class="right_col" role="main">
           <!-- top tiles -->
