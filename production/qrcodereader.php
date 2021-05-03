@@ -97,8 +97,10 @@ include 'error.php';
           </div>
         </div>
         <!-- /top navigation -->
-        <div class="row">
-      						<div class="col-md-12 ">
+        <div class="right_col" role="main">
+          <!-- top tiles -->
+          <div class="row">
+          <div class="col-md-12">
                 <div class="x_content">
                 <form class="form-label-left input_mask">
                 <div class="col-md-6 col-sm-6  form-group has-feedback">
@@ -108,6 +110,7 @@ include 'error.php';
 <input type="submit" class="btn btn-success" name="submit" value="Auto Submit">
                 </form>
                 </div>
+                  </div>
                   </div>
                   </div>
         <!-- page content -->
