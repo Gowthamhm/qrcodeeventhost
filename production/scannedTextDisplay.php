@@ -10,7 +10,7 @@ echo "</div>";
 echo "<script>";
 echo "setTimeout(function(){";
   echo "window.location.href = 'qrcodereader.php';";
-    echo " }, 5);";
+    echo " }, 300);";
 echo "</script>";
 }else {
 
