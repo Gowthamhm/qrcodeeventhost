@@ -13,7 +13,7 @@ include 'error.php';
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" href="images/logo.ico" type="image/ico" />
 
-    <title>Home</title>
+    <title>QrCodeScanner</title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <!-- Bootstrap -->
     <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -99,13 +99,14 @@ include 'error.php';
         <!-- /top navigation -->
 
         <!-- page content -->
-        <form class="" action="scannedTextDisplay.php" method="post">
-          <div class="col-md-6 col-sm-6  form-group has-feedback">
-          											<input type="text" class="form-control has-feedback-left" name="qrcode" id="inputSuccess2" placeholder="Focus Before Scan">
-          											<span class="fas fa-scanner form-control-feedback left" aria-hidden="true"></span>
-          										</div>
-        <input type="submit" class="btn btn-success" name="submit" value="Auto Submit">
-        </form>
+        <div class="right_col" role="main">
+          <!-- top tiles -->
+          <div class="row">
+
+          <!-- /row end -->
+        </div>
+          <!-- /top tiles -->
+        </div>
         <!-- /page content -->
 
       </div>
