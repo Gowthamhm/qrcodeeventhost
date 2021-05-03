@@ -36,112 +36,8 @@ include 'error.php';
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/duotone.css" integrity="sha384-R3QzTxyukP03CMqKFe0ssp5wUvBPEyy9ZspCB+Y01fEjhMwcXixTyeot+S40+AjZ" crossorigin="anonymous"/>
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/fontawesome.css" integrity="sha384-eHoocPgXsiuZh+Yy6+7DsKAerLXyJmu2Hadh4QYyt+8v86geixVYwFqUvMU8X90l" crossorigin="anonymous"/>
-  <style media="screen">
-  @import url(https://fonts.googleapis.com/css?family=Raleway:400,700,900,400italic,700italic,900italic);
-
-  *,
-  :before,
-  :after {
-  box-sizing: border-box;
-  }
-
-  body {
-  background-color: #fdf9fd;
-  color: #011a32;
-  font: 16px/1.25 'Raleway', sans-serif;
-  text-align: center;
-  }
-
-  #wrapper {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 80em;
-  }
-
-  #container {
-  display: flex;
-  flex-direction: column;
-  float: left;
-  justify-content: center;
-  min-height: 100vh;
-  padding: 1em;
-  width: 100%;
-  }
-
-  h1 {
-  animation: text-shadow 1.5s ease-in-out infinite;
-  font-size: 5em;
-  font-weight: 900;
-  line-height: 1;
-  }
-
-  h1:hover {
-  animation-play-state: paused;
-  }
-
-  a {
-  color: #024794;
-  }
-
-  a:hover {
-  text-decoration: none;
-  }
-
-  @keyframes text-shadow {
-  0% {
-      transform: translateY(0);
-      text-shadow:
-          0 0 0 #0c2ffb,
-          0 0 0 #2cfcfd,
-          0 0 0 #fb203b,
-          0 0 0 #fefc4b;
-  }
-
-  20% {
-      transform: translateY(-1em);
-      text-shadow:
-          0 0.125em 0 #0c2ffb,
-          0 0.25em 0 #2cfcfd,
-          0 -0.125em 0 #fb203b,
-          0 -0.25em 0 #fefc4b;
-  }
-
-  40% {
-      transform: translateY(0.5em);
-      text-shadow:
-          0 -0.0625em 0 #0c2ffb,
-          0 -0.125em 0 #2cfcfd,
-          0 0.0625em 0 #fb203b,
-          0 0.125em 0 #fefc4b;
-  }
-
-  60% {
-      transform: translateY(-0.25em);
-      text-shadow:
-          0 0.03125em 0 #0c2ffb,
-          0 0.0625em 0 #2cfcfd,
-          0 -0.03125em 0 #fb203b,
-          0 -0.0625em 0 #fefc4b;
-  }
-
-  80% {
-      transform: translateY(0);
-      text-shadow:
-          0 0 0 #0c2ffb,
-          0 0 0 #2cfcfd,
-          0 0 0 #fb203b,
-          0 0 0 #fefc4b;
-  }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-  * {
-    animation: none !important;
-    transition: none !important;
-  }
-  }
-  </style>
   </head>
+
   <body class="nav-md">
     <div class="container body">
       <div class="main_container">
@@ -201,75 +97,54 @@ include 'error.php';
           </div>
         </div>
         <!-- /top navigation -->
-        <div class="right_col" role="main">
-          <!-- top tiles -->
-          <div class="row">
-          <div class="col-md-12">
 
-        <?php
-        if(isset($_POST['submit'])){
-          $barcodedate = $_POST['qrcode'];
-          echo "<div id='wrapper'>";
-        echo "<div id='container'><h1>";
-        $str_arr = explode ("@#", $barcodedate);
-        print_r($str_arr);
-        echo "</h1>";
-          echo "</div>";
-        echo "</div>";
-        echo "<script>";
-        echo "setTimeout(function(){";
-          echo "window.location.href = 'qrcodereader.php';";
-            echo " }, 30000);";
-        echo "</script>";
-        }else {
+        <!-- page content -->
 
-        }
-        ?>
+        <!-- /page content -->
+
       </div>
     </div>
-  </div>
-</div>
-</div>
-</body>
-<!-- jQuery -->
-<script src="../vendors/jquery/dist/jquery.min.js"></script>
-<!-- Bootstrap -->
-<script src="../vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<!-- FastClick -->
-<script src="../vendors/fastclick/lib/fastclick.js"></script>
-<!-- NProgress -->
-<script src="../vendors/nprogress/nprogress.js"></script>
-<!-- Chart.js -->
-<script src="../vendors/Chart.js/dist/Chart.min.js"></script>
-<!-- gauge.js -->
-<script src="../vendors/gauge.js/dist/gauge.min.js"></script>
-<!-- bootstrap-progressbar -->
-<script src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
-<!-- iCheck -->
-<script src="../vendors/iCheck/icheck.min.js"></script>
-<!-- Skycons -->
-<script src="../vendors/skycons/skycons.js"></script>
-<!-- Flot -->
-<script src="../vendors/Flot/jquery.flot.js"></script>
-<script src="../vendors/Flot/jquery.flot.pie.js"></script>
-<script src="../vendors/Flot/jquery.flot.time.js"></script>
-<script src="../vendors/Flot/jquery.flot.stack.js"></script>
-<script src="../vendors/Flot/jquery.flot.resize.js"></script>
-<!-- Flot plugins -->
-<script src="../vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
-<script src="../vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
-<script src="../vendors/flot.curvedlines/curvedLines.js"></script>
-<!-- DateJS -->
-<script src="../vendors/DateJS/build/date.js"></script>
-<!-- JQVMap -->
-<script src="../vendors/jqvmap/dist/jquery.vmap.js"></script>
-<script src="../vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
-<script src="../vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
-<!-- bootstrap-daterangepicker -->
-<script src="../vendors/moment/min/moment.min.js"></script>
-<script src="../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
 
-<!-- Custom Theme Scripts -->
-<script src="../build/js/custom.min.js"></script>
+    <!-- jQuery -->
+    <script src="../vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="../vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- FastClick -->
+    <script src="../vendors/fastclick/lib/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="../vendors/nprogress/nprogress.js"></script>
+    <!-- Chart.js -->
+    <script src="../vendors/Chart.js/dist/Chart.min.js"></script>
+    <!-- gauge.js -->
+    <script src="../vendors/gauge.js/dist/gauge.min.js"></script>
+    <!-- bootstrap-progressbar -->
+    <script src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+    <!-- iCheck -->
+    <script src="../vendors/iCheck/icheck.min.js"></script>
+    <!-- Skycons -->
+    <script src="../vendors/skycons/skycons.js"></script>
+    <!-- Flot -->
+    <script src="../vendors/Flot/jquery.flot.js"></script>
+    <script src="../vendors/Flot/jquery.flot.pie.js"></script>
+    <script src="../vendors/Flot/jquery.flot.time.js"></script>
+    <script src="../vendors/Flot/jquery.flot.stack.js"></script>
+    <script src="../vendors/Flot/jquery.flot.resize.js"></script>
+    <!-- Flot plugins -->
+    <script src="../vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
+    <script src="../vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
+    <script src="../vendors/flot.curvedlines/curvedLines.js"></script>
+    <!-- DateJS -->
+    <script src="../vendors/DateJS/build/date.js"></script>
+    <!-- JQVMap -->
+    <script src="../vendors/jqvmap/dist/jquery.vmap.js"></script>
+    <script src="../vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+    <script src="../vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
+    <!-- bootstrap-daterangepicker -->
+    <script src="../vendors/moment/min/moment.min.js"></script>
+    <script src="../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
 
+    <!-- Custom Theme Scripts -->
+    <script src="../build/js/custom.min.js"></script>
+
+  </body>
 </html>
