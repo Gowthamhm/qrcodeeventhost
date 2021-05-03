@@ -1,3 +1,8 @@
+<?php
+include 'session.php';
+include 'connection.php';
+include 'error.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
