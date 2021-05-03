@@ -14,7 +14,7 @@ echo "setTimeout(function(){";
     echo " }, 30000);";
 echo "</script>";
 }else {
-
+echo "string";
 }
 ?>
 <style media="screen">
