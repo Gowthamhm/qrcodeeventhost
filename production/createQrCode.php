@@ -48,18 +48,19 @@ if(preg_match('~&quot;(.*?)&quot;~', $originText, $m)){
     // echo $status;
     // echo $inText;
     // echo $outText;
-    $createQr = "INSERT INTO `qrcode`(folder_name, text, Qoute, number, path, infilename , outfilename, status, intext, outtext) VALUES ('".$folderName."','".$originText."','".$qoutedText."','".$phoneNumber."','".$path."','".$infilename."','".$outfilename."',".$status.",'".$inText."',
-      '".$outText."');";
+    $createQr = "INSERT INTO `qrcode`(folder_name, text, Qoute, number, path, infilename , outfilename, status, intext, outtext) VALUES
+     ('".$folderName."','".$originText."','".$qoutedText."','".$phoneNumber."','".$path."','".$infilename."','".$outfilename."',".$status.",'".$inText."','".$outText."');";
     // echo $createQr;
     // echo $conn->query($createQr);
-
+$inqrcodedata = $folderName."@#".$originText."@#".$qoutedText."@#".$inText."@#".$path."@#".$infilename."@#".$phoneNumber;
+$outqrcodedata = $folderName."@#".$originText."@#".$qoutedText."@#".$outText."@#".$path."@#".$outfilename."@#".$phoneNumber;
       if($conn->query($createQr) == TRUE){
         if (!file_exists($path)) {
           if (mkdir($path, 0777, true)) {
             $ecc = 'L';
             $pixel_Size = 10;
-            QRcode::png($inText,$path.'/'.$infilename, $ecc, $pixel_Size);
-            QRcode::png($outText,$path.'/'.$outfilename, $ecc, $pixel_Size);
+            QRcode::png($inqrcodedata,$path.'/'.$infilename, $ecc, $pixel_Size);
+            QRcode::png($outqrcodedata,$path.'/'.$outfilename, $ecc, $pixel_Size);
             ?>
             <script type='text/javascript' charset='utf-8'>
              alert("QrCode Created in Folder Successfully and ");
@@ -70,8 +71,8 @@ if(preg_match('~&quot;(.*?)&quot;~', $originText, $m)){
         }else {
           $ecc = 'L';
           $pixel_Size = 10;
-          QRcode::png($inText,$path.'/'.$infilename, $ecc, $pixel_Size);
-          QRcode::png($outText,$path.'/'.$outfilename, $ecc, $pixel_Size);
+          QRcode::png($inqrcodedata,$path.'/'.$infilename, $ecc, $pixel_Size);
+          QRcode::png($outqrcodedata,$path.'/'.$outfilename, $ecc, $pixel_Size);
           ?>
           <script type="text/javascript" charset="utf-8">
            alert("QrCode Create in Folder Successfully without creating folder");
