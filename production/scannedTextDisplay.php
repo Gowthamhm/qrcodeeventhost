@@ -3,7 +3,8 @@ if(isset($_POST['submit'])){
   $barcodedate = $_POST['qrcode'];
   echo "<div id='wrapper'>";
 echo "<div id='container'><h1>";
-echo $barcodedate;
+$str_arr = explode ("@#", $barcodedate);
+print_r($str_arr);
 echo "</h1>";
   echo "</div>";
 echo "</div>";
