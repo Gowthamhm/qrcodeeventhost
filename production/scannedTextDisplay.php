@@ -1,10 +1,29 @@
 <?php
+include 'session.php';
+include 'connection.php';
+include 'error.php';
+
 if(isset($_POST['submit'])){
   $barcodedate = $_POST['qrcode'];
   echo "<div id='wrapper'>";
 echo "<div id='container'><h1>";
 $str_arr = explode ("@#", $barcodedate);
 print_r($str_arr);
+$inqrcodedata = $folderName."@#".$originText."@#".$qoutedText."@#".$inText."@#".$path."@#".$infilename."@#".$phoneNumber;
+$selectdata = "SELECT * FROM `qrcode` where folder_name ='".$str_arr[0]."'and infilename ='".$str_arr[5]."' and number='".$str_arr[6]."'";
+echo $selectdata;
+$result = $conn->query($selectdata);
+if ($result->num_rows > 0) {
+  // output data of each row
+  while($row = $result->fetch_assoc()) {
+  echo $row['folder_name'];
+    echo $row['slno'];
+  echo  $row['text'];
+  echo  $row['number'];
+  echo  $row['infilename'];
+  echo  $row['outfilename'];
+  }
+}
 echo "</h1>";
   echo "</div>";
 echo "</div>";
@@ -14,7 +33,6 @@ echo "setTimeout(function(){";
     echo " }, 30000);";
 echo "</script>";
 }else {
-echo "string";
 }
 ?>
 <style media="screen">

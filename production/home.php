@@ -72,7 +72,7 @@ include 'error.php';
                   </li>
                   <li><a href="sendQrcode.php"><i class="fa fa-comments-o"></i> Share QrCode </a>
                   </li>
-                  <li><a href="qrcodereader.php"><i class="fas fa-scanner"></i> Scan QrCode </a>
+                  <li><a href="qrcodereader.php"><i class="fas fa-scanner"></i>  Scan QrCode </a>
                   </li>
 
                   </ul>
