@@ -19,6 +19,7 @@ if ($result->num_rows > 0) {
     echo $row['slno'];
   echo  $row['text'];
   echo  $row['number'];
+    echo  $row['status'];
   echo  $row['infilename'];
   echo  $row['outfilename'];
   }
