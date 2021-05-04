@@ -8,7 +8,12 @@ if(isset($_POST['submit'])){
   echo "<div id='wrapper'>";
 echo "<div id='container'><h1>";
 $str_arr = explode ("@#", $barcodedate);
-// print_r($str_arr);
+print_r($str_arr);
+if (empty($str_arr[1])) {
+echo " array has only one element";
+}else {
+  echo "array has more than one element";
+}
 $selectdata = "SELECT * FROM `qrcode` where folder_name ='".$str_arr[0]."'and infilename ='".$str_arr[5]."' and number='".$str_arr[6]."'";
 // echo $selectdata;
 $result = $conn->query($selectdata);
