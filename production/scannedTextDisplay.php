@@ -8,11 +8,16 @@ if(isset($_POST['submit'])){
   echo "<div id='wrapper'>";
 echo "<div id='container'><h1>";
 $str_arr = explode ("@#", $barcodedate);
-print_r($str_arr);
+// print_r($str_arr);
 if (empty($str_arr[1])) {
-echo " array has only one element";
+// echo " array has only one element";
+?><script type="text/javascript" charset="utf-8">
+ alert("This QrCode not Created by Our User Please varify");
+ window.location.replace('qrcodereader.php');
+ </script>
+ <?php
 }else {
-  echo "array has more than one element";
+  // echo "array has more than one element";
   $selectdata = "SELECT * FROM `qrcode` where folder_name ='".$str_arr[0]."'and infilename ='".$str_arr[5]."' and number='".$str_arr[6]."'";
   // echo $selectdata;
   $result = $conn->query($selectdata);
@@ -31,7 +36,8 @@ echo "</div>";
 echo "<script>";
 echo "setTimeout(function(){";
   echo "window.location.href = 'qrcodereader.php';";
-    echo " }, 30000);";
+    // echo " }, 30000);";
+    echo " }, 30);";
 echo "</script>";
 }else {
 }
