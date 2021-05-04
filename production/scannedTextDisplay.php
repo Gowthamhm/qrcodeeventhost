@@ -9,7 +9,6 @@ if(isset($_POST['submit'])){
 echo "<div id='container'><h1>";
 $str_arr = explode ("@#", $barcodedate);
 print_r($str_arr);
-$inqrcodedata = $folderName."@#".$originText."@#".$qoutedText."@#".$inText."@#".$path."@#".$infilename."@#".$phoneNumber;
 $selectdata = "SELECT * FROM `qrcode` where folder_name ='".$str_arr[0]."'and infilename ='".$str_arr[5]."' and number='".$str_arr[6]."'";
 echo $selectdata;
 $result = $conn->query($selectdata);
