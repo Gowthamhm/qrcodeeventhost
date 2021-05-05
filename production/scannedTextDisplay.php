@@ -8,7 +8,7 @@ if(isset($_POST['submit'])){
   echo "<div id='wrapper'>";
 echo "<div id='container'><h1>";
 $str_arr = explode ("@#", $barcodedate);
-// print_r($str_arr);
+print_r($str_arr);
 if (empty($str_arr[1])) {
 // echo " array has only one element";
 ?><script type="text/javascript" charset="utf-8">
