@@ -61,7 +61,7 @@ echo "<script>";
     // echo " }, 30000);";
     // echo " }, 30);";
 echo "</script>";
-echo "?><a href='qrcodereader.php'></a>";
+echo "<a href='qrcodereader.php'></a>";
 }else {
 
 }
