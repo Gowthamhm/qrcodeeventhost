@@ -28,7 +28,7 @@ if (empty($str_arr[1])) {
   if($row['status'] == 1){
     // echo "status is changing";
     $number = "+91".$row['number'];
-    $text = "https://sample-wesite-hosting.online/production".str_replace( ".",'', $row['path'])."/".$row['infilename'];
+    $text = "https://sample-wesite-hosting.online/production".str_replace( ".",'', $row['path'])."/".$row['outfilename'];
     echo $number;
     echo $text;
     $update_status = "UPDATE `qrcode` set status= 99 where folder_name ='".$str_arr[0]."'and infilename ='".$str_arr[5]."' and number='".$str_arr[6]."'";
@@ -61,7 +61,6 @@ echo "<script>";
     // echo " }, 30000);";
     // echo " }, 30);";
 echo "</script>";
-echo "<a href='qrcodereader.php'></a>";
 }else {
 
 }
