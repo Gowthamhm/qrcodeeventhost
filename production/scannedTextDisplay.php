@@ -31,7 +31,7 @@ if (empty($str_arr[1])) {
     $text = "https://sample-wesite-hosting.online/production".str_replace( ".",'', $row['path'])."/".$row['infilename'];
     echo $number;
     echo $text;
-    $update_status = "UPDATE `qrcode` set status=".99." where folder_name ='".$str_arr[0]."'and infilename ='".$str_arr[5]."' and number='".$str_arr[6]."'";
+    $update_status = "UPDATE `qrcode` set status= 99 where folder_name ='".$str_arr[0]."'and infilename ='".$str_arr[5]."' and number='".$str_arr[6]."'";
   }else if ($row['status'] == 99) {
     ?><script type="text/javascript" charset="utf-8">
      alert("In QrCode Already Scanned Please Contact Admin");
