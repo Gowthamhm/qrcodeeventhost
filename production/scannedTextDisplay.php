@@ -18,11 +18,11 @@ if (empty($str_arr[1])) {
  <?php
 }else {
   // echo "array has more than one element";
-  $pattern = in.png;
+  $pattern = "in.png";
   if (preg_match($pattern, $str_arr[5])) {
   $selectdata = "SELECT * FROM `qrcode` where folder_name ='".$str_arr[0]."'and infilename ='".$str_arr[5]."' and number='".$str_arr[6]."'";
 }else {
-  $pattern = out.png;
+  $pattern = "out.png";
     if (preg_match($pattern, $str_arr[5])) {
     $selectdata = "SELECT * FROM `qrcode` where folder_name ='".$str_arr[0]."'and outfilename ='".$str_arr[5]."' and number='".$str_arr[6]."'";
 }
