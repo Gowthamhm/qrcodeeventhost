@@ -65,6 +65,7 @@ echo "?><a href='qrcodereader.php'></a>";
 }else {
 
 }
+?>
 <style media="screen">
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,700,900,400italic,700italic,900italic);
 
