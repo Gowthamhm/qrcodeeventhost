@@ -163,8 +163,10 @@ if (!empty($_SESSION['folder_name'])) {
                                       ?>  <td><?php echo "Not Shared Yet";?></td><?php
                                     }else if($row['status']==1){
                                         ?>  <td><?php echo "In QrCode Shared";?></td><?php
+                                    }else if($row['status']==99){
+                                        ?>  <td><?php echo "Out QrCode Shared";?></td><?php
                                     }
-                                    else if($row['status']==99){
+                                    else if($row['status']==999){
                                         ?>  <td><?php echo "All Done";?></td><?php
                                     }
                                     else {

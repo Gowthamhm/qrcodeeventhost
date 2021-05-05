@@ -5,7 +5,7 @@ include 'session.php';
 if (isset($_POST['sendsms'])) {
 $number = $_POST['numbers'];
 $text = $_POST['text'];
-      $service_plan_id = "78125b9858494c72894913f48031923d";
+$service_plan_id = "78125b9858494c72894913f48031923d";
 $bearer_token = "63045e8e65ae445b8b65d9f8b7a657cb";
 
 $send_from = "+447537454577";
