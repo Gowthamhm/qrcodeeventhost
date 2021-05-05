@@ -56,14 +56,15 @@ echo "</h1>";
   echo "</div>";
 echo "</div>";
 echo "<script>";
-echo "setTimeout(function(){";
-  echo "window.location.href = 'qrcodereader.php';";
+// echo "setTimeout(function(){";
+  // echo "window.location.href = 'qrcodereader.php';";
     // echo " }, 30000);";
-    echo " }, 30);";
+    // echo " }, 30);";
 echo "</script>";
+echo "?><a href='qrcodereader.php'></a>";
 }else {
+
 }
-?>
 <style media="screen">
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,700,900,400italic,700italic,900italic);
 
