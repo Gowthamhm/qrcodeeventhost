@@ -121,7 +121,16 @@ if(isset($_POST['submit']))
   $barcodedata = $_POST['qrcode'];
   echo $barcodedata;
   $str_arr = explode ("@#", $barcodedata);
-  print_r($str_arr);
+  // print_r($str_arr);
+  if(empty($str_arr[1]){
+    ?><script type="text/javascript" charset="utf-8">
+   alert("This QrCode not Created by Our User Please varify");
+   window.location.replace('qrcodereader.php');
+   </script>
+   <?php
+ }else {
+   print_r($str_arr);
+ }
   ?>
 <div id='wrapper'>
 <div id='container'><h1>
