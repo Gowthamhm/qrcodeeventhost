@@ -227,6 +227,7 @@ $pattern = "/out.png/i";
             if($conn->query($update_status) === TRUE){
               ?><script type="text/javascript" charset="utf-8">
                alert("Status updated Successfully");
+                window.location.replace('qrcodereader.php');
                </script>
                <?php
             }else {
