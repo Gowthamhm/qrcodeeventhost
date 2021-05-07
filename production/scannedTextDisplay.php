@@ -223,7 +223,7 @@ $pattern = "/out.png/i";
            </script>
            <?php
           } else if($row['status'] == 99){
-            $update_status = "UPDATE `qrcode` set status= 999 where folder_name ='".$str_arr[0]."'and infilename ='".$str_arr[5]."' and number='".$str_arr[6]."'";
+            $update_status = "UPDATE `qrcode` set status= 999 where folder_name ='".$str_arr[0]."'and outfilename ='".$str_arr[5]."' and number='".$str_arr[6]."'";
             if($conn->query($update_status) === TRUE){
               ?><script type="text/javascript" charset="utf-8">
                alert("Status updated Successfully");
