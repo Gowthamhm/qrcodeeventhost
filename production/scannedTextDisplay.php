@@ -119,7 +119,7 @@ text-decoration: none;
 if(isset($_POST['submit']))
 {
   $barcodedata = $_POST['qrcode'];
-  echo $barcodedata;
+  // echo $barcodedata;
   $str_arr = explode ("@#", $barcodedata);
   // print_r($str_arr);
   if(empty($str_arr[1])){
@@ -129,8 +129,18 @@ if(isset($_POST['submit']))
    </script>
    <?php
  }else {
-   print_r($str_arr);
+   // print_r($str_arr);
+   $pattern = "/in.png/i";
+if (preg_match($pattern, $str_arr[5])) {
+$selectdata = "SELECT * FROM `qrcode` where folder_name ='".$str_arr[0]."'and infilename ='".$str_arr[5]."' and number='".$str_arr[6]."'";
+}else {
+$pattern = "/out.png/i";
+  if (preg_match($pattern, $str_arr[5])) {
+  $selectdata = "SELECT * FROM `qrcode` where folder_name ='".$str_arr[0]."'and outfilename ='".$str_arr[5]."' and number='".$str_arr[6]."'";
+}
  }
+ echo "$selectdata";
+}
   ?>
 <div id='wrapper'>
 <div id='container'><h1>
@@ -141,7 +151,6 @@ if(isset($_POST['submit']))
 </div>
 </div>
   <?
-
 }
  ?>
   </body>
