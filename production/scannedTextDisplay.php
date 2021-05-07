@@ -133,24 +133,48 @@ if(isset($_POST['submit']))
    $pattern = "/in.png/i";
 if (preg_match($pattern, $str_arr[5])) {
 $selectdata = "SELECT * FROM `qrcode` where folder_name ='".$str_arr[0]."'and infilename ='".$str_arr[5]."' and number='".$str_arr[6]."'";
+$result = $conn->query($selectdata);
+if ($result->num_rows > 0) {
+      while($row = $result->fetch_assoc()) {
+        if($row['status'] == 1){
+            $number = "+91".$row['number'];
+            $text = "https://sample-wesite-hosting.online/production".str_replace( ".",'', $row['path'])."/".$row['outfilename'];
+            $update_status = "UPDATE `qrcode` set status= 99 where folder_name ='".$str_arr[0]."'and infilename ='".$str_arr[5]."' and number='".$str_arr[6]."'";
+
+            echo $number.$text.$update_status;
+        }else if($row['status'] == 99){
+          ?><script type="text/javascript" charset="utf-8">
+         alert("In Qrcode Is Already Scanned, Please CHeck Once");
+         window.location.replace('qrcodereader.php');
+         </script>
+         <?php
+        }else if($row['status'] == 999){
+          ?><script type="text/javascript" charset="utf-8">
+         alert("In and Out Qrcode are Scanned, Varify Once Again");
+         window.location.replace('qrcodereader.php');
+         </script>
+         <?php
+        }
+      }
+}
 }else {
 $pattern = "/out.png/i";
   if (preg_match($pattern, $str_arr[5])) {
   $selectdata = "SELECT * FROM `qrcode` where folder_name ='".$str_arr[0]."'and outfilename ='".$str_arr[5]."' and number='".$str_arr[6]."'";
 }
  }
- echo "$selectdata";
-}
-  ?>
+ // echo "$selectdata";
+ ?>
 <div id='wrapper'>
 <div id='container'><h1>
-  <?php
+ <?php
 
-   ?>
+  ?>
 </h1>
 </div>
 </div>
-  <?
+ <?
+}
 }
  ?>
   </body>
