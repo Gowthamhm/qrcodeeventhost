@@ -134,7 +134,7 @@ if(isset($_POST['submit']))
 if (preg_match($pattern, $str_arr[5])) {
 $selectdata = "SELECT * FROM `qrcode` where folder_name ='".$str_arr[0]."'and infilename ='".$str_arr[5]."' and number='".$str_arr[6]."'";
 $result = $conn->query($selectdata);
-echo $result->num_rows;
+// echo $result->num_rows;
 if ($result->num_rows > 0) {
       while($row = $result->fetch_assoc()) {
         if($row['status'] == 1){
@@ -205,7 +205,7 @@ curl_close($ch);
          window.location.replace('qrcodereader.php');
          </script>
          <?php
-        }
+       }break;
       }
 }
 }else {
@@ -213,7 +213,7 @@ $pattern = "/out.png/i";
   if (preg_match($pattern, $str_arr[5])) {
   $selectdata = "SELECT * FROM `qrcode` where folder_name ='".$str_arr[0]."'and outfilename ='".$str_arr[5]."' and number='".$str_arr[6]."'";
   $result = $conn->query($selectdata);
-  echo $result->num_rows;
+  // echo $result->num_rows;
   if ($result->num_rows > 0) {
         while($row = $result->fetch_assoc()) {
           if($row['status'] == 1){
@@ -245,6 +245,7 @@ $pattern = "/out.png/i";
            </script>
            <?php
           }
+          break;
         }
       }
 }
