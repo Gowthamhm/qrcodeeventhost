@@ -26,7 +26,7 @@ if(isset($_POST['delete'])){
      // mysql_close($conn);
      ?>
       <script type="text/javascript" charset="utf-8">
-      alert("Folder Deleted successfully");
+      alert("Folder and qrcode Deleted successfully");
       window.location.replace('home.php');
       // </script>
       <?php

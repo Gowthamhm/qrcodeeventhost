@@ -130,6 +130,16 @@ if(isset($_POST['submit']))
    <?php
  }else {
    // print_r($str_arr);
+   ?>
+  <div id='wrapper'>
+  <div id='container'><h1>
+   <?php
+   echo $barcodedata;
+    ?>
+  </h1>
+  </div>
+  </div>
+   <?
    $pattern = "/in.png/i";
 if (preg_match($pattern, $str_arr[5])) {
 $selectdata = "SELECT * FROM `qrcode` where folder_name ='".$str_arr[0]."'and infilename ='".$str_arr[5]."' and number='".$str_arr[6]."'";
@@ -251,16 +261,6 @@ $pattern = "/out.png/i";
 }
  }
  // echo "$selectdata";
- ?>
-<div id='wrapper'>
-<div id='container'><h1>
- <?php
-
-  ?>
-</h1>
-</div>
-</div>
- <?
 }
 }
  ?>
