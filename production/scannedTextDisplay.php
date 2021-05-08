@@ -115,14 +115,6 @@ text-decoration: none;
 }
 </style>
   <body>
-    <div id='wrapper'>
-    <div id='container'><h1>
-     <?php
-     echo $barcodedata;
-      ?>
-    </h1>
-    </div>
-    </div>
 <?php
 if(isset($_POST['submit']))
 {
@@ -139,6 +131,14 @@ if(isset($_POST['submit']))
  }else {
    // print_r($str_arr);
    ?>
+   <div id='wrapper'>
+   <div id='container'><h1>
+    <?php
+    echo $barcodedata;
+     ?>
+   </h1>
+   </div>
+   </div>
    <?
    $pattern = "/in.png/i";
 if (preg_match($pattern, $str_arr[5])) {
