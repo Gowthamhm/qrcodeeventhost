@@ -1,7 +1,7 @@
 <?php
-if(isset($_post['delete'])){
-  echo $_post['foldername'];
+if(isset($_POST['delete'])){
+  echo $_POST['foldername'];
 }else {
-  echo $_post['delete'];
+  echo $_POST['delete'];
 }
 ?>
