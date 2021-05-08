@@ -140,7 +140,7 @@ $user = $_SESSION['folder_name'];
                 <input type="hidden" name="hiddentext"  id="hiddentext" value="">
                 <br><br>
                 <div class="col-md-6 col-sm-6  form-group has-feedback">
-											<input type="tel" class="form-control" name="number" id="inputSuccess5" placeholder="Phone" required>
+											<input type="tel" class="form-control" name="number" id="inputSuccess5" placeholder="Phone" required/>
 											<span class="fa fa-phone form-control-feedback right" aria-hidden="true"></span>
 										</div>
                 <input type="submit" name="sendsms" class="btn btn-round btn-success" onclick="submitForm()" value="Create QrCode">
