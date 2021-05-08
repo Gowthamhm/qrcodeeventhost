@@ -63,7 +63,7 @@ $outqrcodedata = $folderName."@#".$originText."@#".$qoutedText."@#".$outText."@#
             QRcode::png($outqrcodedata,$path.'/'.$outfilename, $ecc, $pixel_Size);
             ?>
             <script type='text/javascript' charset='utf-8'>
-             alert("QrCode Created in Folder Successfully and ");
+             alert("QrCode Created in Folder Successfully");
              window.location.replace('folder.php');
              </script>
              <?php
