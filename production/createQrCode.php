@@ -5,6 +5,7 @@ include 'error.php';
 include './phpqrcode/qrlib.php';
 
   $folderName= mysqli_real_escape_string($conn,$_POST['foldername']);
+  echo $folderName;
 // $create = $_POST['qrcreate'];
 
     $oText=$_POST['hiddentext'];
@@ -64,7 +65,7 @@ $outqrcodedata = $folderName."@#".$originText."@#".$qoutedText."@#".$outText."@#
             ?>
             <script type='text/javascript' charset='utf-8'>
              alert("QrCode Created in Folder Successfully");
-             window.location.replace('folder.php');
+             // window.location.replace('folder.php');
              </script>
              <?php
           }
@@ -76,7 +77,7 @@ $outqrcodedata = $folderName."@#".$originText."@#".$qoutedText."@#".$outText."@#
           ?>
           <script type="text/javascript" charset="utf-8">
            alert("QrCode Create in Folder Successfully without creating folder");
-           window.location.replace('folder.php');
+           // window.location.replace('folder.php');
            </script>
            <?php
         }
