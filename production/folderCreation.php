@@ -5,6 +5,7 @@ include 'error.php';
 
 if (isset($_POST['create'])) {
   $foldername = mysqli_real_escape_string($conn,$_POST['folder']);
+  str_replace( " ",'-', $foldername)
   $creator = mysqli_real_escape_string($conn,$_POST['username']);
   $date = date("Y-m-d");
  $time =date("h:i:sa");
