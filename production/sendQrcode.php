@@ -6,9 +6,10 @@ include 'error.php';
 if (!empty($_SESSION['folder_name'])) {
   // echo $_SESSION['folder_name'];
 }else {
-  ?><script type="text/javascript" charset="utf-8">
+  ?>
+  <!-- <script type="text/javascript" charset="utf-8">
    window.location.replace('home.php');
-   </script>
+   </script> -->
    <?php
 }
 ?>
@@ -149,7 +150,11 @@ if (!empty($_SESSION['folder_name'])) {
                       </thead>
                       <tbody>
                           <?php
-                  $sql ="SELECT * FROM `qrcode` where folder_name='".$_SESSION['folder_name']."'";
+                          if (empty($_SESSION['folder_name'])) {
+                            $sql="SELECT * FROM `qrcode`";
+                          }else {
+                            $sql ="SELECT * FROM `qrcode` where folder_name='".$_SESSION['folder_name']."'";
+                          }
                   $result = $conn->query($sql);
                   if ($result->num_rows > 0) {
                     // output data of each row
