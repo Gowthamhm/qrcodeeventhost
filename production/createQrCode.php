@@ -4,8 +4,9 @@ include 'connection.php';
 include 'error.php';
 include './phpqrcode/qrlib.php';
 
-  $folderName= mysqli_real_escape_string($conn,$_POST['foldername']);
-  echo $folderName;
+  // $folderName= mysqli_real_escape_string($conn,$_POST['foldername']);
+ $folderName = $_SESSION['folder_name'];
+ echo $folderName;
 // $create = $_POST['qrcreate'];
 
     $oText=$_POST['hiddentext'];
