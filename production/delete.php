@@ -18,7 +18,7 @@ if(isset($_POST['delete'])){
 //   }
 // }
   $delete = "DELETE from `folders` where folder_name='".$folder_name."';";
-  echo $delete;
+  // echo $delete;
    if($conn->query($delete) === TRUE) {
      // echo "Deleted data successfully\n";
      // mysql_close($conn);
