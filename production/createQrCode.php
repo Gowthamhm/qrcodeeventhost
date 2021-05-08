@@ -4,8 +4,8 @@ include 'connection.php';
 include 'error.php';
 include './phpqrcode/qrlib.php';
 
-  // $folderName= mysqli_real_escape_string($conn,$_POST['foldername']);
- $folderName = $_SESSION['folder_name'];
+  $folderName= mysqli_real_escape_string($conn,$_POST['foldername']);
+ // $folderName = $_SESSION['folder_name'];
  echo $folderName;
 // $create = $_POST['qrcreate'];
 
@@ -15,7 +15,7 @@ include './phpqrcode/qrlib.php';
     if(empty($phoneNumber)){
       ?>
       <script type='text/javascript' charset='utf-8'>
-       alert("Phone NUmber is Empty");
+       alert("Phone Number is Empty");
        window.location.replace('folder.php');
        </script>
        <?php
