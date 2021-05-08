@@ -6,10 +6,10 @@ if (isset($_POST['view'])) {
   // echo $_POST['view'];
   // echo $_POST['foldername'];
   $_SESSION['folder_name'] = mysqli_real_escape_string($conn,$_POST['foldername']);
-      echo "home to folder ".$_SESSION['folder_name'];
+      // echo "home to folder ".$_SESSION['folder_name'];
 }else{
   if (!empty($_SESSION['folder_name'])) {
-    echo $_SESSION['folder_name'];
+    // echo $_SESSION['folder_name'];
   }else {
     ?><script type="text/javascript" charset="utf-8">
      window.location.replace('home.php');
