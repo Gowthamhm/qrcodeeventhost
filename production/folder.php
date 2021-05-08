@@ -133,7 +133,7 @@ $user = $_SESSION['folder_name'];
                       <div class="col-md-3 col-sm-3  form-group has-feedback">
                       <form class="" action="delete.php" method="post">
                           <input type="hidden" name="foldername" value=<?php echo $_SESSION['folder_name'];?> >
-                          <i class="fas fa-trash-alt"><input type="submit" name="delete" class="btn btn-round btn-danger" value="Delete"></i>
+                          <i class="fas fa-trash-alt btn btn-round btn-danger"><input type="submit" name="delete" value="Delete"></i>
                       </form>
                               </div>
 
