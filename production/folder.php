@@ -134,7 +134,7 @@ $user = $_SESSION['folder_name'];
 
   					<div class="col-md-12 col-sm-12 " id="collapseOne" style="display:none;">
               <form class="input_mask" action="createQrCode.php" id="qrsubmit" method="post">
-                          <input type="text" name="foldername" value=<?php echo $_SESSION['folder_name']; ?>
+                          <input type="text" name="foldername" value=<?php echo $_SESSION['folder_name'];?>
                 <textarea name="editor1" id="editor1" rows="10" cols="80">
                </textarea>
                 <input type="hidden" name="hiddentext"  id="hiddentext" value="">
