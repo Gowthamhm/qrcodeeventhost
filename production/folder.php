@@ -125,16 +125,21 @@ $user = $_SESSION['folder_name'];
 
             <div class="col-md-3 col-sm-3  form-group has-feedback">
             <a href="sendQrcode.php" class="btn btn-round btn-success"> QrCode </a>
-
                     </div>
 
                   <div class="col-md-3 col-sm-3  form-group has-feedback">
                     <button type="button" class="btn btn-round btn-success" onclick="showeditor()">   New &nbsp;  <i class="fa fa-plus"></i></button>
                       </div>
+                      <div class="col-md-3 col-sm-3  form-group has-feedback">
+                      <form class="" action="delete.php" method="post">
+                          <input type="hidden" name="foldername" value=<?php echo $_SESSION['folder_name'];?> >
+                          <input type="submit" name="delete" class="btn btn-round btn-danger" value="Delete">
+                      </form>
+                              </div>
 
   					<div class="col-md-12 col-sm-12 " id="collapseOne" style="display:none;">
               <form class="input_mask" action="createQrCode.php" id="qrsubmit" method="post">
-                          <input type="hidden" name="foldername" value=<?php echo $_SESSION['folder_name'];?>
+                          <input type="hidden" name="foldername" value=<?php echo $_SESSION['folder_name'];?>>
                 <textarea name="editor1" id="editor1" rows="10" cols="80">
                </textarea>
                 <input type="hidden" name="hiddentext"  id="hiddentext" value="">
