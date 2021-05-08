@@ -11,7 +11,7 @@ if(isset($_POST['delete'])){
   $checkResult = $conn->query($checkFolder);
   if ($checkResult->num_rows > 0) {
     while($row = $checkResult->fetch_assoc()) {
-      $slno = $row['slno'];
+      $slno = $row['sl_no'];
   $dbcreator = $row['creator'];
   $dbfoldername = $row['folder_name'];
   echo $slno.$dbcreator.$dbfoldername;
