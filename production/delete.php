@@ -8,7 +8,7 @@ if(isset($_POST['delete'])){
   $delete = "DELETE from `qrcode` where folder_name='". $_POST['foldername']."'";
    if($conn->query($delete) === TRUE) {
      echo "Deleted data successfully\n";
-     mysql_close($conn);
+     // mysql_close($conn);
      ?> <script type="text/javascript" charset="utf-8">
       alert("Data Deleted successfully");
       window.location.replace('home.php');
