@@ -6,7 +6,7 @@ if (isset($_POST['view'])) {
   // echo $_POST['view'];
   // echo $_POST['foldername'];
   $_SESSION['folder_name'] = mysqli_real_escape_string($conn,$_POST['foldername']);
-      // echo $_SESSION['folder_name'];
+      echo $_SESSION['folder_name'];
 }else{
   if (!empty($_SESSION['folder_name'])) {
     // echo $_SESSION['folder_name'];
