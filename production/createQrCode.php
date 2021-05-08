@@ -12,6 +12,14 @@ include './phpqrcode/qrlib.php';
     $oText=$_POST['hiddentext'];
     $originText =strval($oText);
     $phoneNumber =mysqli_real_escape_string($conn,$_POST['number']);
+    if(empty($phoneNumber)){
+      ?>
+      <script type='text/javascript' charset='utf-8'>
+       alert("Phone NUmber is Empty");
+       window.location.replace('folder.php');
+       </script>
+       <?php
+    }
     // echo $folderName,$originText,$create,$phoneNumber ;
 // echo $_POST['hiddentext'];
 // echo $originText;
