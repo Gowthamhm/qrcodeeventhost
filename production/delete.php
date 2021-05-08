@@ -17,9 +17,11 @@ if(isset($_POST['delete'])){
 //   // echo $slno.$dbcreator.$dbfoldername;
 //   }
 // }
-  $delete = "DELETE from `folders` where folder_name='".$folder_name."';";
+  $deletefolder = "DELETE from `folders` where folder_name='".$folder_name."'";
   // echo $delete;
-   if($conn->query($delete) === TRUE) {
+  $deleteqrcode = "DELETE from `qrcode` where folder_name='".$folder_name."'";
+   if($conn->query($deletefolder) === TRUE) {
+      if($conn->query($deleteqrcode) === TRUE) {
      // echo "Deleted data successfully\n";
      // mysql_close($conn);
      ?>
@@ -28,6 +30,7 @@ if(isset($_POST['delete'])){
       window.location.replace('home.php');
       // </script>
       <?php
+    }
    }else {
      // die('Could not delete data: ' . mysql_error());
      <script type="text/javascript" charset="utf-8">
