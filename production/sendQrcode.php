@@ -7,9 +7,9 @@ if (!empty($_SESSION['folder_name'])) {
   // echo $_SESSION['folder_name'];
 }else {
   ?>
-  <!-- <script type="text/javascript" charset="utf-8">
+  <script type="text/javascript" charset="utf-8">
    window.location.replace('home.php');
-   </script> -->
+   </script>
    <?php
 }
 ?>
