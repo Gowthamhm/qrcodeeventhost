@@ -192,26 +192,20 @@ if(curl_errno($ch)) {
         ?><script type="text/javascript" charset="utf-8">
          alert("Out QrCode Send Successfully");
           // window.location.replace('qrcodereader.php');
+          setTimeout(function(){
+           window.location.href = 'qrcodereader.php';
+               }, 3000);
          </script>
          <?php
-         echo "<script>";
-echo "setTimeout(function(){";
-  echo "window.location.href = 'qrcodereader.php';";
-    echo " }, 30000);";
-    // echo " }, 30);";
-echo "</script>";
       }else {
         ?><script type="text/javascript" charset="utf-8">
         alert("Out QrCode Send Successfully but Can't able to update in DB Please scan once Again");
          // window.location.replace('qrcodereader.php');
+         setTimeout(function(){
+          window.location.href = 'qrcodereader.php';
+              }, 3000);
          </script>
          <?php
-         echo "<script>";
-echo "setTimeout(function(){";
-  echo "window.location.href = 'qrcodereader.php';";
-    echo " }, 30000);";
-    // echo " }, 30);";
-echo "</script>";
       }
 }
 curl_close($ch);
@@ -220,26 +214,20 @@ curl_close($ch);
           ?><script type="text/javascript" charset="utf-8">
          alert("In Qrcode Is Already Scanned, Please Check Once");
          // window.location.replace('qrcodereader.php');
+         setTimeout(function(){
+          window.location.href = 'qrcodereader.php';
+              }, 3000);
          </script>
          <?php
-         echo "<script>";
-echo "setTimeout(function(){";
-  echo "window.location.href = 'qrcodereader.php';";
-    echo " }, 30000);";
-    // echo " }, 30);";
-echo "</script>";
         }else if($row['status'] == 999){
           ?><script type="text/javascript" charset="utf-8">
          alert("In and Out Qrcode are Scanned, Varify Once Again");
          // window.location.replace('qrcodereader.php');
+         setTimeout(function(){
+          window.location.href = 'qrcodereader.php';
+              }, 3000);
          </script>
          <?php
-         echo "<script>";
-echo "setTimeout(function(){";
-  echo "window.location.href = 'qrcodereader.php';";
-    echo " }, 30000);";
-    // echo " }, 30);";
-echo "</script>";
        }break;
       }
 }
@@ -255,12 +243,13 @@ $pattern = "/out.png/i";
             ?><script type="text/javascript" charset="utf-8">
            alert("Please Check Scanning OutQrCode Before InQrcode");
            // window.location.replace('qrcodereader.php');
+           setTimeout(function(){
+            window.location.href = 'qrcodereader.php';
+                }, 3000);
            </script>
            <?php
            echo "<script>";
-  echo "setTimeout(function(){";
-    echo "window.location.href = 'qrcodereader.php';";
-      echo " }, 30000);";
+
       // echo " }, 30);";
   echo "</script>";
           } else if($row['status'] == 99){
@@ -269,40 +258,31 @@ $pattern = "/out.png/i";
               ?><script type="text/javascript" charset="utf-8">
                alert("Status updated Successfully");
                 // window.location.replace('qrcodereader.php');
+                setTimeout(function(){
+                 window.location.href = 'qrcodereader.php';
+                     }, 3000);
                </script>
                <?php
-               echo "<script>";
-      echo "setTimeout(function(){";
-        echo "window.location.href = 'qrcodereader.php';";
-          echo " }, 30000);";
-          // echo " }, 30);";
-      echo "</script>";
             }else {
               ?><script type="text/javascript" charset="utf-8">
               alert("Can't able to Status updated Successfully");
                // window.location.replace('qrcodereader.php');
+               setTimeout(function(){
+                window.location.href = 'qrcodereader.php';
+                    }, 3000);
                </script>
                <?php
-               echo "<script>";
-      echo "setTimeout(function(){";
-        echo "window.location.href = 'qrcodereader.php';";
-          echo " }, 30000);";
-          // echo " }, 30);";
-      echo "</script>";
             }
           }
           else if($row['status'] == 999){
             ?><script type="text/javascript" charset="utf-8">
            alert("In and Out Qrcode are Scanned, Varify Once Again");
            // window.location.replace('qrcodereader.php');
+           setTimeout(function(){
+            window.location.href = 'qrcodereader.php';
+                }, 3000);
            </script>
            <?php
-           echo "<script>";
-  echo "setTimeout(function(){";
-    echo "window.location.href = 'qrcodereader.php';";
-      echo " }, 30000);";
-      // echo " }, 30);";
-  echo "</script>";
           }
           break;
         }
