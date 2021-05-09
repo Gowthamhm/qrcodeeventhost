@@ -160,10 +160,9 @@ if (!empty($_SESSION['folder_name'])) {
                               if ($result->num_rows > 0) {
                                 // output data of each row
                                 while ($row = $result->fetch_assoc()) {
-                                  echo "<tr>";
-                                  echo "<td><input type='checkbox'  name ='check' value=";
-                                  echo $row['slno'];
-                                  echo "></td>";
+                                  echo "<tr><td>";
+                                  echo "<input type='checkbox'  name ='check' value=$row['slno']>";
+                                  echo "</td>";
                                   echo "<td> ";
                                   echo $row['slno'];
                                   echo "</td> <td>";
