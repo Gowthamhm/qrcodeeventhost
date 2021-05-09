@@ -131,25 +131,73 @@ if (!empty($_SESSION['folder_name'])) {
       <table id="datatable-buttons" class="table table-striped table-bordered" style="width:100%">
         <thead>
           <tr>
-            <th>Name</th>
-            <th>Position</th>
-            <th>Office</th>
-            <th>Age</th>
-            <th>Start date</th>
-            <th>Salary</th>
+            <th>slno</th>
+                                <th>Folder_name</th>
+                                <th>Original Text</th>
+                                <th>Qouteed Text</th>
+                                <th>Phone Number</th>
+                                <th>path</th>
+                                <th>InFilename</th>
+                                <th>OutFilename</th>
+                                <th>Status</th>
+                                <th>In Text</th>
+                                <th>Out Text</th>
           </tr>
         </thead>
-
-
         <tbody>
-          <tr>
-            <td>Tiger Nixon</td>
-            <td>System Architect</td>
-            <td>Edinburgh</td>
-            <td>61</td>
-            <td>2011/04/25</td>
-            <td>$320,800</td>
-          </tr>
+          <?php
+                             if (empty($_SESSION['folder_name'])) {
+                               $sql = "SELECT * FROM `qrcode`";
+                             } else {
+                               $sql = "SELECT * FROM `qrcode` where folder_name='" . $_SESSION['folder_name'] . "'";
+                             }
+                             // echo $sql;
+                             $result = $conn->query($sql);
+                             // echo $result->num_rows;
+                             if ($result->num_rows > 0) {
+                               // output data of each row
+                               while ($row = $result->fetch_assoc()) {
+                                 echo "<tr><td>";
+                                 echo $row['slno'];
+                                 echo "</td> <td>";
+                                 echo $row['folder_name'];
+                                 echo "</td> <td>";
+                                 echo $row['text'];
+                                 echo "</td> <td>";
+                                 echo $row['Qoute'];
+                                 echo "</td> <td>";
+                                 echo $row['number'];
+                                 echo "</td> <td>";
+                                 echo  "https://sample-wesite-hosting.online/production/" . str_replace(".", ' ', $row['path']);
+                                 echo "</td> <td>";
+                                 echo $row['infilename'];
+                                 echo "</td> <td>";
+                                 echo $row['outfilename'];
+
+                                 if ($row['status'] == 0) {
+                                   echo "</td> <td>";
+                                   echo "Not Shared Yet";
+                                 } else if ($row['status'] == 1) {
+                                   echo "</td> <td>";
+                                   echo "In QrCode Shared";
+                                 } else if ($row['status'] == 99) {
+                                   echo "</td> <td>";
+                                   echo "Out QrCode Shared";
+                                 } else if ($row['status'] == 999) {
+                                   echo "</td> <td>";
+                                   echo "All Done";
+                                 } else {
+                                   echo "</td> <td>";
+                                   echo "No Status";
+                                 }
+                                 echo "</td> <td>";
+                                 echo $row['intext'];
+                                 echo "</td> <td>";
+                                 echo $row['outtext'];
+                                 echo "</td> </tr>";
+                               }
+                             }
+                             ?>
         </tbody>
       </table>
     </div>
