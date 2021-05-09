@@ -159,7 +159,7 @@ $qrcodeData = array();
                              if ($result->num_rows > 0) {
                                // output data of each row
                                while ($row = $result->fetch_assoc()) {
-                                 $qrcodeData[] = $row;
+                                 $qrcodeData = $row;
                                }
                              }
                              print_r($qrcodeData); // show all array data
