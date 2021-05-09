@@ -166,12 +166,10 @@ $qrcodeData = array();
                                }
                              }
                              for ($j=0; $j <count($qrcodeData) ; $j++) {
-                               echo $j;
+                               // echo $j;
+                               $sql = "SELECT * FROM `qrcode` where slno='" . $qrcodeData[$j] . "'";
+                               echo $sql;
                              }
-                             for ($j=0; $j <$i ; $j++) {
-                               echo $j;
-                             }
-                              // $sql = "SELECT * FROM `qrcode` where slno='" . $_SESSION['folder_name'] . "'";
                              // print_r($qrcodeData); // show all array data
 
                              ?>
