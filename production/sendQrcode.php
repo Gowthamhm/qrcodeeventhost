@@ -163,7 +163,6 @@ $qrcodeData = array();
                                }
                              }
                              print_r($qrcodeData); // show all array data
-echo $qrcodeData[0]['slno'];
                              ?>
         </tbody>
       </table>
