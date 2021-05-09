@@ -33,11 +33,10 @@ if(isset($_POST['delete'])){
     }
    }else {
      // die('Could not delete data: ' . mysql_error());
-     <script type="text/javascript" charset="utf-8">
-     alert("Folder Not Deleted successfully");
-     window.location.replace('folder.php');
-     // </script>
-     <?php
+    echo "<script type='text/javascript' charset='utf-8'>";
+    echo " alert('Folder Not Deleted successfully');";
+     echo "window.location.replace('folder.php');";
+    echo " </script>";
    }
 }else {
 
