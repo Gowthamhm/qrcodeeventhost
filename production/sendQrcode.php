@@ -168,6 +168,7 @@ $qrcodeData = array();
                              for ($j=0; $j <count($qrcodeData) ; $j++) {
                                // echo $j;
                                $sql = "SELECT * FROM `qrcode` where slno='" . $qrcodeData[$j] . "'";
+                               echo $sql;
                                $result = $conn->query($sql);
                                // echo $result->num_rows;
                                if ($result->num_rows > 0) {
