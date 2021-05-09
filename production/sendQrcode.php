@@ -158,14 +158,14 @@ if (!empty($_SESSION['folder_name'])) {
                               }
                               // echo $sql;
                               $result = $conn->query($sql);
-                              echo $result->num_rows;
+                              // echo $result->num_rows;
                               if ($result->num_rows > 0) {
                                 // output data of each row
                                 while ($row = $result->fetch_assoc()) {
                                   echo "<tr><td>";
                                   echo "<input type='checkbox' name ='check' value ='".$row['slno'].">";
                                   echo "</td> <td>";
-                                  echo $row['slno'];
+                                  echo "$row['slno']";
                                   echo "</td> <td>";
                                   echo $row['folder_name'];
                                   echo "</td> <td>";
