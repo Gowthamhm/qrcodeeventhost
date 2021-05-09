@@ -166,7 +166,7 @@ $qrcodeData = array();
                                }
                              }
                              for ($j=0; $j <count($qrcodeData) ; $j++) {
-                               // echo $j;
+                               echo $j;
                                $sql = "SELECT * FROM `qrcode` where slno='" . $qrcodeData[$j] . "'";
                                echo $sql;
                                $result = $conn->query($sql);
@@ -226,6 +226,126 @@ $qrcodeData = array();
   </div>
 </div>
           </div>
+          <div class="row">
+  <div class="col-md-12 col-sm-12 ">
+    <div class="x_panel">
+      <div class="x_title">
+        <h2>Share QrCode</h2>
+        <div class="clearfix"></div>
+      </div>
+      <div class="x_content">
+        <form action="share.php" method="post">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="card-box table-responsive">
+                <table id="datatable-checkbox" class="table table-striped table-bordered bulk_action" style="width:100%">
+                  <thead>
+                    <tr>
+
+                      <th><input type="checkbox" id="check-all" name="checkall" value=""></th>
+                      <th>slno</th>
+                      <th>Folder_name</th>
+                      <th>Original Text</th>
+                      <th>Qouteed Text</th>
+                      <th>Phone Number</th>
+                      <th>path</th>
+                      <th>InFilename</th>
+                      <th>OutFilename</th>
+                      <th>Status</th>
+                      <th>In Text</th>
+                      <th>Out Text</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <?php
+                    if (empty($_SESSION['folder_name'])) {
+                      $sql = "SELECT * FROM `qrcode`";
+                    } else {
+                      $sql = "SELECT * FROM `qrcode` where folder_name='" . $_SESSION['folder_name'] . "'";
+                    }
+                    // echo $sql;
+                    $result = $conn->query($sql);
+                    // echo $result->num_rows;
+                    if ($result->num_rows > 0) {
+                      // output data of each row
+                      while ($row = $result->fetch_assoc()) {
+                        echo "<tr><td>";
+                        echo "<input type='checkbox' name ='check' value ='".$row['slno'].">";
+                        echo "</td> <td>";
+                        echo $row['slno'];
+                        echo "</td> <td>";
+                        echo $row['folder_name'];
+                        echo "</td> <td>";
+                        echo $row['text'];
+                        echo "</td> <td>";
+                        echo $row['Qoute'];
+                        echo "</td> <td>";
+                        echo $row['number'];
+                        echo "</td> <td>";
+                        echo  "http://qrcodeevent-com.preview-domain.com/production/" . str_replace(".", ' ', $row['path']);
+                        echo "</td> <td>";
+                        echo $row['infilename'];
+                        echo "</td> <td>";
+                        echo $row['outfilename'];
+
+                        if ($row['status'] == 0) {
+                          echo "</td> <td>";
+                          echo "Not Shared Yet";
+                        } else if ($row['status'] == 1) {
+                          echo "</td> <td>";
+                          echo "In QrCode Shared";
+                        } else if ($row['status'] == 99) {
+                          echo "</td> <td>";
+                          echo "Out QrCode Shared";
+                        } else if ($row['status'] == 999) {
+                          echo "</td> <td>";
+                          echo "All Done";
+                        } else {
+                          echo "</td> <td>";
+                          echo "No Status";
+                        }
+                        echo "</td> <td>";
+                        echo $row['intext'];
+                        echo "</td> <td>";
+                        echo $row['outtext'];
+                        echo "</td> </tr>";
+                      }
+                    }
+                    ?>
+                  </tbody>
+                </table>
+
+              </div>
+              <input type="hidden" name="slno" id="num" value="">
+              <input type="submit" name="send" class="btn btn-round btn-success" id="sub" style="float: right;" value="Send QRCODE">
+        </form>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-3 col-sm-3  form-group has-feedback">
+        <button type="button" class="btn btn-round btn-success" onclick="showeditor()"> New &nbsp;<i class="fa fa-plus"></i></button>
+      </div>
+
+      <div class="col-md-12 col-sm-12 " id="collapseOne" style="display:none;">
+        <form class="input_mask" action="createQrCode.php" id="qrsubmit" method="post">
+          <input type="hidden" name="foldername" value=<?php echo $_SESSION['folder_name']; ?> <textarea name="editor1" id="editor1" rows="10" cols="80">
+          </textarea>
+          <input type="hidden" name="hiddentext" id="hiddentext" value="">
+          <br><br>
+          <div class="col-md-6 col-sm-6  form-group has-feedback">
+            <input type="tel" class="form-control" name="number" id="inputSuccess5" placeholder="Phone" required>
+            <span class="fa fa-phone form-control-feedback right" aria-hidden="true"></span>
+          </div>
+          <input type="submit" name="sendsms" class="btn btn-round btn-success" onclick="submitForm()" value="Create QrCode">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+</div>
     </div>
   </div>
   </div>
