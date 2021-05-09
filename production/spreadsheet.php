@@ -21,7 +21,8 @@ if (isset($_GET['export'])) {
     //output each row of the data, format line as csv and write to file pointer
     while ($row = $query->fetch_assoc()) {
 
-      $lineData = array($row['slno'], $row['folder_name'], $row['text'], $row['Qoute'], $row['number'], 'https://qr-code-event.000webhostapp.com' . str_replace(".", "", $row['path']), $row['infilename'], $row['outfilename'], $row['status'], $row['intext'], $row['outtext'], 'https://qr-code-event.000webhostapp.com' . str_replace(".", "", $row['path']) . '/' . $row['infilename'], 'https://qr-code-event.000webhostapp.com' . str_replace(".", "", $row['path']) . '/' . $row['outfilename']);
+      $lineData = array($row['slno'], $row['folder_name'], $row['text'], $row['Qoute'], $row['number'], 'https://sample-wesite-hosting.online' . str_replace(".", "", $row['path']), $row['infilename'], $row['outfilename'],
+       $row['status'], $row['intext'], $row['outtext'], 'https://sample-wesite-hosting.online' . str_replace(".", "", $row['path']) . '/' . $row['infilename'], 'https://sample-wesite-hosting.online' . str_replace(".", "", $row['path']) . '/' . $row['outfilename']);
       fputcsv($f, $lineData, $delimiter);
     }
 
