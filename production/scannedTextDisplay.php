@@ -144,6 +144,7 @@ $result = $conn->query($selectdata);
 if ($result->num_rows > 0) {
       while($row = $result->fetch_assoc()) {
         if($row['status'] == 1){
+          echo $barcodedata;
             $number = "+91".$row['number'];
             $text = "https://sample-wesite-hosting.online/production".str_replace( ".",'', $row['path'])."/".$row['outfilename'];
             $service_plan_id = "78125b9858494c72894913f48031923d";
@@ -270,6 +271,7 @@ $pattern = "/out.png/i";
           } else if($row['status'] == 99){
             $update_status = "UPDATE `qrcode` set status= 999 where folder_name ='".$str_arr[0]."'and outfilename ='".$str_arr[5]."' and number='".$str_arr[6]."'";
             if($conn->query($update_status) === TRUE){
+              echo $barcodedata;
               echo "<script type='text/javascript' charset='utf-8'>";
              echo "alert('Status updated Successfully');";
              echo "window.location.replace('qrcodereader.php');";
@@ -323,12 +325,6 @@ $pattern = "/out.png/i";
 }
  }
  // echo "$selectdata";
- echo "<div id='wrapper'>";
- echo "<div id='container'><h1>";
- echo $barcodedata;
- echo "</h1>";
- echo "</div>";
- echo "</div>";
 }
 }
  ?>
