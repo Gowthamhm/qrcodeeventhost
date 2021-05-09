@@ -160,8 +160,8 @@ $qrcodeData = array();
                                // output data of each row
                                $i=0;
                                while ($row = $result->fetch_assoc()) {
-                                 $qrcodeData[$i] = $row;
-                                 echo $row['slno'];
+                                 $qrcodeData[$i] = $row['slno'];
+                                 // echo $row['slno'];
                                  $i++;
                                }
 
