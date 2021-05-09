@@ -141,6 +141,12 @@ if (preg_match($pattern, $str_arr[5])) {
 $selectdata = "SELECT * FROM `qrcode` where folder_name ='".$str_arr[0]."'and infilename ='".$str_arr[5]."' and number='".$str_arr[6]."'";
 $result = $conn->query($selectdata);
 // echo $result->num_rows;
+echo "<div id='wrapper'>";
+echo "<div id='container'><h1>";
+echo $barcodedata;
+echo "</h1>";
+echo "</div>";
+echo "</div>";
 if ($result->num_rows > 0) {
       while($row = $result->fetch_assoc()) {
         if($row['status'] == 1){
@@ -192,12 +198,6 @@ if(curl_errno($ch)) {
         //   //  window.location.href = 'qrcodereader.php';
         //   //      }, 3000);
         //  </script>
-        echo "<div id='wrapper'>";
-        echo "<div id='container'><h1>";
-        echo $barcodedata;
-        echo "</h1>";
-        echo "</div>";
-        echo "</div>";
         echo "<script type='text/javascript' charset='utf-8'>";
         echo "alert('Out QrCode Send Successfully');";
         echo "window.location.replace('qrcodereader.php');";
