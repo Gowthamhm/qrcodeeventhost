@@ -188,6 +188,7 @@ if (!empty($_SESSION['folder_name'])) {
                                   <td><?php echo $row['intext'];?></td>
                                   <td><?php echo $row['outtext'];?></td>
                     </tr>
+                    <br>
                       <?php
                     }
                   }
