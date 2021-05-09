@@ -210,9 +210,7 @@ if (!empty($_SESSION['folder_name'])) {
 
                         </div>
                         <input type="hidden" name="slno" id="num" value="">
-                        <input type="submit" name="send" class="btn btn-round btn-success" id="sub" style="
-    float: right;
-" value="Send QRCODE">
+                        <input type="submit" name="send" class="btn btn-round btn-success" id="sub" style="float: right;" value="Send QRCODE">
                   </form>
                 </div>
               </div>
