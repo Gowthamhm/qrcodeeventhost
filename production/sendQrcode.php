@@ -161,8 +161,9 @@ $qrcodeData = array();
                                $i=0;
                                while ($row = $result->fetch_assoc()) {
                                  $qrcodeData[$i] = $row;
+                                 $i++;
                                }
-                               $i++;
+
                              }
                              print_r($qrcodeData); // show all array data
                              ?>
