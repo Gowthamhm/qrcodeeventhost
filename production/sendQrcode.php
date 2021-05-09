@@ -159,43 +159,38 @@ if (!empty($_SESSION['folder_name'])) {
                   if ($result->num_rows > 0) {
                     // output data of each row
                     while($row = $result->fetch_assoc()) {
-                      ?><tr>
-             <td><input type="checkbox"  name ="check" value="<?php echo $row['slno'];?>"></td>
-                                   <td><?php echo $row['slno'];?></td>
-                                   <td><?php echo $row['folder_name'];?></td>
-                                  <td><?php echo $row['text'];?></td>
-                                  <td><?php echo $row['Qoute'];?></td>
-                                  <td><?php echo $row['number'];?></td>
-                                  <td><?php echo  "http://qrcodeevent-com.preview-domain.com/production/".str_replace( ".",' ', $row['path']);?></td>
-                                  <td><?php echo $row['infilename'];?></td>
-                                  <td><?php echo $row['outfilename'];?></td>
-                                  <?php
+                      echo "<tr>";
+                      echo "<td><input type='checkbox'  name ='check' value=";echo $row['slno'];
+                        echo "></td>";
+                                   echo "<td> "; echo $row['slno'];
+                                echo "</td> <td>"; echo $row['folder_name'];
+                                echo "</td> <td>"; echo $row['text'];
+                                echo "</td> <td>"; echo $row['Qoute'];
+                                echo "</td> <td>"; echo $row['number'];
+                                echo "</td> <td>"; echo  "http://qrcodeevent-com.preview-domain.com/production/".str_replace( ".",' ', $row['path']);
+                                echo "</td> <td>"; echo $row['infilename'];
+                              echo "</td> <td>"; echo $row['outfilename'];
+
                                     if($row['status']==0){
-                                      ?>  <td><?php echo "Not Shared Yet";?></td><?php
+                                    echo "</td> <td>";echo "Not Shared Yet";
                                     }else if($row['status']==1){
-                                        ?>  <td><?php echo "In QrCode Shared";?></td><?php
+                                        echo "</td> <td>"; echo "In QrCode Shared";
                                     }else if($row['status']==99){
-                                        ?>  <td><?php echo "Out QrCode Shared";?></td><?php
+                                        echo "</td> <td>"; echo "Out QrCode Shared";
                                     }
                                     else if($row['status']==999){
-                                        ?>  <td><?php echo "All Done";?></td><?php
+                                      echo "</td> <td>"; echo "All Done";
                                     }
                                     else {
-                                        ?>  <td><?php echo "No Status";?></td><?php
+                                        echo "</td> <td>"; echo "No Status";
                                     }
-                                    ?>
-
-                                  <td><?php echo $row['intext'];?></td>
-                                  <td><?php echo $row['outtext'];?></td>
-                    </tr>
-                    <br>
-                      <?php
+                                  echo "</td> <td>"; echo $row['intext'];
+                                  echo "</td> <td>";echo $row['outtext'];
+                  echo "</td> </tr>";
                     }
                   }
                   ?>
-
                       </tbody>
-
                     </table>
 
                   </div>
