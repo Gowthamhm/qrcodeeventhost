@@ -168,7 +168,50 @@ $qrcodeData = array();
                              for ($j=0; $j <count($qrcodeData) ; $j++) {
                                // echo $j;
                                $sql = "SELECT * FROM `qrcode` where slno='" . $qrcodeData[$j] . "'";
-                               echo $sql;
+                               $result = $conn->query($sql);
+                               // echo $result->num_rows;
+                               if ($result->num_rows > 0) {
+                                 while ($row = $result->fetch_assoc()) {
+                                   echo "<tr><td>";
+                                  echo $row['slno'];
+                                  echo "</td> <td>";
+                                  echo $row['folder_name'];
+                                  echo "</td> <td>";
+                                  echo $row['text'];
+                                  echo "</td> <td>";
+                                  echo $row['Qoute'];
+                                  echo "</td> <td>";
+                                  echo $row['number'];
+                                  echo "</td> <td>";
+                                  echo  "http://qrcodeevent-com.preview-domain.com/production/" . str_replace(".", ' ', $row['path']);
+                                  echo "</td> <td>";
+                                  echo $row['infilename'];
+                                  echo "</td> <td>";
+                                  echo $row['outfilename'];
+
+                                  if ($row['status'] == 0) {
+                                    echo "</td> <td>";
+                                    echo "Not Shared Yet";
+                                  } else if ($row['status'] == 1) {
+                                    echo "</td> <td>";
+                                    echo "In QrCode Shared";
+                                  } else if ($row['status'] == 99) {
+                                    echo "</td> <td>";
+                                    echo "Out QrCode Shared";
+                                  } else if ($row['status'] == 999) {
+                                    echo "</td> <td>";
+                                    echo "All Done";
+                                  } else {
+                                    echo "</td> <td>";
+                                    echo "No Status";
+                                  }
+                                  echo "</td> <td>";
+                                  echo $row['intext'];
+                                  echo "</td> <td>";
+                                  echo $row['outtext'];
+                                  echo "</td> </tr>";
+                                 }
+                               }
                              }
                              // print_r($qrcodeData); // show all array data
 
