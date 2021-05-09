@@ -123,28 +123,30 @@ if(isset($_POST['submit']))
   $str_arr = explode ("@#", $barcodedata);
   // print_r($str_arr);
   if(empty($str_arr[1])){
-    ?><script type="text/javascript" charset="utf-8">
-   alert("This QrCode not Created by Our User Please varify");
-   window.location.replace('qrcodereader.php');
-   </script>
-   <?php
+    echo "<script type='text/javascript' charset='utf-8'>";
+   echo "alert('This QrCode not Created by Our User Please varify');";
+   echo "window.location.replace('qrcodereader.php');";
+   // echo "setTimeout(function(){ ";
+   // echo " window.location.href = 'qrcodereader.php';";
+   //  echo "    }, 3000);";
+   echo "</script>";
+   //  <script type="text/javascript" charset="utf-8">
+   // alert("This QrCode not Created by Our User Please varify");
+   // window.location.replace('qrcodereader.php');
+   // </script>
  }else {
    // print_r($str_arr);
-   ?>
-   <div id='wrapper'>
-   <div id='container'><h1>
-    <?php
-    echo $barcodedata;
-     ?>
-   </h1>
-   </div>
-   </div>
-   <?
    $pattern = "/in.png/i";
 if (preg_match($pattern, $str_arr[5])) {
 $selectdata = "SELECT * FROM `qrcode` where folder_name ='".$str_arr[0]."'and infilename ='".$str_arr[5]."' and number='".$str_arr[6]."'";
 $result = $conn->query($selectdata);
 // echo $result->num_rows;
+echo "<div id='wrapper'>";
+echo "<div id='container'><h1>";
+echo $barcodedata;
+echo "</h1>";
+echo "</div>";
+echo "</div>";
 if ($result->num_rows > 0) {
       while($row = $result->fetch_assoc()) {
         if($row['status'] == 1){
@@ -189,46 +191,70 @@ if(curl_errno($ch)) {
     // echo $result;
       $update_status = "UPDATE `qrcode` set status= 99 where folder_name ='".$str_arr[0]."'and infilename ='".$str_arr[5]."' and number='".$str_arr[6]."'";
       if($conn->query($update_status) === TRUE){
-        ?><script type="text/javascript" charset="utf-8">
-         alert("Out QrCode Send Successfully");
-          window.location.replace('qrcodereader.php');
-          // setTimeout(function(){
-          //  window.location.href = 'qrcodereader.php';
-          //      }, 3000);
-         </script>
-         <?php
+        // <script type="text/javascript" charset="utf-8">
+        //  alert("Out QrCode Send Successfully");
+        //   window.location.replace('qrcodereader.php');
+        //   // setTimeout(function(){
+        //   //  window.location.href = 'qrcodereader.php';
+        //   //      }, 3000);
+        //  </script>
+        echo "<script type='text/javascript' charset='utf-8'>";
+        echo "alert('Out QrCode Send Successfully');";
+        echo "window.location.replace('qrcodereader.php');";
+        // echo "setTimeout(function(){ ";
+        // echo " window.location.href = 'qrcodereader.php';";
+        //  echo "    }, 3000);";
+        echo "</script>";
       }else {
-        ?><script type="text/javascript" charset="utf-8">
-        alert("Out QrCode Send Successfully but Can't able to update in DB Please scan once Again");
-         window.location.replace('qrcodereader.php');
-         // setTimeout(function(){
-         //  window.location.href = 'qrcodereader.php';
-         //      }, 3000);
-         </script>
-         <?php
+      echo "<script type='text/javascript' charset='utf-8'>";
+       echo "alert('Out QrCode Send Successfully but Can't able to update in DB Please scan once Again');";
+       echo "window.location.replace('qrcodereader.php');";
+       // echo "setTimeout(function(){ ";
+       // echo " window.location.href = 'qrcodereader.php';";
+       //  echo "    }, 3000);";
+       echo "</script>";
+        // <!-- <script type="text/javascript" charset="utf-8">
+        // alert("Out QrCode Send Successfully but Can't able to update in DB Please scan once Again");
+        //  window.location.replace('qrcodereader.php');
+        //  // setTimeout(function(){
+        //  //  window.location.href = 'qrcodereader.php';
+        //  //      }, 3000);
+        //  </script> -->
       }
 }
 curl_close($ch);
             // echo $number.$text.$update_status;
         }else if($row['status'] == 99){
-          ?><script type="text/javascript" charset="utf-8">
-         alert("In Qrcode Is Already Scanned, Please Check Once");
-         window.location.replace('qrcodereader.php');
-         // setTimeout(function(){
-         //  window.location.href = 'qrcodereader.php';
-         //      }, 3000);
-         </script>
-         <?php
+          echo "<script type='text/javascript' charset='utf-8'>";
+           echo "alert('In Qrcode Is Already Scanned, Please Check Once');";
+           echo "window.location.replace('qrcodereader.php');";
+           // echo "setTimeout(function(){ ";
+           // echo " window.location.href = 'qrcodereader.php';";
+           //  echo "    }, 3000);";
+           echo "</script>";
+         //
+         //  <script type="text/javascript" charset="utf-8">
+         // alert("In Qrcode Is Already Scanned, Please Check Once");
+         // window.location.replace('qrcodereader.php');
+         // // setTimeout(function(){
+         // //  window.location.href = 'qrcodereader.php';
+         // //      }, 3000);
         }else if($row['status'] == 999){
-          ?><script type="text/javascript" charset="utf-8">
-         alert("In and Out Qrcode are Scanned, Varify Once Again");
-         window.location.replace('qrcodereader.php');
-         // setTimeout(function(){
-         //  window.location.href = 'qrcodereader.php';
-         //      }, 3000);
-         </script>
-         <?php
-       }break;
+          echo "<script type='text/javascript' charset='utf-8'>";
+           echo "alert('In and Out Qrcode are Scanned, Varify Once Again');";
+           echo "window.location.replace('qrcodereader.php');";
+           // echo "setTimeout(function(){ ";
+           // echo " window.location.href = 'qrcodereader.php';";
+           //  echo "    }, 3000);";
+           echo "</script>";
+         //  <script type="text/javascript" charset="utf-8">
+         // alert("In and Out Qrcode are Scanned, Varify Once Again");
+         // window.location.replace('qrcodereader.php');
+         // // setTimeout(function(){
+         // //  window.location.href = 'qrcodereader.php';
+         // //      }, 3000);
+         // </script>
+         }break;
       }
 }
 }else {
@@ -237,52 +263,71 @@ $pattern = "/out.png/i";
   $selectdata = "SELECT * FROM `qrcode` where folder_name ='".$str_arr[0]."'and outfilename ='".$str_arr[5]."' and number='".$str_arr[6]."'";
   $result = $conn->query($selectdata);
   // echo $result->num_rows;
+  echo "<div id='wrapper'>";
+  echo "<div id='container'><h1>";
+  echo $barcodedata;
+  echo "</h1>";
+  echo "</div>";
+  echo "</div>";
   if ($result->num_rows > 0) {
         while($row = $result->fetch_assoc()) {
           if($row['status'] == 1){
-            ?><script type="text/javascript" charset="utf-8">
-           alert("Please Check Scanning OutQrCode Before InQrcode");
-           window.location.replace('qrcodereader.php');
-           // setTimeout(function(){
-           //  window.location.href = 'qrcodereader.php';
-           //      }, 3000);
-           </script>
-           <?php
-           echo "<script>";
-
-      // echo " }, 30);";
-  echo "</script>";
+            echo "<script type='text/javascript' charset='utf-8'>";
+           echo "alert('Please Check Scanning OutQrCode Before InQrcode');";
+           echo "window.location.replace('qrcodereader.php');";
+           // echo "setTimeout(function(){ ";
+           // echo " window.location.href = 'qrcodereader.php';";
+           //  echo "    }, 3000);";
+        echo "</script>";
           } else if($row['status'] == 99){
             $update_status = "UPDATE `qrcode` set status= 999 where folder_name ='".$str_arr[0]."'and outfilename ='".$str_arr[5]."' and number='".$str_arr[6]."'";
             if($conn->query($update_status) === TRUE){
-              ?><script type="text/javascript" charset="utf-8">
-               alert("Status updated Successfully");
-                window.location.replace('qrcodereader.php');
-                // setTimeout(function(){
-                //  window.location.href = 'qrcodereader.php';
-                //      }, 3000);
-               </script>
-               <?php
+              echo "<script type='text/javascript' charset='utf-8'>";
+             echo "alert('Status updated Successfully');";
+             echo "window.location.replace('qrcodereader.php');";
+             // echo "setTimeout(function(){ ";
+             // echo " window.location.href = 'qrcodereader.php';";
+             //  echo "    }, 3000);";
+          echo "</script>";
+            // <script type="text/javascript" charset="utf-8">
+            //    alert("Status updated Successfully");
+            //     window.location.replace('qrcodereader.php');
+            //     // setTimeout(function(){
+            //     //  window.location.href = 'qrcodereader.php';
+            //     //      }, 3000);
+            //    </script>
             }else {
-              ?><script type="text/javascript" charset="utf-8">
-              alert("Can't able to Status updated Successfully");
-               window.location.replace('qrcodereader.php');
-               // setTimeout(function(){
-               //  window.location.href = 'qrcodereader.php';
-               //      }, 3000);
-               </script>
-               <?php
+              echo "<script type='text/javascript' charset='utf-8'>";
+             echo "alert('Can't able to Status updated Successfully');";
+             echo "window.location.replace('qrcodereader.php');";
+             // echo "setTimeout(function(){ ";
+             // echo " window.location.href = 'qrcodereader.php';";
+             //  echo "    }, 3000);";
+          echo "</script>";
+              // <script type="text/javascript" charset="utf-8">
+              // alert("Can't able to Status updated Successfully");
+              //  window.location.replace('qrcodereader.php');
+              //  // setTimeout(function(){
+              //  //  window.location.href = 'qrcodereader.php';
+              //  //      }, 3000);
+              //  </script>
             }
           }
           else if($row['status'] == 999){
-            ?><script type="text/javascript" charset="utf-8">
-           alert("In and Out Qrcode are Scanned, Varify Once Again");
-           window.location.replace('qrcodereader.php');
-           // setTimeout(function(){
-           //  window.location.href = 'qrcodereader.php';
-           //      }, 3000);
-           </script>
-           <?php
+            echo "<script type='text/javascript' charset='utf-8'>";
+           echo "alert('In and Out Qrcode are Scanned, Varify Once Again');";
+           echo "window.location.replace('qrcodereader.php');";
+           // echo "setTimeout(function(){ ";
+           // echo " window.location.href = 'qrcodereader.php';";
+           //  echo "    }, 3000);";
+        echo "</script>";
+           //  <script type="text/javascript" charset="utf-8">
+           // alert("In and Out Qrcode are Scanned, Varify Once Again");
+           // window.location.replace('qrcodereader.php');
+           // // setTimeout(function(){
+           // //  window.location.href = 'qrcodereader.php';
+           // //      }, 3000);
+           // </script>
           }
           break;
         }
