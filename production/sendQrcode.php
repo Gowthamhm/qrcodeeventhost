@@ -156,8 +156,9 @@ if (!empty($_SESSION['folder_name'])) {
                               } else {
                                 $sql = "SELECT * FROM `qrcode` where folder_name='" . $_SESSION['folder_name'] . "'";
                               }
-                              echo $sql;
+                              // echo $sql;
                               $result = $conn->query($sql);
+                              echo $result->num_rows;
                               if ($result->num_rows > 0) {
                                 // output data of each row
                                 while ($row = $result->fetch_assoc()) {
