@@ -135,13 +135,6 @@ if(isset($_POST['submit']))
    // window.location.replace('qrcodereader.php');
    // </script>
  }else {
-
-   echo "<div id='wrapper'>";
-   echo "<div id='container'><h1>";
-   echo $barcodedata;
-   echo "</h1>";
-   echo "</div>";
-   echo "</div>";
    // print_r($str_arr);
    $pattern = "/in.png/i";
 if (preg_match($pattern, $str_arr[5])) {
@@ -201,18 +194,18 @@ if(curl_errno($ch)) {
         //  </script>
         echo "<script type='text/javascript' charset='utf-8'>";
         echo "alert('Out QrCode Send Successfully');";
-        echo "window.location.replace('qrcodereader.php');";
-        // echo "setTimeout(function(){ ";
-        // echo " window.location.href = 'qrcodereader.php';";
-        //  echo "    }, 3000);";
+        // echo "window.location.replace('qrcodereader.php');";
+        echo "setTimeout(function(){ ";
+        echo " window.location.href = 'qrcodereader.php';";
+         echo "    }, 3000);";
         echo "</script>";
       }else {
       echo "<script type='text/javascript' charset='utf-8'>";
        echo "alert('Out QrCode Send Successfully but Can't able to update in DB Please scan once Again');";
-       echo "window.location.replace('qrcodereader.php');";
-       // echo "setTimeout(function(){ ";
-       // echo " window.location.href = 'qrcodereader.php';";
-       //  echo "    }, 3000);";
+       // echo "window.location.replace('qrcodereader.php');";
+       echo "setTimeout(function(){ ";
+       echo " window.location.href = 'qrcodereader.php';";
+        echo "    }, 3000);";
        echo "</script>";
         // <!-- <script type="text/javascript" charset="utf-8">
         // alert("Out QrCode Send Successfully but Can't able to update in DB Please scan once Again");
@@ -279,10 +272,10 @@ $pattern = "/out.png/i";
             if($conn->query($update_status) === TRUE){
               echo "<script type='text/javascript' charset='utf-8'>";
              echo "alert('Status updated Successfully');";
-             echo "window.location.replace('qrcodereader.php');";
-             // echo "setTimeout(function(){ ";
-             // echo " window.location.href = 'qrcodereader.php';";
-             //  echo "    }, 3000);";
+             // echo "window.location.replace('qrcodereader.php');";
+             echo "setTimeout(function(){ ";
+             echo " window.location.href = 'qrcodereader.php';";
+              echo "    }, 3000);";
           echo "</script>";
             // <script type="text/javascript" charset="utf-8">
             //    alert("Status updated Successfully");
@@ -294,10 +287,10 @@ $pattern = "/out.png/i";
             }else {
               echo "<script type='text/javascript' charset='utf-8'>";
              echo "alert('Can't able to Status updated Successfully');";
-             echo "window.location.replace('qrcodereader.php');";
-             // echo "setTimeout(function(){ ";
-             // echo " window.location.href = 'qrcodereader.php';";
-             //  echo "    }, 3000);";
+             // echo "window.location.replace('qrcodereader.php');";
+             echo "setTimeout(function(){ ";
+             echo " window.location.href = 'qrcodereader.php';";
+              echo "    }, 3000);";
           echo "</script>";
               // <script type="text/javascript" charset="utf-8">
               // alert("Can't able to Status updated Successfully");
@@ -330,6 +323,12 @@ $pattern = "/out.png/i";
 }
  }
  // echo "$selectdata";
+ echo "<div id='wrapper'>";
+ echo "<div id='container'><h1>";
+ echo $barcodedata;
+ echo "</h1>";
+ echo "</div>";
+ echo "</div>";
 }
 }
  ?>
