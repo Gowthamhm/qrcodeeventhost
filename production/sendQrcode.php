@@ -165,7 +165,7 @@ if (!empty($_SESSION['folder_name'])) {
                                   echo "<tr><td>";
                                   echo "<input type='checkbox' name ='check' value ='".$row['slno'].">";
                                   echo "</td> <td>";
-                                  echo $row['slno'];
+                                  echo "$row['slno']";
                                   echo "</td> <td>";
                                   echo $row['folder_name'];
                                   echo "</td> <td>";
