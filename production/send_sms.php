@@ -69,7 +69,7 @@ if (isset($_POST['sendsms'])) {
     window.location.replace('instancesms.php');
   </script> -->
 <?php
-require __DIR__ . '/vendor/autoload.php';
+require __DIR__ . 'vendor/autoload.php';
 use Twilio\Rest\Client;
 
 // Your Account SID and Auth Token from twilio.com/console
