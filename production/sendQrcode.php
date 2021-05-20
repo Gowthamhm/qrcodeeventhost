@@ -116,12 +116,13 @@ if (!empty($_SESSION['folder_name'])) {
       <!-- page content -->
       <div class="right_col" role="main">
         <div class="">
-          <div class="clearfix"></div>
+          <!-- <div class="clearfix"></div>
           <div class="row">
             <div class="col-md-12 col-sm-12 ">
   <div class="x_panel">
-    <div class="x_title">
-      <h2>QrCode Details</h2>
+    <div class="x_title"> -->
+      <!-- <h2>QrCode Details</h2> -->
+      <!-- <h2>Share QrCode</h2> -->
       <div class="clearfix"></div>
     </div>
     <div class="x_content">
@@ -129,7 +130,6 @@ if (!empty($_SESSION['folder_name'])) {
   <div class="col-md-12 col-sm-12 ">
     <div class="x_panel">
       <div class="x_title">
-        <!-- <h2>Share QrCode</h2> -->
         <div class="clearfix"></div>
       </div>
       <div class="x_content">
@@ -157,6 +157,25 @@ if (!empty($_SESSION['folder_name'])) {
                   </thead>
                   <tbody>
                     <?php
+                    // set array
+                    $qrcodeData = array();
+                                       if (empty($_SESSION['folder_name'])) {
+                                         $sql = "SELECT * FROM `qrcode`";
+                                       } else {
+                                         $sql = "SELECT * FROM `qrcode` where folder_name='" . $_SESSION['folder_name'] . "'";
+                                       }
+                                       // echo $sql;
+                                       $result = $conn->query($sql);
+                                       // echo $result->num_rows;
+                                       if ($result->num_rows > 0) {
+                                         // output data of each row
+                                         $i=0;
+                                         while ($row = $result->fetch_assoc()) {
+                                           $qrcodeData[$i] = $row['slno'];
+                                           // echo $row['slno'];
+                                           $i++;
+                                         }
+                                       }
                      for ($j=0; $j <count($qrcodeData) ; $j++) {
                                echo $j;
                                $sql = "SELECT * FROM `qrcode` where slno=" . $qrcodeData[$j];
