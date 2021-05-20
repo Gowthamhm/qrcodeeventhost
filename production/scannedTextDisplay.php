@@ -206,7 +206,7 @@ include 'error.php';
                   // echo "window.location.replace('qrcodereader.php');";
                   echo "setTimeout(function(){ ";
                   echo " window.location.href = 'qrcodereader.php';";
-                  echo "    }, 3000);";
+                  echo "    }, 30000);";
                   echo "</script>";
                 } else {
                   echo "<script type='text/javascript' charset='utf-8'>";
@@ -214,7 +214,7 @@ include 'error.php';
                   // echo "window.location.replace('qrcodereader.php');";
                   echo "setTimeout(function(){ ";
                   echo " window.location.href = 'qrcodereader.php';";
-                  echo "    }, 3000);";
+                  echo "    }, 30000);";
                   echo "</script>";
                   // <!-- <script type="text/javascript" charset="utf-8">
                   // alert("Out QrCode Send Successfully but Can't able to update in DB Please scan once Again");
@@ -292,7 +292,7 @@ include 'error.php';
                   // echo "window.location.replace('qrcodereader.php');";
                   echo "setTimeout(function(){ ";
                   echo " window.location.href = 'qrcodereader.php';";
-                  echo "    }, 3000);";
+                  echo "    }, 30000);";
                   echo "</script>";
                   // <script type="text/javascript" charset="utf-8">
                   //    alert("Status updated Successfully");
@@ -307,7 +307,7 @@ include 'error.php';
                   // echo "window.location.replace('qrcodereader.php');";
                   echo "setTimeout(function(){ ";
                   echo " window.location.href = 'qrcodereader.php';";
-                  echo "    }, 3000);";
+                  echo "    }, 30000);";
                   echo "</script>";
                   // <script type="text/javascript" charset="utf-8">
                   // alert("Can't able to Status updated Successfully");
