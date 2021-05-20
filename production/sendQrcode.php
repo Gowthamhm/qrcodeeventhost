@@ -146,18 +146,13 @@ if (!empty($_SESSION['folder_name'])) {
                           <tbody>
                             <form action="sms.php" method="post">
                               <?php
-                              $sql = "SELECT * FROM `qrcode`";
-                              $result = $conn->query($sql);
-                              if ($result->num_rows > 0) {
-                                // output data of each row
-                                while ($row = $result->fetch_assoc()) {
-                              ?><tr>
-                                    <td><input type="checkbox" name="check" value="<?php echo $row['number']; ?>"></td>
-                                    <td><?php echo $row['number']; ?></td>
-                                  </tr>
-                              <?php
-                                }
-                              }
+                               $qrcodeData = array();
+                               if (empty($_SESSION['folder_name'])) {
+                                 $sql = "SELECT * FROM `qrcode`";
+                               } else {
+                                 $sql = "SELECT * FROM `qrcode` where folder_name='" . $_SESSION['folder_name'] . "'";
+                               }
+                               echo $sql;
                               ?>
                               <tr>
                                 <input type="hidden" name="number" id="num" value="">
