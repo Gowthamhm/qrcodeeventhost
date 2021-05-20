@@ -24,6 +24,9 @@ if (isset($_POST['sendsms'])) {
 $twilio_number = "+17204087706";
  $client = new Client($account_sid, $auth_token);
 
+$text = str_replace('<p>',' ',$text);
+$text = str_replace('</p>',' ',$text);
+
 for($i=0;$i<count($number);$i++){
   // echo $number[$i];
   $number_to_send =  '+91'.$number[$i];
