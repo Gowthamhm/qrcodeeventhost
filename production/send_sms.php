@@ -28,6 +28,7 @@ try{
 $text = str_replace('<p>',' ',$text);
 $text = str_replace('</p>',' ',$text);
 $text = str_replace('&quot','"',$text);
+$text = str_replace('&nbsp;',' ',$text);
 
 for($i=0;$i<count($number);$i++){
   // echo $number[$i];
@@ -53,7 +54,7 @@ if(strlen($number_to_send) == 13){
 }
 ?><script type="text/javascript" charset="utf-8">
   alert("Message Sent Succusfully");
-  window.location.replace('instancesms.php.php');
+  window.location.replace('instancesms.php');
 </script>
 <?php
 }
