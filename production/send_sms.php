@@ -1,5 +1,7 @@
 <?php
-require __DIR__ . 'vendor/autoload.php';
+// C:\xampp\htdocs\qrcodeeventhost\production\
+// require __DIR__ . 'twilio\src\Twilio\autoload.php';
+ require __DIR__ . '/twilio/src/Twilio/autoload.php';
 use Twilio\Rest\Client;
 
 include 'connection.php';

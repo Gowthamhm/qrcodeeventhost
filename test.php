@@ -1,6 +1,6 @@
  <?php
  // Include the bundled autoload from the Twilio PHP Helper Library
- require __DIR__ . '/production/twilio-php-main/src/Twilio/autoload.php';
+ require __DIR__ . '/production/twilio/src/Twilio/autoload.php';
  use Twilio\Rest\Client;
  // Your Account SID and Auth Token from twilio.com/console
  $account_sid = 'AC11111a46dcd23e4a639e77e6088b32c4';
