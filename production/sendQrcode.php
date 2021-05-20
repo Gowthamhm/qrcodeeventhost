@@ -219,12 +219,30 @@ if (!empty($_SESSION['folder_name'])) {
                           </tbody>
                         </table>
                       </div>
+                      <input type="hidden" name="slno" id="num" value="">
+             <input type="submit" name="send" class="btn btn-round btn-success" id="sub" style="float: right;" value="Send QRCODE">
+       </form>
                     </div>
                   </div>
-                  <input type="hidden" name="number" id="num" value="">
-                  <input type="submit" name="send" class="btn btn-round btn-success" id="sub" value="Enter Message">
-                </form>
-                </div>
+                  <div class="row">
+  <div class="col-md-3 col-sm-3  form-group has-feedback">
+    <button type="button" class="btn btn-round btn-success" onclick="showeditor()"> New &nbsp;<i class="fa fa-plus"></i></button>
+  </div>
+
+  <div class="col-md-12 col-sm-12 " id="collapseOne" style="display:none;">
+    <form class="input_mask" action="createQrCode.php" id="qrsubmit" method="post">
+      <input type="hidden" name="foldername" value=<?php echo $_SESSION['folder_name']; ?> <textarea name="editor1" id="editor1" rows="10" cols="80">
+      </textarea>
+      <input type="hidden" name="hiddentext" id="hiddentext" value="">
+      <br><br>
+      <div class="col-md-6 col-sm-6  form-group has-feedback">
+        <input type="tel" class="form-control" name="number" id="inputSuccess5" placeholder="Phone" required>
+        <span class="fa fa-phone form-control-feedback right" aria-hidden="true"></span>
+      </div>
+      <input type="submit" name="sendsms" class="btn btn-round btn-success" onclick="submitForm()" value="Create QrCode">
+    </form>
+  </div>
+                  </div>
               </div>
             </div>
 
