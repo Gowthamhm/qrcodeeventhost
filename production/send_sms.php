@@ -28,7 +28,7 @@ for($i=0;$i<count($number);$i++){
   // echo $number[$i];
   $number_to_send =  '+91'.$number[$i];
 // echo $number_to_send;
-if(count($number_to_send) == 13){
+if(strlen($number_to_send) == 13){
   $client->messages->create(
       // Where to send a text message (your cell phone?)
       $number_to_send,
