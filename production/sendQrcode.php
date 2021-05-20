@@ -166,9 +166,9 @@ if (!empty($_SESSION['folder_name'])) {
                                }
                              }
                              for ($j=0; $j <count($qrcodeData) ; $j++) {
-                               echo $j;
+                               // echo $j;
                                $sql = "SELECT * FROM `qrcode` where slno='" . $qrcodeData[$j] . "'";
-                               echo $sql;
+                               // echo $sql;
                                $result = $conn->query($sql);
                                // echo $result->num_rows;
                                if ($result->num_rows > 0) {
@@ -259,9 +259,9 @@ if (!empty($_SESSION['folder_name'])) {
                   <tbody>
                     <?php
                      for ($j=0; $j <count($qrcodeData) ; $j++) {
-                               echo $j;
+                               // echo $j;
                                $sql = "SELECT * FROM `qrcode` where slno='" . $qrcodeData[$j] . "'";
-                               echo $sql;
+                               // echo $sql;
                                $result = $conn->query($sql);
                                // echo $result->num_rows;
                                if ($result->num_rows > 0) {
