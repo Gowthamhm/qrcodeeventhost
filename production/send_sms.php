@@ -34,9 +34,18 @@ $twilio_number = "+17204087706";
  //         'body' => 'I sent this message in under 10 minutes!'
  //     )
  // );
- echo "$text";
+ // echo "$text";
 for($i=0;$i<count($number);$i++){
-  echo $number[$i];
+  // echo $number[$i];
+  $client->messages->create(
+      // Where to send a text message (your cell phone?)
+      $number[$i],
+      array(
+          'from' => $twilio_number,
+          'body' => $text
+      )
+  );
+
 }
 
 //
