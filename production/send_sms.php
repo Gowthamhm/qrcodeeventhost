@@ -26,6 +26,7 @@ $twilio_number = "+17204087706";
 
 $text = str_replace('<p>',' ',$text);
 $text = str_replace('</p>',' ',$text);
+$text = str_replace('&quot','"',$text);
 
 for($i=0;$i<count($number);$i++){
   // echo $number[$i];
