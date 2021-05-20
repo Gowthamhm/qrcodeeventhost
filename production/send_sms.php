@@ -47,7 +47,8 @@ if(strlen($number_to_send) == 13){
 }
 }catch (Exception $e){
   ?><script type="text/javascript" charset="utf-8">
-    alert($e.get_code());
+    // alert($e.get_code());
+    alert("Message not send Succusfully");
     window.location.replace('instancesms.php');
   </script>
   <?php
