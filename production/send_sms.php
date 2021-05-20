@@ -23,30 +23,31 @@ if (isset($_POST['sendsms'])) {
 // A Twilio number you own with SMS capabilities
 $twilio_number = "+17204087706";
  $client = new Client($account_sid, $auth_token);
- // $client->messages->create(
- //     // Where to send a text message (your cell phone?)
- //     '+919483621844',
- //     array(
- //         'from' => $twilio_number,
- //         'body' => 'I sent this message in under 10 minutes!'
- //     )
- // );
- // echo "$text";
-for($i=0;$i<count($number);$i++){
-  echo $number[$i];
-  $number_to_send =  '+91'.$number[$i];
-echo $number_to_send;
-  // $client->messages->create(
-  //     // Where to send a text message (your cell phone?)
-  //     '+91'.$number_to_send,
-  //     array(
-  //         'from' => $twilio_number,
-  //         'body' => $text
-  //     )
-  // );
 
+for($i=0;$i<count($number);$i++){
+  // echo $number[$i];
+  $number_to_send =  '+91'.$number[$i];
+// echo $number_to_send;
+  $client->messages->create(
+      // Where to send a text message (your cell phone?)
+      $number_to_send,
+      array(
+          'from' => $twilio_number,
+          'body' => $text
+      )
+  );
 }
 
+
+// $client->messages->create(
+//     // Where to send a text message (your cell phone?)
+//     '+919483621844',
+//     array(
+//         'from' => $twilio_number,
+//         'body' => 'I sent this message in under 10 minutes!'
+//     )
+// );
+// echo "$text";
 //
 // $client = new Client($account_sid, $auth_token);
 // for($i=0;$i<count($number);$i++){
