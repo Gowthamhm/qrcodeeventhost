@@ -5,6 +5,11 @@ include 'session.php';
 if (isset($_POST['sendsms'])) {
   $number = $_POST['numbers'];
   $text = $_POST['text'];
+  if (stristr($number, ',')) {
+    $number = explode(',', $number);
+  } else {
+    $number = [$number];
+  }
   // $service_plan_id = "78125b9858494c72894913f48031923d";
   // $bearer_token = "63045e8e65ae445b8b65d9f8b7a657cb";
   //
@@ -81,16 +86,16 @@ $auth_token = '7d10e6525a0193bce77b73ffb03a71c6';
 
 // A Twilio number you own with SMS capabilities
 $twilio_number = "+17204087706";
-
 $client = new Client($account_sid, $auth_token);
-$client->messages->create(
-    // Where to send a text message (your cell phone?)
-    $number,
-    array(
-        'from' => $twilio_number,
-        'body' => $text
-    )
-);
-
+for($i=0;$i<count($number);$i++){
+  $client->messages->create(
+      // Where to send a text message (your cell phone?)
+      $number[$i],
+      array(
+          'from' => $twilio_number,
+          'body' => $text
+      )
+  );
+}
 }
 ?>
