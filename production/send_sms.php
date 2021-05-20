@@ -40,7 +40,7 @@ for($i=0;$i<count($number);$i++){
   $number_to_send =  $number[$i];
   $client->messages->create(
       // Where to send a text message (your cell phone?)
-    $number_to_send,
+    '+91'.$number_to_send,
       array(
           'from' => $twilio_number,
           'body' => $text
