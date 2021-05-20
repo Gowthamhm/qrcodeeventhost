@@ -34,7 +34,8 @@ $twilio_number = "+17204087706";
  //         'body' => 'I sent this message in under 10 minutes!'
  //     )
  // );
-for($i=0;$<count($number);$i++){
+ echo "$text";
+for($i=0;$i<count($number);$i++){
   echo $number[$i];
 }
 
