@@ -108,7 +108,7 @@ include 'error.php';
             <div class="col-md-12 col-sm-12 ">
               <div class="x_panel">
                 <div class="x_title">
-                  <h2>Instance message to numbers</small></h2>
+                  <h2>Share QRCode </small></h2>
 
                   <div class="clearfix"></div>
                 </div>
@@ -119,9 +119,18 @@ include 'error.php';
                         <table id="datatable-checkbox" class="table table-striped table-bordered bulk_action" style="width:100%">
                           <thead>
                             <tr>
-
                               <th><input type="checkbox" id="check-all" name="checkall" value=""></th>
-                              <th>Phone Number</th>
+                              <th>slno</th>
+                          <th>Folder_name</th>
+                          <th>Original Text</th>
+                          <th>Qouteed Text</th>
+                          <th>Phone Number</th>
+                          <th>path</th>
+                          <th>InFilename</th>
+                          <th>OutFilename</th>
+                          <th>Status</th>
+                          <th>In Text</th>
+                          <th>Out Text</th>
                             </tr>
                           </thead>
                           <tbody>
