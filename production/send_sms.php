@@ -25,11 +25,12 @@ $twilio_number = "+17204087706";
 try{
  $client = new Client($account_sid, $auth_token);
 
-$text = str_replace('<p>',' ',$text);
-$text = str_replace('</p>',' ',$text);
-$text = str_replace('&quot','"',$text);
-$text = str_replace('&nbsp;',' ',$text);
-$text = str_replace(';',' ',$text);
+// $text = str_replace('<p>',' ',$text);
+// $text = str_replace('</p>',' ',$text);
+// $text = str_replace('&quot','"',$text);
+// $text = str_replace('&nbsp;',' ',$text);
+// $text = str_replace(';',' ',$text);
+$text = strip_tags($text);
 
 for($i=0;$i<count($number);$i++){
   // echo $number[$i];
