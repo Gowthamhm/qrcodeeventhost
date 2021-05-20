@@ -22,6 +22,7 @@ if (isset($_POST['sendsms'])) {
 
 // A Twilio number you own with SMS capabilities
 $twilio_number = "+17204087706";
+try{
  $client = new Client($account_sid, $auth_token);
 
 $text = str_replace('<p>',' ',$text);
@@ -43,7 +44,19 @@ if(strlen($number_to_send) == 13){
   );
 }
 }
-
+}catch (Exception $e){
+  ?><script type="text/javascript" charset="utf-8">
+    alert($e.get_code());
+    window.location.replace('instancesms.php');
+  </script>
+  <?php
+}
+?><script type="text/javascript" charset="utf-8">
+  alert("Message Sent Succusfully");
+  window.location.replace('instancesms.php.php');
+</script>
+<?php
+}
 
 // $client->messages->create(
 //     // Where to send a text message (your cell phone?)
@@ -66,7 +79,6 @@ if(strlen($number_to_send) == 13){
 //       )
 //   );
 // }
-}
 
 // $service_plan_id = "78125b9858494c72894913f48031923d";
 // $bearer_token = "63045e8e65ae445b8b65d9f8b7a657cb";
