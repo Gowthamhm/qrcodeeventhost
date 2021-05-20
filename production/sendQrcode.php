@@ -165,16 +165,16 @@ if (!empty($_SESSION['folder_name'])) {
                                     }
                                   }
                                   for ($j=0; $j <count($qrcodeData) ; $j++) {
-                                    echo $j;
-                                    echo $qrcodeData[$j];
+                                    // echo $j;
+                                    // echo $qrcodeData[$j];
                                     $sql = "SELECT * FROM `qrcode` where slno='".$qrcodeData[$j]."'";
-                                    echo $sql;
+                                    // echo $sql;
                                     $result = $conn->query($sql);
-                                    echo $result->num_rows;
+                                    // echo $result->num_rows;
                                     if ($result->num_rows > 0) {
                                       while ($row = $result->fetch_assoc()) {
                                         echo "<tr><td>";
-                                        echo "<input type='checkbox' name ='check' value ='".$row['slno'].">";
+                                        echo "<input type='checkbox' name ='check' value ='".$row['slno']."'>";
                                         echo "</td><td>";
                                         echo $row['slno'];
                                         echo "</td> <td>";
