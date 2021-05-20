@@ -216,16 +216,14 @@ if (!empty($_SESSION['folder_name'])) {
                                     }
                                   }
                               ?>
-                              <tr>
-                             <input type="hidden" name="number" id="num" value="">
-                             <input type="submit" name="send" class="btn btn-round btn-success" id="sub" value="Enter Message">
-                           </tr>
-                            </form>
                           </tbody>
                         </table>
                       </div>
                     </div>
                   </div>
+                  <input type="hidden" name="number" id="num" value="">
+                  <input type="submit" name="send" class="btn btn-round btn-success" id="sub" value="Enter Message">
+                </form>
                 </div>
               </div>
             </div>
