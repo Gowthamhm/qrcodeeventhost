@@ -152,7 +152,22 @@ if (!empty($_SESSION['folder_name'])) {
                                } else {
                                  $sql = "SELECT * FROM `qrcode` where folder_name='" . $_SESSION['folder_name'] . "'";
                                }
-                               echo $sql;
+                               // echo $sql;
+                               $result = $conn->query($sql);
+                               // echo $result->num_rows;
+                                if ($result->num_rows > 0) {
+                                   // output data of each row
+                                   $i=0;
+                                   while ($row = $result->fetch_assoc()) {
+                                     $qrcodeData[$i] = $row['slno'];
+                                      // echo $row['slno'];
+                                      $i++;
+                                    }
+                                  }
+                                  for ($j=0; $j <count($qrcodeData) ; $j++) {
+                                    echo $j;
+                                    echo $qrcodeData[$j];
+                                  }
                               ?>
                               <tr>
                                 <input type="hidden" name="number" id="num" value="">
