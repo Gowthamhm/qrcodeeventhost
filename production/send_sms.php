@@ -1,7 +1,5 @@
 <?php
-// C:\xampp\htdocs\qrcodeeventhost\production\
-// require __DIR__ . 'twilio\src\Twilio\autoload.php';
- require __DIR__ . '/twilio/src/Twilio/autoload.php';
+require __DIR__ . '/vendor/autoload.php';
 use Twilio\Rest\Client;
 
 include 'connection.php';
@@ -18,9 +16,8 @@ if (isset($_POST['sendsms'])) {
 
   // Your Account SID and Auth Token from twilio.com/console
   $account_sid = 'AC11111a46dcd23e4a639e77e6088b32c4';
-  $auth_token = '4066a3f5b52af59442d56e3f5859fe15';
+  $auth_token = '70afc0450391fadee1586c848756642b';
 // In production, these should be environment variables. E.g.:
-
 // $auth_token = $_ENV["TWILIO_AUTH_TOKEN"]
 
 // A Twilio number you own with SMS capabilities
@@ -37,10 +34,10 @@ $twilio_number = "+17204087706";
  // echo "$text";
 for($i=0;$i<count($number);$i++){
   // echo $number[$i];
-  $number_to_send =  $number[$i];
+  $number_to_send =  '+91'.$number[$i];
   $client->messages->create(
       // Where to send a text message (your cell phone?)
-    '+91'.$number_to_send,
+      $number_to_send,
       array(
           'from' => $twilio_number,
           'body' => $text
