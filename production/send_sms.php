@@ -28,13 +28,14 @@ try{
 // $text = str_replace('<p>',' ',$text);
 // $text = str_replace('</p>',' ',$text);
 // $text = str_replace('&nbsp;',' ',$text);
-// $text = str_replace(';',' ',$text);
 $text = strip_tags($text);
 $text = str_replace('&quot','"',$text);
+$text = str_replace(';',' ',$text);
 
 for($i=0;$i<count($number);$i++){
   // echo $number[$i];
   $number_to_send =  '+91'.$number[$i];
+
 // echo $number_to_send;
 if(strlen($number_to_send) == 13){
   $client->messages->create(
