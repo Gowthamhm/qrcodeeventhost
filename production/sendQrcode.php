@@ -253,78 +253,99 @@ if (!empty($_SESSION['folder_name'])) {
     <!-- /page content -->
   </div>
   </div>
-
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-  <script type="text/javascript">
-    $(function() {
-      $("#sub").click(function() {
-        //Create an Array.
-        var selected = new Array();
+    <script type="text/javascript">
+      $(function() {
+        $("#sub").click(function() {
+          //Create an Array.
+          var selected = new Array();
 
-        //Reference the CheckBoxes and insert the checked CheckBox value in Array.
-        $("#datatable-checkbox input[type=checkbox]:checked").each(function() {
-          selected.push(this.value);
-        });
-        //Display the selected CheckBox values.
-        if (selected.length > 0) {
-          document.getElementById('num').value = selected.join(",");
-          // alert("Selected values: " + selected.join(","));
-        }
-      });
-    });
-
-    $(document).ready(function() {
-      $('#check-all').click(function() {
-        var isChecked = $(this).prop("checked");
-        $('#datatable-checkbox tr:has(td)').find('input[type="checkbox"]').prop('checked', isChecked);
-      });
-
-      $('#datatable-checkbox tr:has(td)').find('input[type="checkbox"]').click(function() {
-        var isChecked = $(this).prop("checked");
-        var isHeaderChecked = $("#check-all").prop("checked");
-        if (isChecked == false && isHeaderChecked)
-          $("#check-all").prop('checked', isChecked);
-        else {
-          $('#datatable-checkbox tr:has(td)').find('input[type="checkbox"]').each(function() {
-            if ($(this).prop("checked") == false)
-              isChecked = false;
+          //Reference the CheckBoxes and insert the checked CheckBox value in Array.
+          $("#datatable-checkbox input[type=checkbox]:checked").each(function() {
+            selected.push(this.value);
           });
-          console.log(isChecked);
-          $("#check-all").prop('checked', isChecked);
-        }
+          //Display the selected CheckBox values.
+          if (selected.length > 0) {
+            document.getElementById('num').value = selected.join(",");
+            // alert("Selected values: " + selected.join(","));
+          }
+        });
       });
-    });
-  </script>
-  <!-- jQuery -->
-  <script src="../vendors/jquery/dist/jquery.min.js"></script>
-  <!-- Bootstrap -->
-  <script src="../vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- FastClick -->
-  <script src="../vendors/fastclick/lib/fastclick.js"></script>
-  <!-- NProgress -->
-  <script src="../vendors/nprogress/nprogress.js"></script>
-  <!-- iCheck -->
-  <script src="../vendors/iCheck/icheck.min.js"></script>
-  <!-- Datatables -->
-  <script src="../vendors/datatables.net/js/jquery.dataTables.min.js"></script>
-  <script src="../vendors/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
-  <script src="../vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
-  <script src="../vendors/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
-  <script src="../vendors/datatables.net-buttons/js/buttons.flash.min.js"></script>
-  <script src="../vendors/datatables.net-buttons/js/buttons.html5.min.js"></script>
-  <script src="../vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
-  <script src="../vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js"></script>
-  <script src="../vendors/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
-  <script src="../vendors/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
-  <script src="../vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
-  <script src="../vendors/datatables.net-scroller/js/dataTables.scroller.min.js"></script>
-  <script src="../vendors/jszip/dist/jszip.min.js"></script>
-  <script src="../vendors/pdfmake/build/pdfmake.min.js"></script>
-  <script src="../vendors/pdfmake/build/vfs_fonts.js"></script>
 
-  <!-- Custom Theme Scripts -->
-  <script src="../build/js/custom.min.js"></script>
+      $(document).ready(function() {
+        $('#check-all').click(function() {
+          var isChecked = $(this).prop("checked");
+          $('#datatable-checkbox tr:has(td)').find('input[type="checkbox"]').prop('checked', isChecked);
+        });
 
-</body>
+        $('#datatable-checkbox tr:has(td)').find('input[type="checkbox"]').click(function() {
+          var isChecked = $(this).prop("checked");
+          var isHeaderChecked = $("#check-all").prop("checked");
+          if (isChecked == false && isHeaderChecked)
+            $("#check-all").prop('checked', isChecked);
+          else {
+            $('#datatable-checkbox tr:has(td)').find('input[type="checkbox"]').each(function() {
+              if ($(this).prop("checked") == false)
+                isChecked = false;
+            });
+            console.log(isChecked);
+            $("#check-all").prop('checked', isChecked);
+          }
+        });
+      });
+    </script>
+    <script type="text/javascript">
+      initSample();
+      CKEDITOR.replace('editor1');
 
-</html>
+      function showeditor() {
+        var x = document.getElementById("collapseOne");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      }
+
+      function submitForm() {
+        // $("#hiddentext").val($("").html());
+        var data = CKEDITOR.instances.editor1.getData();
+        console.log(data);
+        document.getElementById("hiddentext").value = data;
+        document.getElementById("qrsubmit").submit();
+        // document.getElementById("qrsubmit").submit();
+      }
+    </script>
+    <!-- jQuery -->
+    <script src="../vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="../vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- FastClick -->
+    <script src="../vendors/fastclick/lib/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="../vendors/nprogress/nprogress.js"></script>
+    <!-- iCheck -->
+    <script src="../vendors/iCheck/icheck.min.js"></script>
+    <!-- Datatables -->
+    <script src="../vendors/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="../vendors/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+    <script src="../vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="../vendors/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+    <script src="../vendors/datatables.net-buttons/js/buttons.flash.min.js"></script>
+    <script src="../vendors/datatables.net-buttons/js/buttons.html5.min.js"></script>
+    <script src="../vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
+    <script src="../vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js"></script>
+    <script src="../vendors/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
+    <script src="../vendors/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="../vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
+    <script src="../vendors/datatables.net-scroller/js/dataTables.scroller.min.js"></script>
+    <script src="../vendors/jszip/dist/jszip.min.js"></script>
+    <script src="../vendors/pdfmake/build/pdfmake.min.js"></script>
+    <script src="../vendors/pdfmake/build/vfs_fonts.js"></script>
+
+    <!-- Custom Theme Scripts -->
+    <script src="../build/js/custom.min.js"></script>
+
+  </body>
+
+  </html>
