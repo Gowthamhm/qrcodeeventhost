@@ -167,7 +167,7 @@ if (!empty($_SESSION['folder_name'])) {
                                   for ($j=0; $j <count($qrcodeData) ; $j++) {
                                     echo $j;
                                     echo $qrcodeData[$j];
-                                    $sql = "SELECT * FROM `qrcode` where slno=" . $qrcodeData[$j];
+                                    $sql = "SELECT * FROM `qrcode` where slno='".$qrcodeData[$j]."'";
                                     echo $sql;
                                     $result = $conn->query($sql);
                                     if ($result->num_rows > 0) {
