@@ -1,5 +1,5 @@
 <?php
-include 'session.php';
+include 'otpsession.php';
 ?>
 <!DOCTYPE html>
 <html>
