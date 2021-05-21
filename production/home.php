@@ -86,7 +86,7 @@ include 'error.php';
                 if($_SESSION['role'] == 'admin'){
                   ?>
                   <li><a href="addUser.php"><i class="fas fa-scanner"></i> ADD Users </a>
-                  </li>
+                  </li> 
                   <?php
                 }
                 ?>
