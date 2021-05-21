@@ -93,7 +93,7 @@ if (!empty($_SESSION['folder_name'])) {
                 <?php
                 if($_SESSION['role'] == 'admin'){
                   ?>
-                  <li><a href="addUser.php"><i class="fas fa-scanner"></i> ADD Users </a>
+                  <li><a href="addUser.php"><i class="fa fa-users"></i> ADD Users </a>
                   </li>
                   <?php
                 }
