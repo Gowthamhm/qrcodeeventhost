@@ -81,7 +81,14 @@ include 'error.php';
                 ?>
                 <li><a href="qrcodereader.php"><i class="fas fa-scanner"></i> Scan QrCode </a>
                 </li>
-
+                <?php
+                if($_SESSION['role'] == 'admin'){
+                  ?>
+                  <li><a href="addUser.php"><i class="fas fa-scanner"></i> ADD Users </a>
+                  </li>
+                  <?php
+                }
+                ?>
               </ul>
             </div>
           </div>
