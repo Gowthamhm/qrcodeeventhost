@@ -151,7 +151,11 @@ include 'error.php';
                       <span class="fas fa-user-edit form-control-feedback left" aria-hidden="true"></span>
                     </div>
                     </div>
-                      <div class="col-md-3 col-sm-3  form-group has-feedback">
+                    <div class="col-md-3 col-sm-3" >
+                        </div>
+                        <div class="col-md-3 col-sm-3" >
+                            </div>
+                      <div class="col-md-3 col-sm-3  form-group has-feedback" >
                           <input type="submit" class="form-control btn btn-round btn-success clf" id="inputSuccess2" name="add" value="Add User" >
                           </div>
                 </form>
