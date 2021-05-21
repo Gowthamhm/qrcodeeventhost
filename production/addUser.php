@@ -118,7 +118,7 @@ include 'error.php';
               </div>
               <div class="x_content">
                 <br />
-                <form class="form-label-left input_mask">
+                <form class="form-label-left input_mask" action="adduserprocess.php" method="post">
                 <div class="item form-group">
                     <label class="col-form-label col-md-3 col-sm-3 label-align" for="username">User Name <span class="required">*</span>
                     </label>
@@ -131,7 +131,7 @@ include 'error.php';
                       <label class="col-form-label col-md-3 col-sm-3 label-align" for="email">Email <span class="required">*</span>
                       </label>
                   <div class="col-md-6 col-sm-6  form-group has-feedback">
-  <input type="email" class="form-control has-feedback-left" id="inputSuccess4" placeholder="Email" name="email"require>
+  <input type="email" class="form-control has-feedback-left" id="inputSuccess4" placeholder="Email" name="email" require>
   <span class="fa fa-envelope form-control-feedback left" aria-hidden="true"></span>
 </div>
 </div>
