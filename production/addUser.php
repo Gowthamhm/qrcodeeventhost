@@ -119,10 +119,14 @@ include 'error.php';
               <div class="x_content">
                 <br />
                 <form class="form-label-left input_mask">
+                <div class="item form-group">
+                    <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">Last Name <span class="required">*</span>
+                    </label>
                 <div class="col-md-6 col-sm-6  form-group has-feedback">
                     <input type="text" class="form-control has-feedback-left" id="inputSuccess2" placeholder="User Name" name="username" require>
                     <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
                   </div>
+                  </div
                   <div class="col-md-6 col-sm-6  form-group has-feedback">
   <input type="email" class="form-control has-feedback-left" id="inputSuccess4" placeholder="Email" name="email"require>
   <span class="fa fa-envelope form-control-feedback left" aria-hidden="true"></span>
