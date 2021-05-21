@@ -139,7 +139,7 @@ include 'error.php';
     <label class="col-form-label col-md-3 col-sm-3 label-align" for="phone">Phone Number <span class="required">*</span>
     </label>
 <div class="col-md-6 col-sm-6  form-group has-feedback">
-                    <input type="tel" class="form-control" id="inputSuccess5" placeholder="Phone" name ="phone" require>
+                    <input type="tel" class="form-control has-feedback-left" id="inputSuccess5" placeholder="Phone" name ="phone" require>
                     <span class="fa fa-phone form-control-feedback right" aria-hidden="true"></span>
                   </div>
                   </div>
