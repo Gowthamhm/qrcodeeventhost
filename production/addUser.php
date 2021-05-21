@@ -147,7 +147,7 @@ include 'error.php';
                       <label class="col-form-label col-md-3 col-sm-3 label-align" for="role">Role <span class="required">*</span>
                       </label>
                   <div class="col-md-6 col-sm-6  form-group has-feedback">
-                      <input type="text" class="form-control has-feedback-left" id="inputSuccess2" name="role" value="user" disabled>
+                      <input type="text" class="form-control has-feedback-left" id="inputSuccess2" name="role" value="user" disabled/>
                       <span class="fas fa-user-edit form-control-feedback left" aria-hidden="true"></span>
                     </div>
                     </div>
