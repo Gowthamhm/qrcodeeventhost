@@ -120,24 +120,36 @@ include 'error.php';
                 <br />
                 <form class="form-label-left input_mask">
                 <div class="item form-group">
-                    <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">User Name <span class="required">*</span>
+                    <label class="col-form-label col-md-3 col-sm-3 label-align" for="username">User Name <span class="required">*</span>
                     </label>
-                <div class="col-md-9 col-sm-9  form-group has-feedback">
+                <div class="col-md-6 col-sm-6  form-group has-feedback">
                     <input type="text" class="form-control has-feedback-left" id="inputSuccess2" placeholder="User Name" name="username" require>
                     <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
                   </div>
                   </div>
+                  <div class="item form-group">
+                      <label class="col-form-label col-md-3 col-sm-3 label-align" for="email">Email <span class="required">*</span>
+                      </label>
                   <div class="col-md-6 col-sm-6  form-group has-feedback">
   <input type="email" class="form-control has-feedback-left" id="inputSuccess4" placeholder="Email" name="email"require>
   <span class="fa fa-envelope form-control-feedback left" aria-hidden="true"></span>
 </div>
+</div>
+<div class="item form-group">
+    <label class="col-form-label col-md-3 col-sm-3 label-align" for="phone">Phone Number <span class="required">*</span>
+    </label>
 <div class="col-md-6 col-sm-6  form-group has-feedback">
                     <input type="tel" class="form-control" id="inputSuccess5" placeholder="Phone" name ="phone" require>
                     <span class="fa fa-phone form-control-feedback right" aria-hidden="true"></span>
                   </div>
+                  </div>
+                  <div class="item form-group">
+                      <label class="col-form-label col-md-3 col-sm-3 label-align" for="role">Role <span class="required">*</span>
+                      </label>
                   <div class="col-md-6 col-sm-6  form-group has-feedback">
-                      <input type="text" class="form-control has-feedback-left" id="inputSuccess2"name="role" value="user" disabled>
+                      <input type="text" class="form-control has-feedback-left" id="inputSuccess2" name="role" value="user" disabled>
                       <span class="fas fa-user-edit form-control-feedback left" aria-hidden="true"></span>
+                    </div>
                     </div>
                 </form>
               </div>
