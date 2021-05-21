@@ -8,6 +8,6 @@ if (isset($_POST['add'])) {
   $email = mysqli_real_escape_string($conn, $_POST['email']);
   $phone = mysqli_real_escape_string($conn, $_POST['phone']);
   $role ='user';
-  echo $username.'\n'.$email.'\n'.$phone.'\n'.$role;
+  echo $username."\n".$email."\n".$phone."\n".$role;
 }
 ?>
