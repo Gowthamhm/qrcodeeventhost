@@ -140,7 +140,7 @@ include 'error.php';
     </label>
 <div class="col-md-6 col-sm-6  form-group has-feedback">
                     <input type="tel" class="form-control has-feedback-left" id="inputSuccess5" placeholder="Phone" name ="phone" require>
-                    <span class="fa fa-phone form-control-feedback right" aria-hidden="true"></span>
+                    <span class="fa fa-phone form-control-feedback left" aria-hidden="true"></span>
                   </div>
                   </div>
                   <div class="item form-group">
