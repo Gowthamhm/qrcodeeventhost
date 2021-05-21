@@ -110,7 +110,7 @@ include 'error.php';
       <!-- page content -->
       <div class="right_col" role="main">
       <div class="row">
-          <div class="col-md-8 ">
+          <div class="col-md-12 ">
             <div class="x_panel">
               <div class="x_title">
                 <h2>Add Users </h2>
@@ -122,11 +122,11 @@ include 'error.php';
                 <div class="item form-group">
                     <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">User Name <span class="required">*</span>
                     </label>
-                <div class="col-md-6 col-sm-6  form-group has-feedback">
+                <div class="col-md-9 col-sm-9  form-group has-feedback">
                     <input type="text" class="form-control has-feedback-left" id="inputSuccess2" placeholder="User Name" name="username" require>
                     <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
                   </div>
-                  </div
+                  </div>
                   <div class="col-md-6 col-sm-6  form-group has-feedback">
   <input type="email" class="form-control has-feedback-left" id="inputSuccess4" placeholder="Email" name="email"require>
   <span class="fa fa-envelope form-control-feedback left" aria-hidden="true"></span>
