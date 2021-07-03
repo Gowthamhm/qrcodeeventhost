@@ -33,16 +33,8 @@ $twilio_number = "+17204087706";
       if ($row = $result->fetch_assoc()) {
         // echo "array split ".$sl;
         // echo "db value ".$row['slno'];
-        ?><script type="text/javascript" charset="utf-8">
-        alert(<?php echo $row['slno']?>);
-      </script>
-  <?php
         if ($row['slno'] == $sl) {
           // echo "entered inside if";
-          ?><script type="text/javascript" charset="utf-8">
-          alert(<?php echo $row['number']?>);
-        </script>
-    <?php
           $number = "+91" . $row['number'];
           $text = "https://sample-wesite-hosting.online/production" . str_replace(".", '', $row['path']) . "/" . $row['infilename'];
           if (strlen($number) == 13) {
@@ -67,6 +59,7 @@ $twilio_number = "+17204087706";
              if ($conn->query($updatestatus) === TRUE) {
                ?><script type="text/javascript" charset="utf-8">
                  alert("Message Send Successfully");
+                 window.location.replace('sendQrcode.php');
                </script>
            <?php
              }
@@ -74,7 +67,8 @@ $twilio_number = "+17204087706";
             catch (Exception $e){
               ?><script type="text/javascript" charset="utf-8">
                 // alert($e.get_code());
-                alert($e."Message not send Succusfully");
+                alert("Message not send Succusfully");
+                window.location.replace('sendQrcode.php');
                 // window.location.replace('instancesms.php');
               </script>
               <?php
@@ -113,14 +107,14 @@ $twilio_number = "+17204087706";
           }
         } else {
           ?><script type="text/javascript" charset="utf-8">
-            // alert("entered and db value not equal");
+            alert("entered and db value not equal");
           </script>
       <?php
         }
       }
     } else {
       ?><script type="text/javascript" charset="utf-8">
-        // alert("Please Select a Valid Number");
+        alert("Please Select a Valid Number");
       </script>
   <?php
     }
