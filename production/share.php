@@ -17,7 +17,7 @@ if (isset($_POST['send'])) {
 
   // Your Account SID and Auth Token from twilio.com/console
   $account_sid = 'AC11111a46dcd23e4a639e77e6088b32c4';
-  $auth_token = '70afc0450391fadee1586c848756642b';
+  $auth_token = 'fa6b39d0d9dd3ec4c9f3531f7c6a82a1';
 // In production, these should be environment variables. E.g.:
 // $auth_token = $_ENV["TWILIO_AUTH_TOKEN"]
 
@@ -33,8 +33,16 @@ $twilio_number = "+17204087706";
       if ($row = $result->fetch_assoc()) {
         // echo "array split ".$sl;
         // echo "db value ".$row['slno'];
+        ?><script type="text/javascript" charset="utf-8">
+        alert(<?php echo $row['slno']?>);
+      </script>
+  <?php
         if ($row['slno'] == $sl) {
           // echo "entered inside if";
+          ?><script type="text/javascript" charset="utf-8">
+          alert(<?php echo $row['number']?>);
+        </script>
+    <?php
           $number = "+91" . $row['number'];
           $text = "https://sample-wesite-hosting.online/production" . str_replace(".", '', $row['path']) . "/" . $row['infilename'];
           if (strlen($number) == 13) {
@@ -66,7 +74,7 @@ $twilio_number = "+17204087706";
             catch (Exception $e){
               ?><script type="text/javascript" charset="utf-8">
                 // alert($e.get_code());
-                alert("Message not send Succusfully");
+                alert($e."Message not send Succusfully");
                 // window.location.replace('instancesms.php');
               </script>
               <?php

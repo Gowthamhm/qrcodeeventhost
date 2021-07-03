@@ -16,7 +16,7 @@ if (isset($_POST['sendsms'])) {
 
   // Your Account SID and Auth Token from twilio.com/console
   $account_sid = 'AC11111a46dcd23e4a639e77e6088b32c4';
-  $auth_token = '70afc0450391fadee1586c848756642b';
+  $auth_token = 'fa6b39d0d9dd3ec4c9f3531f7c6a82a1';
 // In production, these should be environment variables. E.g.:
 // $auth_token = $_ENV["TWILIO_AUTH_TOKEN"]
 
@@ -51,7 +51,7 @@ if(strlen($number_to_send) == 13){
 }catch (Exception $e){
   ?><script type="text/javascript" charset="utf-8">
     // alert($e.get_code());
-    alert("Message not send Succusfully");
+    alert("essage not send Succusfully");
     window.location.replace('instancesms.php');
   </script>
   <?php

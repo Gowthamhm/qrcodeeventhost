@@ -6,7 +6,7 @@ $dbname = "u514971509_qrcode";
 
 // $servername ="localhost";
 // $username ="root";
-// $password ="";
+// $password ="password";
 // $dbname ="qrcode";
 
 // Create connection

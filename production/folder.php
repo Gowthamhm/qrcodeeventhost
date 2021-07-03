@@ -96,6 +96,15 @@ $user = $_SESSION['folder_name'];
                 </li>
                 <li><a href="qrcodereader.php"><i class="fas fa-scanner"></i> Scan QrCode </a>
                 </li>
+                <?php
+                // echo $_SESSION['role'];
+                if($_SESSION['role'] == 'admin'){
+                  ?>
+                  <li><a href="addUser.php"><i class="fa fa-users"></i> ADD Users </a>
+                  </li>
+                  <?php
+                }
+                ?>
 
               </ul>
             </div>

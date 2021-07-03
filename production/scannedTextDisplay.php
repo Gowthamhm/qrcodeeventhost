@@ -126,7 +126,7 @@ include 'error.php';
     $barcodedata = $_POST['qrcode'];
     // echo $barcodedata;
     $str_arr = explode("@#", $barcodedata);
-    // print_r($str_arr);
+    print_r($str_arr);
     if (empty($str_arr[1])) {
       echo "<script type='text/javascript' charset='utf-8'>";
       echo "alert('This QrCode not Created by Our User Please varify');";
@@ -142,8 +142,13 @@ include 'error.php';
     } else {
       // print_r($str_arr);
       $pattern = "/in.png/i";
-      if (preg_match($pattern, $str_arr[5])) {
-        $selectdata = "SELECT * FROM `qrcode` where folder_name ='" . $str_arr[0] . "'and infilename ='" . $str_arr[5] . "' and number='" . $str_arr[6] . "'";
+      // echo $str_arr[5];
+      $filename = $str_arr[5];
+      if (empty($str_arr[5])){
+        $filename = $str_arr[2];
+      }
+      if (preg_match($pattern, $filename)) {
+        $selectdata = "SELECT * FROM `qrcode` where folder_name ='" . $str_arr[0] . "'and infilename ='" .$filename . "' and number='" . $str_arr[6] . "'";
         $result = $conn->query($selectdata);
         // echo $result->num_rows;
         // echo $selectdata;
@@ -167,7 +172,7 @@ include 'error.php';
 
               // Your Account SID and Auth Token from twilio.com/console
               $account_sid = 'AC11111a46dcd23e4a639e77e6088b32c4';
-              $auth_token = '70afc0450391fadee1586c848756642b';
+              $auth_token = 'fa6b39d0d9dd3ec4c9f3531f7c6a82a1';
             // In production, these should be environment variables. E.g.:
             // $auth_token = $_ENV["TWILIO_AUTH_TOKEN"]
 
@@ -183,9 +188,28 @@ include 'error.php';
                      'body' => $text
                  )
              );
-
-             $update_status = "UPDATE `qrcode` set status= 99 where folder_name ='" . $str_arr[0] . "'and infilename ='" . $str_arr[5] . "' and number='" . $str_arr[6] . "'";
+             $time = time();
+             $update_status = "UPDATE `qrcode` set status= 99 where folder_name ='" . $str_arr[0] . "'and infilename ='" . $filename . "' and number='" . $str_arr[6] . "'";
              if ($conn->query($update_status) === TRUE) {
+               $scanned = "INSERT into `qrscannedinfo` (time,scannedby,folder_name,filename) values 
+                ('" . $time . "','" . $_SESSION['active_user'] . "','" . $str_arr[0] . "','" .$filename ."');";
+               if ($conn->query($scanned) == TRUE) {
+                echo "<script type='text/javascript' charset='utf-8'>";
+               echo "alert('Out QrCode Send Successfully and info stored');";
+               // echo "window.location.replace('qrcodereader.php');";
+               echo "setTimeout(function(){ ";
+               echo " window.location.href = 'qrcodereader.php';";
+               echo "    }, 30000);";
+               echo "</script>";
+              }else{
+                echo "<script type='text/javascript' charset='utf-8'>";
+                echo "alert('Out QrCode Send Successfully and info not stored');";
+                // echo "window.location.replace('qrcodereader.php');";
+                echo "setTimeout(function(){ ";
+                echo " window.location.href = 'qrcodereader.php';";
+                echo "    }, 30000);";
+                echo "</script>";
+              }
                // <script type="text/javascript" charset="utf-8">
                //  alert("Out QrCode Send Successfully");
                //   window.location.replace('qrcodereader.php');
@@ -193,13 +217,6 @@ include 'error.php';
                //   //  window.location.href = 'qrcodereader.php';
                //   //      }, 3000);
                //  </script>
-               echo "<script type='text/javascript' charset='utf-8'>";
-               echo "alert('Out QrCode Send Successfully');";
-               // echo "window.location.replace('qrcodereader.php');";
-               echo "setTimeout(function(){ ";
-               echo " window.location.href = 'qrcodereader.php';";
-               echo "    }, 30000);";
-               echo "</script>";
              } else {
                echo "<script type='text/javascript' charset='utf-8'>";
                echo "alert('Out QrCode Send Successfully but Can't able to update in DB Please scan once Again');";
@@ -299,8 +316,8 @@ include 'error.php';
         }
       } else {
         $pattern = "/out.png/i";
-        if (preg_match($pattern, $str_arr[5])) {
-          $selectdata = "SELECT * FROM `qrcode` where folder_name ='" . $str_arr[0] . "'and outfilename ='" . $str_arr[5] . "' and number='" . $str_arr[6] . "'";
+        if (preg_match($pattern, $filename)) {
+          $selectdata = "SELECT * FROM `qrcode` where folder_name ='" . $str_arr[0] . "'and outfilename ='" . $filename . "' and number='" . $str_arr[6] . "'";
           $result = $conn->query($selectdata);
           // echo $result->num_rows;
           if ($result->num_rows > 0) {
@@ -314,7 +331,7 @@ include 'error.php';
                 //  echo "    }, 3000);";
                 echo "</script>";
               } else if ($row['status'] == 99) {
-                $update_status = "UPDATE `qrcode` set status= 999 where folder_name ='" . $str_arr[0] . "'and outfilename ='" . $str_arr[5] . "' and number='" . $str_arr[6] . "'";
+                $update_status = "UPDATE `qrcode` set status= 999 where folder_name ='" . $str_arr[0] . "'and outfilename ='" . $filename . "' and number='" . $str_arr[6] . "'";
                 if ($conn->query($update_status) === TRUE) {
                   // echo $barcodedata;
                   echo "<div id='wrapper'>";
