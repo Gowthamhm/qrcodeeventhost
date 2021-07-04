@@ -147,7 +147,7 @@ include 'error.php';
             echo $str_arr[3];
             echo "</h1></div></div>";
             $number = "+91" . $row['number'];
-            $text = "https://sample-wesite-hosting.online/production" . str_replace(".", '', $row['path']) . "/" . $row['outfilename'];
+            $text = "http://screensenterprise.online/production" . str_replace(".", '', $row['path']) . "/" . $row['outfilename'];
             // Your Account SID and Auth Token from twilio.com/console
             $account_sid = 'AC11111a46dcd23e4a639e77e6088b32c4';
             $auth_token = '6d63020664652b272bbc8dd1027a76b7';

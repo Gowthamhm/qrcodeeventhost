@@ -202,7 +202,7 @@ if (!empty($_SESSION['folder_name'])) {
                                   echo "</td> <td>";
                                   echo $row['number'];
                                   echo "</td> <td>";
-                                  echo  "https://sample-wesite-hosting.online/production/" . str_replace(".", ' ', $row['path']);
+                                  echo  "http://screensenterprise.online/production/" . str_replace(".", ' ', $row['path']);
                                   echo "</td> <td>";
                                   echo $row['infilename'];
                                   echo "</td> <td>";
@@ -297,7 +297,7 @@ if (!empty($_SESSION['folder_name'])) {
                                     echo "</td> <td>";
                                     echo $row['number'];
                                     echo "</td> <td>";
-                                    echo  "https://sample-wesite-hosting.online/production/" . str_replace(".", ' ', $row['path']);
+                                    echo  "http://screensenterprise.online/production/" . str_replace(".", ' ', $row['path']);
                                     echo "</td> <td>";
                                     echo $row['infilename'];
                                     echo "</td> <td>";
