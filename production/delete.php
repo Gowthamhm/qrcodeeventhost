@@ -6,17 +6,6 @@ include 'error.php';
 if (isset($_POST['delete'])) {
   // echo $_POST['foldername'];
   $folder_name = $_POST['foldername'];
-  //   $checkFolder = "SELECT * FROM `folders` WHERE folder_name='".$folder_name."'";
-  //   // echo $checkFolder;
-  //   $checkResult = $conn->query($checkFolder);
-  //   if ($checkResult->num_rows > 0) {
-  //     while($row = $checkResult->fetch_assoc()) {
-  //       $slno = $row['sl_no'];
-  //   $dbcreator = $row['creator'];
-  //   $dbfoldername = $row['folder_name'];
-  //   // echo $slno.$dbcreator.$dbfoldername;
-  //   }
-  // }
   $deletefolder = "DELETE from `folders` where folder_name='" . $folder_name . "'";
   // echo $delete;
   $deleteqrcode = "DELETE from `qrcode` where folder_name='" . $folder_name . "'";

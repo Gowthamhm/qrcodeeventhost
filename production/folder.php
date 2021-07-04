@@ -92,20 +92,26 @@ $user = $_SESSION['folder_name'];
                 </li>
                 <li><a href="spreadsheet.php?export=true"><i class="fa fa-file-excel-o"></i> Google Sheets</a>
                 </li>
-                <li><a href="sendQrcode.php"><i class="fa fa-comments-o"></i> Share QrCode </a>
-                </li>
+                <?php if (empty($_SESSION['folder_name'])) {
+                  // code...
+                } else { ?>
+                  <li><a href="sendQrcode.php"><i class="fa fa-share-alt"></i> Share QrCode </a>
+                  </li>
+                <?php
+                }
+                ?>
                 <li><a href="qrcodereader.php"><i class="fas fa-scanner"></i> Scan QrCode </a>
                 </li>
                 <?php
-                // echo $_SESSION['role'];
                 if($_SESSION['role'] == 'admin'){
                   ?>
                   <li><a href="addUser.php"><i class="fa fa-users"></i> ADD Users </a>
                   </li>
+                  <li><a href="feedbacklist.php"><i class="fas fa-comments"></i> Feed Back  </a>
+                  </li>
                   <?php
                 }
                 ?>
-
               </ul>
             </div>
           </div>
@@ -166,6 +172,7 @@ $user = $_SESSION['folder_name'];
 
         </div>
       </div>
+      
       <!-- /page content -->
 
     </div>

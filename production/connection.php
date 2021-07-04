@@ -1,19 +1,21 @@
 <?php
-$servername = "localhost";
-$username = "u514971509_root";
-$password = "Gowthamhm001@";
-$dbname = "u514971509_qrcode";
+// $servername = "localhost";
+// $username = "u514971509_root";
+// $password = "Gowthamhm001@";
+// $dbname = "u514971509_qrcode";
 
-// $servername ="localhost";
-// $username ="root";
-// $password ="password";
-// $dbname ="qrcode";
+// DataBase Connections values
+$servername ="localhost";
+$username ="root";
+$password ="password";
+$dbname ="qrcode";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 // Check connection
 if ($conn->connect_error) {
+  // if error with connection display the error and redirect to login
   die("Connection failed: " . $conn->connect_error);
 ?>
   <script type='text/javascript' charset='utf-8'>

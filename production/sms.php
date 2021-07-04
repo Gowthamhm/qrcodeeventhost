@@ -1,8 +1,6 @@
 <?php
 if (isset($_POST['send'])) {
   $numbers = $_POST['number'];
-  // echo $numbers;
-  //   echo $_POST['checkall'];
 } else {
 }
 ?>
@@ -92,6 +90,8 @@ include 'error.php';
                 if($_SESSION['role'] == 'admin'){
                   ?>
                   <li><a href="addUser.php"><i class="fa fa-users"></i> ADD Users </a>
+                  </li>
+                  <li><a href="feedbacklist.php"><i class="fas fa-comments"></i> Feed Back  </a>
                   </li>
                   <?php
                 }

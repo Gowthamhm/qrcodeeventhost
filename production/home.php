@@ -59,7 +59,7 @@ include 'error.php';
           </div>
           <!-- /menu profile quick info -->
 
-          <br />
+          <br/>
 
           <!-- sidebar menu -->
           <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
@@ -74,7 +74,7 @@ include 'error.php';
                 <?php if (empty($_SESSION['folder_name'])) {
                   // code...
                 } else { ?>
-                  <li><a href="sendQrcode.php"><i class="fa fa-comments-o"></i> Share QrCode </a>
+                  <li><a href="sendQrcode.php"><i class="fa fa-share-alt"></i> Share QrCode </a>
                   </li>
                 <?php
                 }
@@ -82,10 +82,11 @@ include 'error.php';
                 <li><a href="qrcodereader.php"><i class="fas fa-scanner"></i> Scan QrCode </a>
                 </li>
                 <?php
-                // echo $_SESSION['role'];
                 if($_SESSION['role'] == 'admin'){
                   ?>
                   <li><a href="addUser.php"><i class="fa fa-users"></i> ADD Users </a>
+                  </li>
+                  <li><a href="feedbacklist.php"><i class="fas fa-comments"></i> Feed Back  </a>
                   </li>
                   <?php
                 }

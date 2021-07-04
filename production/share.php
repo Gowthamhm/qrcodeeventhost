@@ -17,7 +17,7 @@ if (isset($_POST['send'])) {
 
   // Your Account SID and Auth Token from twilio.com/console
   $account_sid = 'AC11111a46dcd23e4a639e77e6088b32c4';
-  $auth_token = 'fa6b39d0d9dd3ec4c9f3531f7c6a82a1';
+  $auth_token = '6d63020664652b272bbc8dd1027a76b7';
 // In production, these should be environment variables. E.g.:
 // $auth_token = $_ENV["TWILIO_AUTH_TOKEN"]
 

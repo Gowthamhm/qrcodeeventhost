@@ -85,20 +85,4 @@ if (empty($phoneNumber)) {
 <?php
   }
 }
-// echo $folderName,$originText,$create,$phoneNumber ;
-// echo $_POST['hiddentext'];
-// echo $originText;
-// echo $folderName."\n";
-// echo $originText."\n";
-//     if (preg_match('/"([^"]+)"/',$originText, $m)) {
-//       $qoutedText =$m[1];
-//     // print $m[1];
-// } else {
-// $qoutedText =" ";
-// }
-// $input = "[modid=256]";
-// preg_match('~=(.*?)]~', $input, $output);
-// echo $output[1];
-
-
 ?>

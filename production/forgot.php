@@ -5,13 +5,8 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<title>Forgot Password</title>
-
-	<!-- Latest compiled and minified CSS -->
-	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<!-- Optional theme -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 	<link rel="shortcut icon" href="images/logo.ico">
 	<link href="css/login.css" rel="stylesheet" type="text/css">
@@ -48,9 +43,6 @@
 
 								<div class="form-group">
 									<label for="password">Password
-										<!-- <a href="forgot.html" class="float-right">
-											Forgot Password?
-										</a> -->
 									</label>
 									<input id="password" type="password" class="form-control" name="newpassword" required data-eye>
 									<div class="invalid-feedback">
@@ -59,9 +51,6 @@
 								</div>
 								<div class="form-group">
 									<label for="password">Confirm Password
-										<!-- <a href="forgot.html" class="float-right">
-											Forgot Password?
-										</a> -->
 									</label>
 									<input id="confpassword" type="password" class="form-control" name="confirmpassword" required data-eye>
 									<div class="invalid-feedback">
@@ -77,12 +66,7 @@
 								</div>
 								<div class="form-group m-0">
 									<input type="submit" class="btn btn-primary btn-block" value="Reset Password" name="reset">
-
-									<!-- </button> -->
 								</div>
-								<!-- <div class="mt-4 text-center">
-									Don't have an account? <a href="register.html">Create One</a>
-								</div> -->
 							</form>
 						</div>
 					</div>

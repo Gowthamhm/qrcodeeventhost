@@ -71,14 +71,22 @@ include 'error.php';
                 </li>
                 <li><a href="spreadsheet.php?export=true"><i class="fa fa-file-excel-o"></i> Google Sheets</a>
                 </li>
-                <li><a href="sendQrcode.php"><i class="fa fa-comments-o"></i> Share QrCode </a>
-                </li>
+                <?php if (empty($_SESSION['folder_name'])) {
+                  // code...
+                } else { ?>
+                  <li><a href="sendQrcode.php"><i class="fa fa-share-alt"></i> Share QrCode </a>
+                  </li>
+                <?php
+                }
+                ?>
                 <li><a href="qrcodereader.php"><i class="fas fa-scanner"></i> Scan QrCode </a>
                 </li>
                 <?php
                 if($_SESSION['role'] == 'admin'){
                   ?>
                   <li><a href="addUser.php"><i class="fa fa-users"></i> ADD Users </a>
+                  </li>
+                  <li><a href="feedbacklist.php"><i class="fas fa-comments"></i> Feed Back  </a>
                   </li>
                   <?php
                 }
@@ -110,8 +118,10 @@ include 'error.php';
         <div class="row">
           <div class="col-md-12">
             <div class="x_content">
-              <form class="form-label-left input_mask" action="scannedTextDisplay.php" method="post">
+              <form class="form-label-left input_mask" action="scannedTextDisplay.php" method="post"> 
+              <!--  -->
                 <div class="col-md-6 col-sm-6  form-group has-feedback">
+                <textarea name="qrcode" id="" cols="30" rows="100" class="form-control has-feedback-left" id="inputSuccess2" placeholder="Focus Before Scan"></textarea>
                   <input type="text" name="qrcode" class="form-control has-feedback-left" id="inputSuccess2" placeholder="Focus Before Scan">
                   <span class="fas fa-scanner form-control-feedback left" aria-hidden="true"></span>
                 </div>
@@ -120,6 +130,13 @@ include 'error.php';
             </div>
           </div>
         </div>
+        <?php
+      if (isset($_POST['submit'])) {
+       echo $_POST['qrcode'];
+      }
+      ?>
+      </div>
+      <div>
       </div>
       <!-- page content -->
       <div class="right_col" role="main">
