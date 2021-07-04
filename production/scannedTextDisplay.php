@@ -150,7 +150,7 @@ include 'error.php';
             $text = "http://screensenterprise.online/production" . str_replace(".", '', $row['path']) . "/" . $row['outfilename'];
             // Your Account SID and Auth Token from twilio.com/console
             $account_sid = 'AC11111a46dcd23e4a639e77e6088b32c4';
-            $auth_token = '6d63020664652b272bbc8dd1027a76b7';
+            $auth_token = '317c1ec4b0f9787730b77432777a0783';
             $twilio_number = "+17204087706";
             try {
               $client = new Client($account_sid, $auth_token);

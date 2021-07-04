@@ -16,7 +16,7 @@ if (isset($_POST['sendsms'])) {
 
   // Your Account SID and Auth Token from twilio.com/console
   $account_sid = 'AC11111a46dcd23e4a639e77e6088b32c4';
-  $auth_token = '6d63020664652b272bbc8dd1027a76b7';
+  $auth_token = '317c1ec4b0f9787730b77432777a0783';
 
 // A Twilio number you own with SMS capabilities
 $twilio_number = "+17204087706";
