@@ -121,11 +121,11 @@ include 'error.php';
               <form class="form-label-left input_mask" action="scannedTextDisplay.php" method="post"> 
               <!--  -->
                 <div class="col-md-6 col-sm-6  form-group has-feedback">
-                <textarea name="qrcode" id="" cols="30" rows="100" class="form-control has-feedback-left" id="inputSuccess2" placeholder="Focus Before Scan"></textarea>
-                  <input type="text" name="qrcode" class="form-control has-feedback-left" id="inputSuccess2" placeholder="Focus Before Scan">
+                <textarea name="qrcode" id="" cols="30" rows="1" class="form-control has-feedback-left" id="inputSuccess2" placeholder="Focus Before Scan"></textarea>
+                  <!-- <input type="text" name="qrcode" class="form-control has-feedback-left" id="inputSuccess2" placeholder="Focus Before Scan"> -->
                   <span class="fas fa-scanner form-control-feedback left" aria-hidden="true"></span>
                 </div>
-                <input type="submit" class="btn btn-success" name="submit" value="Auto Submit">
+                <input type="submit" class="btn btn-success" name="submit" value="Submit">
               </form>
             </div>
           </div>
