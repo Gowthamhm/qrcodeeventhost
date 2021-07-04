@@ -288,22 +288,22 @@ include 'error.php';
         echo "</script>";
       }
     }
-    echo "<script type='text/javascript' charset='utf-8'>";
-    // echo "alert('The QrCode not created by the System check once');";
-    echo "setTimeout(function(){ ";
-    echo " window.location.href = 'qrcodereader.php';";
-    echo "    }, 0000);";
-    echo "</script>";
+    // echo "<script type='text/javascript' charset='utf-8'>";
+    // // echo "alert('The QrCode not created by the System check once');";
+    // echo "setTimeout(function(){ ";
+    // echo " window.location.href = 'qrcodereader.php';";
+    // echo "    }, 0000);";
+    // echo "</script>";
   }
-  echo "<script type='text/javascript' charset='utf-8'>";
-  // echo "alert('The QrCode not created by the System check once');";
-  echo "setTimeout(function(){ ";
-  echo " window.location.href = 'qrcodereader.php';";
-  echo "    }, 0000);";
-  echo "</script>"; 
+  // echo "<script type='text/javascript' charset='utf-8'>";
+  // // echo "alert('The QrCode not created by the System check once');";
+  // echo "setTimeout(function(){ ";
+  // echo " window.location.href = 'qrcodereader.php';";
+  // echo "    }, 0000);";
+  // echo "</script>"; 
 }else {
   echo "<script type='text/javascript' charset='utf-8'>";
-  // echo "alert('The QrCode not created by the System check once');";
+  echo "alert('The QrCode not created by the System check once');";
   echo "setTimeout(function(){ ";
   echo " window.location.href = 'qrcodereader.php';";
   echo "    }, 0000);";
