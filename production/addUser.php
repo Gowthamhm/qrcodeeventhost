@@ -82,13 +82,15 @@ include 'error.php';
                 <li><a href="qrcodereader.php"><i class="fas fa-scanner"></i> Scan QrCode </a>
                 </li>
                 <?php
-                if($_SESSION['role'] == 'admin'){
-                  ?>
+                if ($_SESSION['role'] == 'admin') {
+                ?>
                   <li><a href="addUser.php"><i class="fa fa-users"></i> ADD Users </a>
                   </li>
-                  <li><a href="feedbacklist.php"><i class="fas fa-comments"></i> Feed Back  </a>
+                  <li><a href="feedbacklist.php"><i class="fas fa-comments"></i> Feed Back </a>
                   </li>
-                  <?php
+                  <li><a href="scannedby.php"><i class="fas fa-scanner"></i>Scanned Info</a>
+                  </li>
+                <?php
                 }
                 ?>
               </ul>
@@ -116,7 +118,7 @@ include 'error.php';
 
       <!-- page content -->
       <div class="right_col" role="main">
-      <div class="row">
+        <div class="row">
           <div class="col-md-12 ">
             <div class="x_panel">
               <div class="x_title">
@@ -126,92 +128,92 @@ include 'error.php';
               <div class="x_content">
                 <br />
                 <form class="form-label-left input_mask" action="adduserprocess.php" method="post">
-                <div class="item form-group">
+                  <div class="item form-group">
                     <label class="col-form-label col-md-3 col-sm-3 label-align" for="username">User Name <span class="required">*</span>
                     </label>
-                <div class="col-md-6 col-sm-6  form-group has-feedback">
-                    <input type="text" class="form-control has-feedback-left" id="inputSuccess2" placeholder="User Name" name="username" require>
-                    <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
-                  </div>
-                  </div>
-                  <div class="item form-group">
-                      <label class="col-form-label col-md-3 col-sm-3 label-align" for="email">Email <span class="required">*</span>
-                      </label>
-                  <div class="col-md-6 col-sm-6  form-group has-feedback">
-  <input type="email" class="form-control has-feedback-left" id="inputSuccess4" placeholder="Email" name="email" require>
-  <span class="fa fa-envelope form-control-feedback left" aria-hidden="true"></span>
-</div>
-</div>
-<div class="item form-group">
-    <label class="col-form-label col-md-3 col-sm-3 label-align" for="phone">Phone Number <span class="required">*</span>
-    </label>
-<div class="col-md-6 col-sm-6  form-group has-feedback">
-                    <input type="tel" class="form-control has-feedback-left" id="inputSuccess5" placeholder="Phone" name ="phone" require>
-                    <span class="fa fa-phone form-control-feedback left" aria-hidden="true"></span>
-                  </div>
+                    <div class="col-md-6 col-sm-6  form-group has-feedback">
+                      <input type="text" class="form-control has-feedback-left" id="inputSuccess2" placeholder="User Name" name="username" require>
+                      <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
+                    </div>
                   </div>
                   <div class="item form-group">
-                      <label class="col-form-label col-md-3 col-sm-3 label-align" for="role">Role <span class="required">*</span>
-                      </label>
-                  <div class="col-md-6 col-sm-6  form-group has-feedback">
-                      <input type="text" class="form-control has-feedback-left" id="inputSuccess2" name="role" value="user" disabled/>
+                    <label class="col-form-label col-md-3 col-sm-3 label-align" for="email">Email <span class="required">*</span>
+                    </label>
+                    <div class="col-md-6 col-sm-6  form-group has-feedback">
+                      <input type="email" class="form-control has-feedback-left" id="inputSuccess4" placeholder="Email" name="email" require>
+                      <span class="fa fa-envelope form-control-feedback left" aria-hidden="true"></span>
+                    </div>
+                  </div>
+                  <div class="item form-group">
+                    <label class="col-form-label col-md-3 col-sm-3 label-align" for="phone">Phone Number <span class="required">*</span>
+                    </label>
+                    <div class="col-md-6 col-sm-6  form-group has-feedback">
+                      <input type="tel" class="form-control has-feedback-left" id="inputSuccess5" placeholder="Phone" name="phone" require>
+                      <span class="fa fa-phone form-control-feedback left" aria-hidden="true"></span>
+                    </div>
+                  </div>
+                  <div class="item form-group">
+                    <label class="col-form-label col-md-3 col-sm-3 label-align" for="role">Role <span class="required">*</span>
+                    </label>
+                    <div class="col-md-6 col-sm-6  form-group has-feedback">
+                      <input type="text" class="form-control has-feedback-left" id="inputSuccess2" name="role" value="user" disabled />
                       <span class="fas fa-user-edit form-control-feedback left" aria-hidden="true"></span>
                     </div>
-                    </div>
-                    <div class="col-md-3 col-sm-3" >
-                        </div>
-                        <div class="col-md-3 col-sm-3" >
-                            </div>
-                      <div class="col-md-3 col-sm-3  form-group has-feedback" >
-                          <input type="submit" class="form-control btn btn-round btn-success clf" id="inputSuccess2" name="add" value="Add User" >
-                          </div>
+                  </div>
+                  <div class="col-md-3 col-sm-3">
+                  </div>
+                  <div class="col-md-3 col-sm-3">
+                  </div>
+                  <div class="col-md-3 col-sm-3  form-group has-feedback">
+                    <input type="submit" class="form-control btn btn-round btn-success clf" id="inputSuccess2" name="add" value="Add User">
+                  </div>
                 </form>
               </div>
             </div>
-      <!-- /page content -->
-    </div>
-  </div>
+            <!-- /page content -->
+          </div>
+        </div>
 
-  <!-- jQuery -->
-  <script src="../vendors/jquery/dist/jquery.min.js"></script>
-  <!-- Bootstrap -->
-  <script src="../vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- FastClick -->
-  <script src="../vendors/fastclick/lib/fastclick.js"></script>
-  <!-- NProgress -->
-  <script src="../vendors/nprogress/nprogress.js"></script>
-  <!-- Chart.js -->
-  <script src="../vendors/Chart.js/dist/Chart.min.js"></script>
-  <!-- gauge.js -->
-  <script src="../vendors/gauge.js/dist/gauge.min.js"></script>
-  <!-- bootstrap-progressbar -->
-  <script src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
-  <!-- iCheck -->
-  <script src="../vendors/iCheck/icheck.min.js"></script>
-  <!-- Skycons -->
-  <script src="../vendors/skycons/skycons.js"></script>
-  <!-- Flot -->
-  <script src="../vendors/Flot/jquery.flot.js"></script>
-  <script src="../vendors/Flot/jquery.flot.pie.js"></script>
-  <script src="../vendors/Flot/jquery.flot.time.js"></script>
-  <script src="../vendors/Flot/jquery.flot.stack.js"></script>
-  <script src="../vendors/Flot/jquery.flot.resize.js"></script>
-  <!-- Flot plugins -->
-  <script src="../vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
-  <script src="../vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
-  <script src="../vendors/flot.curvedlines/curvedLines.js"></script>
-  <!-- DateJS -->
-  <script src="../vendors/DateJS/build/date.js"></script>
-  <!-- JQVMap -->
-  <script src="../vendors/jqvmap/dist/jquery.vmap.js"></script>
-  <script src="../vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
-  <script src="../vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
-  <!-- bootstrap-daterangepicker -->
-  <script src="../vendors/moment/min/moment.min.js"></script>
-  <script src="../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+        <!-- jQuery -->
+        <script src="../vendors/jquery/dist/jquery.min.js"></script>
+        <!-- Bootstrap -->
+        <script src="../vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- FastClick -->
+        <script src="../vendors/fastclick/lib/fastclick.js"></script>
+        <!-- NProgress -->
+        <script src="../vendors/nprogress/nprogress.js"></script>
+        <!-- Chart.js -->
+        <script src="../vendors/Chart.js/dist/Chart.min.js"></script>
+        <!-- gauge.js -->
+        <script src="../vendors/gauge.js/dist/gauge.min.js"></script>
+        <!-- bootstrap-progressbar -->
+        <script src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+        <!-- iCheck -->
+        <script src="../vendors/iCheck/icheck.min.js"></script>
+        <!-- Skycons -->
+        <script src="../vendors/skycons/skycons.js"></script>
+        <!-- Flot -->
+        <script src="../vendors/Flot/jquery.flot.js"></script>
+        <script src="../vendors/Flot/jquery.flot.pie.js"></script>
+        <script src="../vendors/Flot/jquery.flot.time.js"></script>
+        <script src="../vendors/Flot/jquery.flot.stack.js"></script>
+        <script src="../vendors/Flot/jquery.flot.resize.js"></script>
+        <!-- Flot plugins -->
+        <script src="../vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
+        <script src="../vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
+        <script src="../vendors/flot.curvedlines/curvedLines.js"></script>
+        <!-- DateJS -->
+        <script src="../vendors/DateJS/build/date.js"></script>
+        <!-- JQVMap -->
+        <script src="../vendors/jqvmap/dist/jquery.vmap.js"></script>
+        <script src="../vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+        <script src="../vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
+        <!-- bootstrap-daterangepicker -->
+        <script src="../vendors/moment/min/moment.min.js"></script>
+        <script src="../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
 
-  <!-- Custom Theme Scripts -->
-  <script src="../build/js/custom.min.js"></script>
+        <!-- Custom Theme Scripts -->
+        <script src="../build/js/custom.min.js"></script>
 
 </body>
 <script type="text/javascript" charset="utf-8">

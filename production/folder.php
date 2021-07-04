@@ -103,13 +103,15 @@ $user = $_SESSION['folder_name'];
                 <li><a href="qrcodereader.php"><i class="fas fa-scanner"></i> Scan QrCode </a>
                 </li>
                 <?php
-                if($_SESSION['role'] == 'admin'){
-                  ?>
+                if ($_SESSION['role'] == 'admin') {
+                ?>
                   <li><a href="addUser.php"><i class="fa fa-users"></i> ADD Users </a>
                   </li>
-                  <li><a href="feedbacklist.php"><i class="fas fa-comments"></i> Feed Back  </a>
+                  <li><a href="feedbacklist.php"><i class="fas fa-comments"></i> Feed Back </a>
                   </li>
-                  <?php
+                  <li><a href="scannedby.php"><i class="fas fa-scanner"></i>Scanned Info</a>
+                  </li>
+                <?php
                 }
                 ?>
               </ul>
@@ -172,7 +174,7 @@ $user = $_SESSION['folder_name'];
 
         </div>
       </div>
-      
+
       <!-- /page content -->
 
     </div>

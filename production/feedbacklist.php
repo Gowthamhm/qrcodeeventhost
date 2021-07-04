@@ -6,13 +6,16 @@ include 'error.php';
 // if (!empty($_SESSION['folder_name'])) {
 //   // echo $_SESSION['folder_name'];
 // } else {
-// ?>
-//   <script type="text/javascript" charset="utf-8">
-//     window.location.replace('home.php');
-//   </script>
+// 
+?>
+// <script type="text/javascript" charset="utf-8">
+  //     window.location.replace('home.php');
+  //   
+</script>
 // <?php
-// }
-// ?>
+    // }
+    // 
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -86,23 +89,25 @@ include 'error.php';
                 </li>
                 <li><a href="spreadsheet.php?export=true"><i class="fa fa-file-excel-o"></i> Google Sheets</a>
                 </li> <?php if (empty($_SESSION['folder_name'])) {
-                  // code...
-                } else { ?>
+                        // code...
+                      } else { ?>
                   <li><a href="sendQrcode.php"><i class="fa fa-share-alt"></i> Share QrCode </a>
                   </li>
                 <?php
-                }
+                      }
                 ?>
                 <li><a href="qrcodereader.php"><i class="fas fa-scanner"></i> Scan QrCode </a>
                 </li>
                 <?php
-                if($_SESSION['role'] == 'admin'){
-                  ?>
+                if ($_SESSION['role'] == 'admin') {
+                ?>
                   <li><a href="addUser.php"><i class="fa fa-users"></i> ADD Users </a>
                   </li>
-                  <li><a href="feedbacklist.php"><i class="fas fa-comments"></i> Feed Back  </a>
+                  <li><a href="feedbacklist.php"><i class="fas fa-comments"></i> Feed Back </a>
                   </li>
-                  <?php
+                  <li><a href="scannedby.php"><i class="fas fa-scanner"></i>Scanned Info</a>
+                  </li>
+                <?php
                 }
                 ?>
 
@@ -135,55 +140,55 @@ include 'error.php';
           <div class="clearfix"></div>
           <div class="row">
             <div class="col-md-12 col-sm-12 ">
-  <div class="x_panel">
-    <div class="x_title">
-      <h2>Feed Back Details</h2>
-      <div class="clearfix"></div>
-    </div>
-    <div class="x_content">
-        <div class="row">
-            <div class="col-sm-12">
-              <div class="card-box table-responsive">
-      <table id="datatable-buttons" class="table table-striped table-bordered" style="width:100%">
-        <thead>
-          <tr>
-            <th>slno</th>
-                                <th>First Name</th>
-                                <th>Last Name</th>
-                                <th>Email</th>
-                                <th>FeedBack</th>
-                                <th>Phone Number</th>
-                                <th>Event Name</th>
-                                <th>Rating</th>
-          </tr>
-        </thead>
-        <tbody>
-          <?php
-          // set array
-          $qrcodeData = array();
-                             
-                               $sql = "SELECT * FROM `feedback`;";
-                             // echo $sql;
-                             $result = $conn->query($sql);
-                             // echo $result->num_rows;
-                             if ($result->num_rows > 0) {
-                               // output data of each row
-                               $i=0;
-                               while ($row = $result->fetch_assoc()) {
-                                 $qrcodeData[$i] = $row['id'];
-                                 // echo $row['slno'];
-                                 $i++;
-                               }
-                             }
-                             for ($j=0; $j <count($qrcodeData) ; $j++) {
-                               // echo $j;
-                               $sql = "SELECT * FROM `feedback` where id='" . $qrcodeData[$j] . "'";
-                               // echo $sql;
-                               $result = $conn->query($sql);
-                               // echo $result->num_rows;
-                               if ($result->num_rows > 0) {
-                                 while ($row = $result->fetch_assoc()) {
-                                   echo "<tr><td>";
+              <div class="x_panel">
+                <div class="x_title">
+                  <h2>Feed Back Details</h2>
+                  <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <div class="card-box table-responsive">
+                        <table id="datatable-buttons" class="table table-striped table-bordered" style="width:100%">
+                          <thead>
+                            <tr>
+                              <th>slno</th>
+                              <th>First Name</th>
+                              <th>Last Name</th>
+                              <th>Email</th>
+                              <th>FeedBack</th>
+                              <th>Phone Number</th>
+                              <th>Event Name</th>
+                              <th>Rating</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <?php
+                            // set array
+                            $qrcodeData = array();
+
+                            $sql = "SELECT * FROM `feedback`;";
+                            // echo $sql;
+                            $result = $conn->query($sql);
+                            // echo $result->num_rows;
+                            if ($result->num_rows > 0) {
+                              // output data of each row
+                              $i = 0;
+                              while ($row = $result->fetch_assoc()) {
+                                $qrcodeData[$i] = $row['id'];
+                                // echo $row['slno'];
+                                $i++;
+                              }
+                            }
+                            for ($j = 0; $j < count($qrcodeData); $j++) {
+                              // echo $j;
+                              $sql = "SELECT * FROM `feedback` where id='" . $qrcodeData[$j] . "'";
+                              // echo $sql;
+                              $result = $conn->query($sql);
+                              // echo $result->num_rows;
+                              if ($result->num_rows > 0) {
+                                while ($row = $result->fetch_assoc()) {
+                                  echo "<tr><td>";
                                   echo $row['id'];
                                   echo "</td> <td>";
                                   echo $row['firstname'];
@@ -200,30 +205,30 @@ include 'error.php';
                                   echo "</td> <td>";
                                   echo $row['rating'];
                                   echo "</td> </tr>";
-                                 }
-                               }
-                             }
-                             // print_r($qrcodeData); // show all array data
+                                }
+                              }
+                            }
+                            // print_r($qrcodeData); // show all array data
 
-                             ?>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</div>
-</div>
-  </div>
-</div>
+                            ?>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-         
+
+        </div>
       </div>
     </div>
   </div>
-</div>
-</div>
+  </div>
 
-</div>
-    </div>
+  </div>
+  </div>
   </div>
   </div>
   <!-- /page content -->
