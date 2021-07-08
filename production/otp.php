@@ -33,7 +33,7 @@ if (isset($_POST['reset'])) {
       $twilio_number = "+17204087706";
       try{
        $client = new Client($account_sid, $auth_token);
-       $text=" OTP for reset your password of Username " . $dbusername . " is " . $fourRandomDigit;
+       $text= "Verification Message From {company name},\n OTP for reset your password of Username " . $dbusername . " is " . $fourRandomDigit;
       $phone = '+91'.$phone;
       if(strlen($phone) == 13){
         $client->messages->create(

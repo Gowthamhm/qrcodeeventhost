@@ -30,23 +30,23 @@
                             <form method="POST" class="my-login-validation" action="feedbacksubmit.php" novalidate="">
                                 <div class="form-group">
                                     <label for="fname">First Name</label>
-                                    <input id="email" type="text" class="form-control" name="firstname"  required autofocus>
+                                    <input id="email" type="text" class="form-control" name="firstname" required autofocus>
                                     <div class="invalid-feedback">
                                         Firstname is invalid
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="lname">Last Name</label>
-                                    <input id="email" type="text" class="form-control" name="lastname"  required autofocus>
+                                    <input id="email" type="text" class="form-control" name="lastname" required autofocus>
                                     <div class="invalid-feedback">
-                                       Lastname is invalid
+                                        Lastname is invalid
                                     </div>
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="email">E-Mail ID  
+                                    <label for="email">E-Mail ID
                                     </label>
-                                    <input id="password" type="email" class="form-control" name="email" required >
+                                    <input id="password" type="email" class="form-control" name="email" required>
                                     <div class="invalid-feedback">
                                         Email is required
                                     </div>
@@ -54,24 +54,24 @@
                                 <div class="form-group">
                                     <label for="phone">Phone Number
                                     </label>
-                                    <input type="text" name="phone" id="phone" required class="form-control" size="10">
-                                     <div class="invalid-feedback">
-                                      Phone  is Missing
+                                    <input type="text" name="phone" id="phone" class="form-control" size="10">
+                                    <div class="invalid-feedback">
+                                        Phone is Missing
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="eventName">Event Name
                                     </label>
-                                    <input type="text" name="event" id="phone" required class="form-control" >
-                                     <div class="invalid-feedback">
-                                     Event Name Missing
+                                    <input type="text" name="event" id="phone" required class="form-control">
+                                    <div class="invalid-feedback">
+                                        Event Name Missing
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="rating">Rating 
+                                    <label for="rating">Rating
                                     </label>
                                     <span id="slider_value" style="color:red;margin-left: 50%;"></span>
-                                    <input id="rating" type="range" class="form-control" name="rating" required  min="0" max="10" onchange="show_value(this.value);">
+                                    <input id="rating" type="range" class="form-control" name="rating" required min="0" max="10" onchange="show_value(this.value);">
                                     <div class="invalid-feedback">
                                         Rating is required
                                     </div>
@@ -79,14 +79,32 @@
                                 <div class="form-group">
                                     <label for="rating">FeedBack About Event
                                     </label>
-                                    <textarea name="text" id="feedback" cols="55" rows="10" required ></textarea>
-                                     <div class="invalid-feedback">
-                                       Feedback  is Missing
+                                    <textarea name="text" id="feedback" cols="55" rows="10" required></textarea>
+                                    <div class="invalid-feedback">
+                                        Feedback is Missing
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="rating">Photo or Video Links
+                                    </label>
+                                    <input type="file" name="" id="" multiple>
+                                    <!-- <textarea name="text" id="feedback" cols="55" rows="10" required></textarea> -->
+                                    <div class="invalid-feedback">
+                                        Links are Missing
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="links">Photo or Video Links
+                                    </label>
+                                    <input type="url" name="links" id="" required>
+                                    <!-- <textarea name="text" id="feedback" cols="55" rows="10" required></textarea> -->
+                                    <div class="invalid-feedback">
+                                        Links are Missing
                                     </div>
                                 </div>
                                 <div class="form-group m-0">
                                     <input type="submit" name="feedback" class="btn btn-primary btn-block" value="Submit ">
-                            </div>
+                                </div>
                             </form>
                         </div>
                     </div>
@@ -102,11 +120,10 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="js/login.js"></script>
     <script>
-    function show_value(x)
-{
- document.getElementById("slider_value").innerHTML=x;
-}
-</script>
+        function show_value(x) {
+            document.getElementById("slider_value").innerHTML = x;
+        }
+    </script>
 </body>
 
 </html>

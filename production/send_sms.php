@@ -26,6 +26,7 @@ try{
  $text = strip_tags($text);
 $text = str_replace('&quot','"',$text);
 $text = str_replace(';',' ',$text);
+$text = "The Text Message sent from {company name},\n".$text;
 
 for($i=0;$i<count($number);$i++){
   // echo $number[$i];

@@ -6,6 +6,7 @@ include './phpqrcode/qrlib.php';
 
 // $folderName= mysqli_real_escape_string($conn,$_POST['foldername']);
 $folderName = $_SESSION['folder_name'];
+$eventName = $_POST['eventname'];
 // echo $folderName;
 // $create = $_POST['qrcreate'];
 
@@ -44,12 +45,12 @@ if (empty($phoneNumber)) {
   // echo $status;
   // echo $inText;
   // echo $outText;
-  $createQr = "INSERT INTO `qrcode`(folder_name, text, Qoute, number, path, infilename , outfilename, status, intext, outtext) VALUES
-           ('" . $folderName . "','" . $originText . "','" . $qoutedText . "','" . $phoneNumber . "','" . $path . "','" . $infilename . "','" . $outfilename . "'," . $status . ",'" . $inText . "','" . $outText . "');";
+  $createQr = "INSERT INTO `qrcode`(folder_name, text, Qoute, number, path, infilename , outfilename, status, intext, outtext,eventname) VALUES
+           ('" . $folderName . "','" . $originText . "','" . $qoutedText . "','" . $phoneNumber . "','" . $path . "','" . $infilename . "','" . $outfilename . "'," . $status . ",'" . $inText . "','" . $outText . "','" . $eventName . "');";
   // echo $createQr;
   // echo $conn->query($createQr);
-  $inqrcodedata = $folderName . "@#" . $originText . "@#" . $qoutedText . "@#" . $inText . "@#" . $path . "@#" . $infilename . "@#" . $phoneNumber;
-  $outqrcodedata = $folderName . "@#" . $originText . "@#" . $qoutedText . "@#" . $outText . "@#" . $path . "@#" . $outfilename . "@#" . $phoneNumber;
+  $inqrcodedata = $folderName . "@#" . $originText . "@#" . $qoutedText . "@#" . $inText . "@#" . $path . "@#" . $infilename . "@#" . $phoneNumber . "@#" .  $eventName;
+  $outqrcodedata = $folderName . "@#" . $originText . "@#" . $qoutedText . "@#" . $outText . "@#" . $path . "@#" . $outfilename . "@#" . $phoneNumber . "@#" .  $eventName;
   if ($conn->query($createQr) == TRUE) {
     if (!file_exists($path)) {
       if (mkdir($path, 0777, true)) {

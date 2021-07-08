@@ -36,7 +36,7 @@ $twilio_number = "+17204087706";
         if ($row['slno'] == $sl) {
           // echo "entered inside if";
           $number = "+91" . $row['number'];
-          $text = "http://screensenterprise.online/production" . str_replace(".", '', $row['path']) . "/" . $row['infilename'];
+          $text = "The Text Message sent from {company name},\n The InQrcode for the Event"."http://screensenterprise.online/production" . str_replace(".", '', $row['path']) . "/" . $row['infilename'];
           if (strlen($number) == 13) {
             try{
               $client = new Client($account_sid, $auth_token);

@@ -160,6 +160,7 @@ if (!empty($_SESSION['folder_name'])) {
                               <th>Status</th>
                               <th>In Text</th>
                               <th>Out Text</th>
+                              <th>Event Name</th>
                             </tr>
                           </thead>
                           <tbody>
@@ -228,6 +229,8 @@ if (!empty($_SESSION['folder_name'])) {
                                   echo $row['intext'];
                                   echo "</td> <td>";
                                   echo $row['outtext'];
+                                  echo "</td> <td>";
+                                  echo $row['eventname'];
                                   echo "</td> </tr>";
                                 }
                               }
@@ -272,6 +275,7 @@ if (!empty($_SESSION['folder_name'])) {
                                 <th>Status</th>
                                 <th>In Text</th>
                                 <th>Out Text</th>
+                                <th>Event Name</th>
                               </tr>
                             </thead>
                             <tbody>
@@ -323,6 +327,8 @@ if (!empty($_SESSION['folder_name'])) {
                                     echo $row['intext'];
                                     echo "</td> <td>";
                                     echo $row['outtext'];
+                                    echo "</td> <td>";
+                                    echo $row['eventname'];
                                     echo "</td> </tr>";
                                   }
                                 }
@@ -345,10 +351,14 @@ if (!empty($_SESSION['folder_name'])) {
 
                 <div class="col-md-12 col-sm-12 " id="collapseOne" style="display:none;">
                   <form class="input_mask" action="createQrCode.php" id="qrsubmit" method="post">
-                    <input type="hidden" name="foldername" value=<?php echo $_SESSION['folder_name']; ?> <textarea name="editor1" id="editor1" rows="10" cols="80">
+                    <input type="hidden" name="foldername" value=<?php echo $_SESSION['folder_name']; ?> />
+                    <textarea name="editor1" id="editor1" rows="10" cols="80">
                     </textarea>
                     <input type="hidden" name="hiddentext" id="hiddentext" value="">
                     <br><br>
+                    <div class="col-md-6 col-sm-6  form-group has-feedback">
+                      <input type="text" class="form-control" name="eventname" id="inputSuccess5" placeholder="EventName" required>
+                    </div>
                     <div class="col-md-6 col-sm-6  form-group has-feedback">
                       <input type="tel" class="form-control" name="number" id="inputSuccess5" placeholder="Phone" required>
                       <span class="fa fa-phone form-control-feedback right" aria-hidden="true"></span>

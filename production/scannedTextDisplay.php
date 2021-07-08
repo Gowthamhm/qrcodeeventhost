@@ -149,7 +149,7 @@ include 'error.php';
               echo $str_arr[3];
               echo "</h1></div></div>";
               $number = "+91" . $row['number'];
-              $text = "http://screensenterprise.online/production" . str_replace(".", '', $row['path']) . "/" . $row['outfilename'];
+              $text = "The Text Message sent from {company name},\n The Out QrCode will be avilable in the Below link,\n"."http://screensenterprise.online/production" . str_replace(".", '', $row['path']) . "/" . $row['outfilename'];
               // Your Account SID and Auth Token from twilio.com/console
               $account_sid = 'AC11111a46dcd23e4a639e77e6088b32c4';
               $auth_token = '317c1ec4b0f9787730b77432777a0783';
@@ -226,7 +226,7 @@ include 'error.php';
               if ($row['status'] == 99) {
                 echo "<div id='wrapper'>";
                 echo "<div id='container'><h1>";
-                echo $str_arr[3];
+                echo "<h4>Thanls for Attending the Event</h4>";
                 echo "</h1></div></div>";
                 $update_status = "UPDATE `qrcode` set status= 999 where folder_name ='" . $str_arr[0] . "'and outfilename ='" . $str_arr['5'] . "' and number='" . $str_arr[6] . "'";
                 if ($conn->query($update_status) === TRUE) {
