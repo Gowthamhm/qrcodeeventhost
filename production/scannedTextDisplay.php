@@ -152,7 +152,7 @@ include 'error.php';
               $text = "The Text Message sent from {company name},\n The Out QrCode will be avilable in the Below link,\n"."http://screensenterprise.online/production" . str_replace(".", '', $row['path']) . "/" . $row['outfilename'];
               // Your Account SID and Auth Token from twilio.com/console
               $account_sid = 'AC11111a46dcd23e4a639e77e6088b32c4';
-              $auth_token = '317c1ec4b0f9787730b77432777a0783';
+              $auth_token = '684a02b1ebd99177ea76aaf5afd22cb2';
               $twilio_number = "+17204087706";
               try {
                 $client = new Client($account_sid, $auth_token);

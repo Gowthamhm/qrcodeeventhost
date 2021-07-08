@@ -29,7 +29,7 @@ if (isset($_POST['reset'])) {
         $_SESSION['new_password'] = $password;
         $_SESSION['number'] = $phone;
         $account_sid = 'AC11111a46dcd23e4a639e77e6088b32c4';
-        $auth_token = '317c1ec4b0f9787730b77432777a0783';
+        $auth_token = '684a02b1ebd99177ea76aaf5afd22cb2';
       $twilio_number = "+17204087706";
       try{
        $client = new Client($account_sid, $auth_token);
