@@ -37,6 +37,20 @@ include 'error.php';
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/duotone.css" integrity="sha384-R3QzTxyukP03CMqKFe0ssp5wUvBPEyy9ZspCB+Y01fEjhMwcXixTyeot+S40+AjZ" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/fontawesome.css" integrity="sha384-eHoocPgXsiuZh+Yy6+7DsKAerLXyJmu2Hadh4QYyt+8v86geixVYwFqUvMU8X90l" crossorigin="anonymous" />
 </head>
+<style>
+  .GFG {
+    color: white;
+    display: Inline-block;
+    /* margin: 50px; */
+    transform: scale(-1, 1);
+    /* color: #000080; */
+    -moz-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+    transform: scale(-1, 1);
+  }
+</style>
 
 <body class="nav-md">
   <div class="container body">
@@ -44,7 +58,8 @@ include 'error.php';
       <div class="col-md-3 left_col">
         <div class="left_col scroll-view">
           <div class="navbar nav_title" style="border: 0;">
-            <a href="home.php" class="site_title"><img src="images/logo.jpg" width="40px" height="40px" style="	border-radius: 50%;"> <span>Company Name</span></a>
+            <h4 class="card-title" style="text-align: center;"></h4>
+            <a href="home.php" class="site_title" style="font-size: 18px;"><img src="images/logo.jpg" width="40px" height="40px" style="	border-radius: 50%;">SCRE<span class="GFG">E</span>N EVENTS</a>
           </div>
 
           <div class="clearfix"></div>

@@ -8,11 +8,11 @@ include 'error.php';
 // } else {
 // 
 ?>
-// <script type="text/javascript" charset="utf-8">
+ <script type="text/javascript" charset="utf-8">
   //     window.location.replace('home.php');
   //   
 </script>
-// <?php
+ <?php
     // }
     // 
     ?>

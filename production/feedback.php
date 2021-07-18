@@ -13,6 +13,29 @@
     <link rel="shortcut icon" href="images/logo.ico">
     <link href="css/login.css" rel="stylesheet" type="text/css">
 </head>
+<style>
+    .GFG {
+        display: Inline-block;
+        /* margin: 50px; */
+        transform: scale(-1, 1);
+        color: #000080;
+        -moz-transform: scale(-1, 1);
+        -webkit-transform: scale(-1, 1);
+        -o-transform: scale(-1, 1);
+        -ms-transform: scale(-1, 1);
+        transform: scale(-1, 1);
+    }
+
+    .card-title {
+        background: -webkit-linear-gradient(#262d26, #da8695);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .btn-block {
+        background-image: linear-gradient(#262d26, #da8695);
+    }
+</style>
 
 <body class="my-login-page">
     <section class="h-100">
@@ -22,7 +45,7 @@
                     <div class="brand">
                         <img src="images/logo.jpg" alt="logo">
                     </div>
-                    <h4 class="card-title" style="text-align: center;">Company Name</h4>
+                    <h4 class="card-title" style="text-align: center;">SCRE<span class="GFG card-title">E</span>N EVENTS</h4>
                     <br>
                     <div class="card fat">
                         <div class="card-body">
@@ -79,7 +102,7 @@
                                 <div class="form-group">
                                     <label for="rating">FeedBack About Event
                                     </label>
-                                    <textarea name="text" id="feedback" cols="55" rows="10" required></textarea>
+                                    <textarea name="text" id="feedback" cols="53" rows="10" required></textarea>
                                     <div class="invalid-feedback">
                                         Feedback is Missing
                                     </div>

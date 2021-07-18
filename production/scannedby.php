@@ -7,12 +7,7 @@ include 'error.php';
 //   // echo $_SESSION['folder_name'];
 // } else {
 // 
-?>
-// <script type="text/javascript" charset="utf-8">
-    //     window.location.replace('home.php');
-    //   
-</script>
-// <?php
+?><?php
     // }
     // 
     ?>
