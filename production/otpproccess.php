@@ -1,5 +1,5 @@
 <?php
-include 'otpsession.php';
+ include 'otpsession.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -17,6 +17,29 @@ include 'otpsession.php';
     <link rel="shortcut icon" href="images/logo.ico">
     <link href="css/login.css" rel="stylesheet" type="text/css">
 </head>
+<style>
+    .GFG {
+        display: Inline-block;
+        /* margin: 50px; */
+        transform: scale(-1, 1);
+        color: #000080;
+        -moz-transform: scale(-1, 1);
+        -webkit-transform: scale(-1, 1);
+        -o-transform: scale(-1, 1);
+        -ms-transform: scale(-1, 1);
+        transform: scale(-1, 1);
+    }
+
+    .card-title {
+        background: -webkit-linear-gradient(#262d26, #da8695);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .btn-block {
+        background-image: linear-gradient(#262d26, #da8695);
+    }
+</style>
 
 <body class="my-login-page">
     <section class="h-100">
@@ -24,10 +47,9 @@ include 'otpsession.php';
             <div class="row justify-content-md-center h-100">
                 <div class="card-wrapper">
                     <div class="brand">
-                        <img src="images/logo.jpg" alt="logo">
+                        <img src="images/alogo.jpg" alt="logo">
                     </div>
-                    <h4 class="card-title" style="text-align: center;">Company Name</h4>
-                    <br>
+                    <h4 class="card-title" style="text-align: center;">SCRE<span class="GFG card-title">E</span>N EVENTS</h4> <br>
                     <div class="card fat">
                         <div class="card-body">
                             <h4 class="card-title">OTP</h4>

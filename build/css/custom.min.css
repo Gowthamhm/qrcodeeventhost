@@ -1065,8 +1065,7 @@
 }
 
 .left_col {
-    /* background: #2A3F54 */
-    background-image: linear-gradient(#262d26, #da8695);
+    background: #2A3F54
 }
 
 .container {
@@ -1343,7 +1342,7 @@ body .container.body .right_col {
 .nav_title {
     width: 230px;
     float: left;
-    background: #0e1013;
+    background: #2A3F54;
     border-radius: 0;
     height: 57px;
     padding: 0px
@@ -1503,13 +1502,11 @@ body .container.body .right_col {
 
 body {
     color: #73879C;
-    /* background: #2A3F54; */
-    background-image: linear-gradient(#262d26, #da8695);
+    background: #2A3F54;
     font-family: "Helvetica Neue", Roboto, Arial, "Droid Sans", sans-serif;
     font-size: 13px;
     font-weight: 400;
-    line-height: 1.471;
-    width: 100%;
+    line-height: 1.471
 }
 
 .main_container .top_nav {
@@ -1883,9 +1880,7 @@ a:focus {
 .nav.side-menu>li.active>a {
     text-shadow: rgba(0, 0, 0, 0.25) 0 -1px 0;
     background: -webkit-gradient(linear, left top, left bottom, from(#334556), to(#2C4257)), #2A3F54;
-    /* background: linear-gradient(#334556, #2C4257), #2A3F54; */
-    background: linear-gradient(#262d26, #da8695);
-    /* background-image: linear-gradient(#262d26, #da8695); */
+    background: linear-gradient(#334556, #2C4257), #2A3F54;
     -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0 1px 0, inset rgba(255, 255, 255, 0.16) 0 1px 0;
     box-shadow: rgba(0, 0, 0, 0.25) 0 1px 0, inset rgba(255, 255, 255, 0.16) 0 1px 0
 }
@@ -2918,8 +2913,7 @@ span.right {
     padding: 5px 0 0 0;
     position: fixed;
     width: 230px;
-    /* background: #2A3F54 */
-    background: #da8695;
+    background: #2A3F54
 }
 
 .sidebar-footer a {
@@ -6193,4 +6187,17 @@ ul.notifications {
 
 #slash {
     display: none;
+}
+
+.GFG {
+    color: white;
+    display: Inline-block;
+    /* margin: 50px; */
+    transform: scale(-1, 1);
+    /* color: #000080; */
+    -moz-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+    transform: scale(-1, 1);
 }

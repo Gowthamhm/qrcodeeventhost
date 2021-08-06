@@ -56,7 +56,8 @@ include 'error.php';
       <div class="col-md-3 left_col">
         <div class="left_col scroll-view">
           <div class="navbar nav_title" style="border: 0;">
-            <a href="home.php" class="site_title"><img src="images/logo.jpg" width="40px" height="40px" style="	border-radius: 50%;"> <span>Company Name</span></a>
+            <!-- <a href="home.php" class="site_title"><img src="images/logo.jpg" width="40px" height="40px" style="	border-radius: 50%;"> <span>Company Name</span></a> -->
+            <a href="home.php" class="site_title" style="font-size: 18px;"><img src="images/logo.jpg" width="40px" height="40px" style="	border-radius: 50%;">SCRE<span class="GFG">E</span>N EVENTS</a>
           </div>
 
           <div class="clearfix"></div>
@@ -82,8 +83,16 @@ include 'error.php';
                 </li>
                 <li><a href="spreadsheet.php?export=true"><i class="fa fa-file-excel-o"></i> Google Sheets</a>
                 </li>
-                <li><a href="sendQrcode.php"><i class="fa fa-comments-o"></i> Share QrCode </a>
-                </li>
+                <?php if (empty($_SESSION['folder_name'])) {
+                  // code...
+                } else { ?>
+                  <li><a href="sendQrcode.php"><i class="fa fa-share-alt"></i> Share QrCode </a>
+                  </li>
+                <?php
+                }
+                ?>
+                <!-- <li><a href="sendQrcode.php"><i class="fa fa-comments-o"></i> Share QrCode </a>
+                </li> -->
                 <li><a href="qrcodereader.php"><i class="fas fa-scanner"></i> Scan QrCode </a>
                 </li>
                 <?php

@@ -40,7 +40,7 @@
 			<div class="row justify-content-md-center h-100">
 				<div class="card-wrapper">
 					<div class="brand">
-						<img src="images/logo.jpg" alt="logo">
+						<img src="images/alogo.jpg" alt="logo">
 					</div>
 					<h4 class="card-title" style="text-align: center;">SCRE<span class="GFG card-title">E</span>N EVENTS</h4>
 					<br>
