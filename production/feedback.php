@@ -108,18 +108,9 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="rating">Media (Photo or Video)
-                                    </label>
-                                    <input type="file" name="" id="" multiple class="form-control">
-                                    <!-- <textarea name="text" id="feedback" cols="55" rows="10" required></textarea> -->
-                                    <div class="invalid-feedback">
-                                       Meadia are Missing
-                                    </div>
-                                </div>
-                                <div class="form-group">
                                     <label for="links">Photo or Video Links
                                     </label>
-                                    <input type="url" name="links" id="" required class="form-control">
+                                    <input type="url" name="links" id="" required  class="form-control">
                                     <!-- <input type="text" name="event" id="phone" required class="form-control"> -->
                                     <div class="invalid-feedback">
                                         Links are Missing
