@@ -32,7 +32,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '2caedeaedae837058feabf18a3294889ce4f3e47',
+    'reference' => '309f018c74dd04708196b4ec8b689f1dfe18a5bd',
     'name' => '__root__',
   ),
   'versions' => 
@@ -44,16 +44,16 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '2caedeaedae837058feabf18a3294889ce4f3e47',
+      'reference' => '309f018c74dd04708196b4ec8b689f1dfe18a5bd',
     ),
     'twilio/sdk' => 
     array (
-      'pretty_version' => '6.24.0',
-      'version' => '6.24.0.0',
+      'pretty_version' => '6.27.1',
+      'version' => '6.27.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => '110651d67940617e08557a7bac57edbd27b77d3e',
+      'reference' => '2e36a394c854719091136c09ad69f5b839716a64',
     ),
   ),
 );
