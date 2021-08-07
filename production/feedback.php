@@ -108,12 +108,12 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="rating">Photo or Video
+                                    <label for="rating">Media (Photo or Video)
                                     </label>
                                     <input type="file" name="" id="" multiple class="form-control">
                                     <!-- <textarea name="text" id="feedback" cols="55" rows="10" required></textarea> -->
                                     <div class="invalid-feedback">
-                                        Links are Missing
+                                       Meadia are Missing
                                     </div>
                                 </div>
                                 <div class="form-group">

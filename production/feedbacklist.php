@@ -161,6 +161,8 @@ include 'error.php';
                               <th>Phone Number</th>
                               <th>Event Name</th>
                               <th>Rating</th>
+                              <th>Files Path</th>
+                              <th>Files URL</th>
                             </tr>
                           </thead>
                           <tbody>
@@ -205,6 +207,10 @@ include 'error.php';
                                   echo $row['eventname'];
                                   echo "</td> <td>";
                                   echo $row['rating'];
+                                  echo "</td> <td>";
+                                  echo "<a href='$row[filepath]'>".$row['filepath']. "</a>";
+                                  echo "</td> <td>";
+                                  echo "<a href='$row[fileURL]'>" . $row['fileURL'] . "</a>";
                                   echo "</td> </tr>";
                                 }
                               }
